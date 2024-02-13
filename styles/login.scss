@@ -1,0 +1,397 @@
+@import './main';
+.container {
+    background:unset; 
+}
+
+.main {
+    
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    .layer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all $duration ease 0s;
+        overflow: hidden;
+        .form-box {
+            transition: all $duration ease 0s;
+            border-radius: 8px;
+            box-shadow: 0 0 7px 0 #ccc;
+            background:white; 
+            display: flex;
+            flex-direction: column;  
+            justify-content: space-between;
+            padding: 30px;
+            gap: 10px;
+            width: 353px;
+            height: 349px;
+            h2 {
+                font-size: 26px;
+                font-weight: bold;
+            } .btn-dark {
+                height: 45px;
+                padding: 10px 0;   
+            } a {
+                font-size: 14px;
+                color:#666  ;
+                font-style: italic;
+                cursor: pointer;
+            }
+        } 
+    }
+    
+    .layer:first-child {
+        box-shadow: 0px 0 7px 0 #ccc;
+        width: 830px;
+        background: #F9F9F9;
+        .login.forgotpass {
+            position: absolute;
+            transform: translate(-300px,0);
+            opacity: 0;
+            pointer-events: none;
+        } .login {
+            position: relative;
+            pointer-events: unset;
+            opacity: 1;
+            transform: translate(0,0);
+        }
+    }
+
+    .layer:last-child {
+        background-image: url('../assets/loginbg.png');
+        background-size: cover;
+        background-position: 160px -430px;
+        width: 1090px;
+        display: flex;
+        flex-direction: column;
+        .process-step.active {
+            opacity: 1;
+        }
+
+        .process-step.active.move {
+            transform: translate(0,-1200px);
+        }
+
+        .process-step {
+            transition: all $duration ease 0s;
+            top: 120px;
+            position: absolute;
+            display: flex;
+            width: 600px;
+            justify-content: space-between;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            progress {
+                transition: all $duration ease 0s;
+                position: absolute;
+                width: 400px;
+                left: 100px;
+                top: 15px;
+                -webkit-appearance: none;
+                appearance: none;
+                border: unset;
+                border-radius: 30px;
+                z-index: -1;
+            }
+
+            progress[value] {
+                height: 10px;
+            }
+            // Chrome
+            progress::-webkit-progress-bar {
+                background-color: orange;
+            }
+            // Mozila
+            progress::-moz-progress-bar { 
+                background: $purple; 
+            }
+            .step {
+                
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+                gap: 10px;
+                .circle.active {
+                    background: $orange;
+                    color:white; 
+                } .circle.active.finish {
+                    background: $purple;
+                    color:white; 
+                } .circle {
+                    transition: all $duration ease 0s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    width: 40px;
+                    height: 40px;
+                    background: $gray;
+                    color:black; 
+                } span {
+                    font-size: 15px;
+                    color: #333; 
+                }
+            }
+        }
+
+        .forgotpassbox.sended {
+            z-index: -1;
+            transform: translate(0,-1920px);
+        }
+        .forgotpass-notif.sended {
+            transform: translate(0, 0);
+            pointer-events: unset;
+        } .forgotpass-notif {
+            transition: all $duration ease 0s;
+            transform: translate(0, 1920px);
+            pointer-events: none;
+            text-align: center;
+            position: absolute;
+            button {
+                margin-top: 20px;
+                width: 200px;
+            } h1 {
+                font-size: 30px;
+                font-weight: bold;
+            } p {
+                font-size: 17px;
+            }
+        }
+
+        .forgotpassbox {
+            transition: all $duration ease 0s;
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-500px);
+            z-index: -1;
+            background:white;
+            opacity: 0;
+            p {
+                font-size: 11px;
+                color: #777;
+            }
+
+        } .forgotpassbox.active {
+            transform: translate(0);
+            z-index: 1;
+            opacity: 1;
+            pointer-events: unset;
+        } .register.forgotpass {
+            transform: translate(1000px, 0);
+            opacity: 0;
+        } .registerbox {
+            height: 412px;
+            transition: all $duration ease 0s;
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0;
+        } .registerbox.active {
+            position: absolute;
+            z-index: 1;
+            pointer-events: unset;
+            opacity: 1;
+        } .registerbox.active.move {
+            transform: translate(-900px, 0);
+            opacity: 0;
+        }
+        
+        
+        .confirmemailbox {
+            
+            height: 317px;
+            transition: all $duration ease 0s;
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            transform: translate(1920px, 0);
+            opacity: 0;
+
+            .confirmbtn {
+                position: relative;
+                span {
+                    position: absolute;
+                    transform: translate(5px,0);
+                  
+                }
+                padding: 12px;
+                height: 45px;
+                font-size: 15px;
+            }
+            .link-purple {
+                color: $purple;
+                margin: 20px 0;
+            }
+        } .confirmemailbox.active {
+            z-index: unset;
+            pointer-events: unset;
+            transform: translate(0, 0);
+            opacity: 1;
+        } .confirmemailbox.active.move {
+            transform: translate(-900px, 0);
+            opacity: 0;
+        }
+
+
+        .customizebox {
+            transition: all $duration ease 0s;
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            transform: translate(1920px, 0);
+            opacity: 0;
+            width: 725px;
+            height: 352px;
+            padding: 0 30px; 
+            justify-content: center;
+            h2 {
+                transform: translate(0,-20px);
+                
+            }
+            .layouts {
+                display:flex; 
+                gap:65px;
+                .layout:first-child {
+                    display: flex;                    
+                    flex-direction: column;
+                    gap: 10px;
+                } .layout:last-child {
+
+                }
+                .layout {
+                    .continuebtn {
+                        cursor: pointer;
+                    }
+                    flex:1;
+                    .image {
+                        display: flex;
+                        align-items: center;
+                        width: auto;
+                        gap: 20px;
+                        
+                        img {
+                            width: 82px; 
+                            height: 82px; 
+                            object-fit: cover;
+                        } label {
+                            border-radius: 3px;
+                            width: 100px;
+                            box-shadow: 0 0 3px 0 $purple;
+                        } input {
+                            display: none;
+                        }
+                    } 
+                    
+                    p {
+                        color: $gray;
+                        font-size: 14px;
+                        margin: 20px 0;
+                    } button {
+                        width: 100%; 
+                        border-radius: 5px;
+                        color:white; 
+                        padding: 15px 0;
+                        box-shadow: 0 0 5px 0 black;
+                        
+                    } .pass-strength {
+                        margin-top: 10px;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        .line {
+                            flex: 1;
+                            height: 8px;
+                            background: $gray;   
+                            border-radius: 30px;
+                        } .line.active {
+                            background: $purple;
+                        } 
+                    } span {
+                        color: $purple;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+        } .customizebox.active {
+            z-index: unset;
+            pointer-events: unset;
+            transform: translate(0, 0);
+            opacity: 1;
+        } .customizebox.active.move {
+            transform: translate(0, -1200px);
+        }
+        .welcomebox.active {
+            transform: translate(0, 0);
+            pointer-events: unset;
+            z-index: 1;
+        }
+
+        .welcomebox {
+            transform: translate(0,1200px);
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+            transition: all $duration ease 0s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px; 
+            h1 {
+                font-size: 49px;
+            }
+            svg {
+                width: 293px; 
+                height: auto;
+            } button {
+                margin-top: 45px;
+                width: 318px; 
+                height: 47px;
+                padding: 12px;
+                font-size: 15px;
+            }
+
+        }
+        
+        .register { 
+            transition: all $duration ease 0s;
+            svg {
+                animation: bubble $duration ease-in 0s infinite alternate;
+            }
+            h5 {
+    
+                font-size: 26px;
+                font-weight: bold;
+            } .btn-purple {
+                width: 380px;
+                height:45px; 
+                border-radius: 3px;
+                font-size: 15px;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+        } 
+
+        
+    }
+
+    .layer:first-child.forgotpass {
+        width: 0;
+    } .layer:last-child.forgotpass {
+        width: 100%;
+        background-size: 1200px;
+        background-position: 425px -630px;
+        background-repeat: no-repeat;
+    }
+}
+

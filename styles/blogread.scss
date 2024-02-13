@@ -1,0 +1,137 @@
+@import './main';
+
+
+.container {
+    overflow-x:hidden;
+} body {
+    overflow: unset;
+}
+
+
+.hero {
+    margin-top: 82px;
+    height: 518px;
+    display: flex;
+    background:url('../assets/blogreadhero.png');
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: flex-end;
+    &-detail {
+        margin-left: 242px;
+        margin-bottom: 32px;
+        display: inline-block;
+        color:white; 
+        p {
+            margin: auto;
+            line-height: 1.5;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.blogread {
+    padding: 50px 242px;
+
+    .back {
+        font-size: 24px;
+        font-family: redhat2;
+    }
+
+    &-header {
+        margin-top: 73px;
+        .author {
+            font-size: 24px;
+            color: #7B7B7B; 
+        } h3 {
+            font-family: redhat2;
+            font-size: 40px;
+            margin: 26px 0;
+            width: 1000px; 
+        } h5 {
+            font-size: 28px;
+            font-family: redhat1;
+            width: 675px; 
+        }
+    }
+
+    &-description {
+        margin-top: 84px;
+        p {
+            text-align: justify;
+            font-size: 24px;
+            font-family: redhat1;
+        } img {
+            margin: 45px 0;
+        } .paragraph {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; 
+        } .quote {
+            color: #7B7B7B;
+            font-style: italic;
+            font-family: redhat2;
+            font-size: 30px;
+            text-align: justify;
+        }
+    }
+}
+
+
+
+.other-blog {
+    padding: 0 242px;
+    .items {
+        display: flex;
+        gap: 65px;
+        justify-content: space-between;
+        .item {
+            width: 301px; 
+        }
+        .item.author {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 62px 40px; 
+            box-shadow: 0 0 5px #ccc;
+            span {
+                color: #7B7B7B; 
+                font-size: 24px;
+            } h5 {
+                font-size: 28px;
+                font-family: redhat1;   
+            }
+        } .item.card {
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 234px;
+            } .detail {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+                p {
+                    font-size: 24px;
+                } .author {
+                    color: #7B7B7B;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.pagination2 {
+    padding: 0 242px;
+    margin: 123px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        font-size: 24px;
+        font-family: redhat2;
+    }
+}

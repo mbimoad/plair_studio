@@ -1,0 +1,321 @@
+@import './main';
+
+
+.container {
+    overflow-x:hidden;
+} body {
+    overflow: unset;
+}
+
+
+.hero {
+    margin-top: 82px;
+    height: 736px;
+    gap: 200px;
+    display: flex;
+    background:url('../assets/heroimg.png');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    &-detail {
+        display: inline-block;
+        width: 816px;
+        text-align: center;
+        color:white; 
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        } p {
+            line-height: 1.5;
+            font-size: 20px;
+        }
+    }
+}
+
+.current-opening {
+    width: 1194px;
+    margin: 98px auto;
+    margin-bottom: 98px;
+    h1 {
+        
+        font-size: 40px;
+        padding-right: 40px;
+        border-bottom: 2px solid $purple;
+    } .cards {
+        margin-top: 56px;
+        display:flex;
+        flex-direction: column;
+        gap:40px;
+        .card.boxed:hover {
+            background: rgba(238, 238, 238, 0.508);
+        }
+        .card.unboxed {
+            transition: all 500ms ease 0s;
+            max-height: 1500px;
+        }
+
+        .card {
+            background:white; 
+            transition: all 500ms ease 0s;
+            border-radius: 5px;
+            padding: 44px;
+            box-shadow: 0 0 5px #ccc;
+            max-height: 160px;
+            overflow: hidden;
+            &-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                pointer-events: none;
+                .information {
+                    gap: 60px;
+                    display: flex;
+                    align-items: center;
+                    .detail {
+                        p {
+                            font-size: 20px;
+                            margin-top: 15px;
+                        } h2 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+
+            &-apply {
+                margin-left: 135px;
+                width: 707px; 
+                padding: 52px 33px;
+                margin-top: 44px;
+                border-top: 15px solid $purple;
+                border-radius: 30px;
+                box-shadow: 0 0 10px #ccc;
+                h3 {
+                    font-size: 20px;
+                } .apply-layouts {
+                    margin-top: 31px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .apply-layout {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .detail {
+                            
+                            flex:1; 
+                            span {
+                                font-size: 20px;
+                                color: $purple;
+                            } h5 {
+                                font-size: 20px;
+                            } button {
+                                cursor: pointer;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 10px; 
+                                background:black;
+                                color:white; 
+                                width: 191px;
+                                height: 36px;
+                                margin: auto;
+                                span {
+                                    color:white; 
+                                } svg,span {
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-descriptions {
+                margin-left: 135px;
+                width: 752px;
+                margin-top: 39px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px; 
+                .card-description {
+                    h3,p,ul li {
+                        font-size: 20px;
+                    } 
+
+                    ul {
+                        margin-left: 15px;
+                    }
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px; 
+
+
+                }
+            }
+
+        }
+    }
+}
+
+.overlay {
+    transition: all 500ms ease 0s;
+    background:unset;
+}
+
+.overlay.active {
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.315); 
+    z-index: 99;
+}
+
+.box-white.active {
+    transform: translate(-50%, -50%);
+}
+
+.box-white {
+    transition: all 500ms ease 0s;
+    // centering
+    position: fixed;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, 200%);
+
+    z-index: 999;
+    margin-top: 34px;
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 860px;
+    height: auto;
+    .header {
+    
+        h1 {
+            font-size: 30px;
+            padding-right: 30px;
+        } h2 {
+            margin-top: 50px;
+            font-size: 20px;
+            font-family: redhat1;
+            border-bottom: 1px solid;
+        }
+    }
+
+    form {
+        .mybtn.btn-purple {
+            margin-top: 46px;
+            width: 100%;
+            height: 46px;
+            font-size: 15px;
+        }
+        .form-group {
+            select {
+                background:white; 
+                padding: 13px 8px;
+                color:black;
+                border:unset;
+                outline: none;
+                -webkit-appearance: none;
+                background: url('../assets/arrow2.svg') no-repeat 95% 20px;
+                box-shadow: inset 1px 3px 3px 0 #eee;
+                color:#ccc;
+                font-size: 16px;
+                option {
+                    color:#ccc;
+                    font-size: 16px;
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            label {
+                font-family: 15px;
+                font-family: redhat1;
+                text-transform: uppercase;
+            } input,textarea,select {
+                height: 45px;
+            } textarea {
+                border-radius: 3px;
+                height: 129px;
+                padding: 16px; 
+                border:unset;
+                outline: unset;
+                box-shadow: inset 1px 3px 3px 0 #eee;
+                color:#ccc;
+                font-size: 16px;
+            }
+            input {
+                font-size: 16px;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 16px;
+            }
+            
+            input::placeholder {
+                font-size: 16px;
+            } label.btn-purple {
+                width: 188px; 
+                height: 36px; 
+                border-radius: 5px;
+                font-size: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            } #myfile {
+                display: none;
+            }
+        }
+        .form-header {
+            margin-top: 36px;
+            margin-bottom: 34px;
+            display: flex;
+            justify-content: space-between;
+            gap: 41px; 
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap:22px;
+                flex: 1; 
+                .form-group {
+                    .numbers {
+                        display: flex;
+                        select {
+                            background:white; 
+                            padding: 13px;
+                            padding-right: 50px;
+                            color:black;
+                            border:unset;
+                            outline: none;
+                            -webkit-appearance: none;
+                            background: url('../assets/arrowselect.svg') no-repeat 65px 23px;
+                            box-shadow: 0 0 2px #ccc;
+                            
+                        } input {
+                            flex:1;
+                        }
+                    }
+                }
+            } .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap:22px;
+                .username {
+                    display: flex;
+                    gap: 16px;
+                    .form-group {
+                        flex:1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,195 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./styles/login.css">
+     <title>Document</title>
+ </head>
+ <body>
+     <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="133" height="31" viewBox="0 0 133 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M45.6027 15.0617C45.6027 16.5724 45.3169 17.9809 44.7465 19.288C44.175 20.5958 43.4017 21.7466 42.4264 22.7407C41.4501 23.7355 40.2994 24.518 38.9734 25.0888C37.6475 25.6602 36.2294 25.9448 34.7197 25.9448H7.31876V30.8615H0.689453V0.587914L34.7197 0.532715C36.2294 0.532715 37.6475 0.818588 38.9734 1.38868C40.2994 1.9601 41.4498 2.74204 42.4264 3.73682C43.4017 4.73094 44.1754 5.89129 44.7465 7.21688C45.3169 8.54281 45.6027 9.96095 45.6027 11.471V15.0617ZM34.7197 19.2603C35.8979 19.2603 36.9019 18.8558 37.7305 18.0451C38.559 17.2354 38.9734 16.2413 38.9734 15.0621V11.4713C38.9734 10.2928 38.559 9.28906 37.7305 8.46052C36.9016 7.63165 35.8979 7.21755 34.7197 7.21755H7.31876V19.2606H34.7197V19.2603Z" fill="black"/>
+                    <path d="M55.713 30.8617H49.084V2.41113H55.7133V30.8617H55.713Z" fill="black"/>
+                    <path d="M87.0908 30.8618H69.7444C68.2337 30.8618 66.8166 30.5769 65.4906 30.0058C64.1647 29.4351 63.0133 28.6614 62.038 27.6855C61.0617 26.7098 60.2884 25.5584 59.7176 24.2325C59.1462 22.9069 58.8613 21.4894 58.8613 19.9787C58.8613 18.4691 59.1462 17.0509 59.7176 15.7247C60.2881 14.3991 61.0614 13.2483 62.038 12.272C63.0133 11.2968 64.1647 10.5231 65.4906 9.95167C66.8166 9.38125 68.2337 9.0957 69.7444 9.0957H86.8145C88.3242 9.0957 89.743 9.38158 91.0686 9.95167C92.3942 10.5231 93.5453 11.2968 94.5216 12.272C95.4972 13.2483 96.2705 14.3991 96.8419 15.7247C97.412 17.0506 97.6976 18.4687 97.6976 19.9787V30.8618H91.0686V19.9787C91.0686 18.8002 90.6542 17.7965 89.8256 16.968C88.9968 16.1391 87.9934 15.725 86.8149 15.725H69.7447C68.5655 15.725 67.5625 16.1394 66.7339 16.968C65.9051 17.7969 65.491 18.8005 65.491 19.9787C65.491 21.1579 65.9054 22.161 66.7339 22.9895C67.5625 23.8177 68.5655 24.2322 69.7447 24.2322H87.0911L87.0908 30.8618Z" fill="black"/>
+                    <path d="M105.445 6.27817H100.555C100.075 6.27817 99.6855 5.88886 99.6855 5.40865V1.41005C99.6855 0.929849 100.075 0.540527 100.555 0.540527H105.445C105.926 0.540527 106.315 0.929849 106.315 1.41005V5.40865C106.315 5.88886 105.926 6.27817 105.445 6.27817ZM99.6855 9.09593H106.315V30.862H99.6855V9.09593Z" fill="black"/>
+                    <path d="M109.465 30.8618V19.9787C109.465 18.4691 109.75 17.0509 110.321 15.7247C110.892 14.3991 111.665 13.2483 112.641 12.272C113.617 11.2968 114.768 10.5231 116.094 9.95167C117.42 9.38125 118.837 9.0957 120.348 9.0957H132.225V15.7247H120.348C119.168 15.7247 118.165 16.1391 117.337 16.9677C116.509 17.7965 116.094 18.8002 116.094 19.9784V30.8615H109.465V30.8618Z" fill="black"/>
+                </svg>    
+            </div>
+            <ul>
+               <li><a href="./about.html">About Us</a></li>
+               <li><a href="./services.html">Services</a></li>
+               <li><a href="./careers.html">Careers</a></li>
+               <li><a href="./blog.html">Blog</a></li>
+               <li><a href="./contactus.html">Contact Us</a></li>
+               <li><a href="./schedule.html">Schedule a meeting</a></li>
+               <li>
+                    <a href="./dashboard.html" class="shadow btn-dark">Get a Quote</a>
+                    <a href="" class="shadow btn-light">Log in</a>
+               </li>
+            </ul>
+        </header>
+   
+   
+        <section class="main">
+            <div class="layer">
+                <form class="form-box login" action="" method="POST">
+                    <h2>Log in</h2>
+                    <input name="email" type="text" class="input" placeholder="Email">
+                    
+                    <div class="inputpassword">
+                        <input name="passwd" type="password" class="input" placeholder="Password">    
+                        <img src="./assets/visibility.svg" class="eye">
+                    </div>
+                    <button type="submit" class="btn-dark">Continue</button>
+                    <a class="forgotpassword">Forgot Your Password</a>
+                </form>
+            </div>
+            <div class="layer">
+
+
+                <div class="process-step">
+
+                    <progress id="file" value="0" max="100"></progress>
+
+                    <div class="step">
+                        <div class="circle active">1</div>
+                        <span>Basic Information</span>
+                    </div>
+                    <div class="step">
+                        <div class="circle">2</div>
+                        <span>Confirm Email</span>
+                    </div>
+                    <div class="step">
+                        <div class="circle">3</div>
+                        <span>Finish</span>
+                    </div>
+                </div>
+
+
+                
+                <div class="form-box registerbox">
+                    <h2>Register</h2>
+                    <input name="firstname" type="text" class="input" placeholder="First Name">
+                    <input name="lastname" type="text" class="input" placeholder="Last Name">
+                    <input name="email" type="email" class="input" placeholder="Email">
+                    <input name="number" type="text" class="input" placeholder="Number">
+                    <button type="button" class="btn-dark registernext">Next</button>
+                    <a class="backtologin">Already Have An Account</a>
+                </div>
+
+
+                <div class="form-box confirmemailbox">
+                    <h2>Confirm your Email</h2>
+                    <p>An email has been sent to your inbox. Click the link in the email to verify your email address Make sure to check your spam.</p>
+                    <a href="#" class="link-purple">Don't see the email? <strong>Send again</strong></a>
+                    <button type="button" class="btn-darkgray confirmbtn">Waiting for verification <span></span></button>
+                    <div class="text-center">
+                        <a class="backtofirststep">Back</a>
+                    </div>
+                </div>
+
+
+                <div class="form-box customizebox">
+                    <h2>Customize</h2>
+                    <form action="">
+                        <div class="layouts">
+                            <div class="layout">
+                                <input name="firstname" type="text" class="company input" placeholder="Company Name">
+                                <div class="inputpassword">
+                                    <input name="passwd" type="password" class="input passwd" placeholder="Password">    
+                                    <img src="./assets/visibility.svg" class="eye">
+                                </div>
+                                <div class="inputpassword">
+                                    <input name="confirmpass" type="password" class="confirmpass input" placeholder="Confirm Password">
+                                    <img src="./assets/visibility.svg" class="eye">
+                                </div>
+                                
+        
+                                <div class="pass-strength">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <span>Password Strength</span>
+                            </div>
+        
+                            <div class="layout">
+                                <div class="image">
+                                    <img src="./assets/user.png" class="previewImage">
+                                    <label for="file-upload" class="custom-file-upload btn-purple">Upload File</label>
+                                    <input name="image" id="file-upload" type="file"/>
+                                </div>
+        
+                                <p>Recommended dimensions 000x000px</p>
+                                <button type="button" class="btn-dark continuebtn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="welcomebox">
+                    <h1>Welcome To</h1>
+                    <svg width="133" height="31" viewBox="0 0 133 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45.6027 15.0617C45.6027 16.5724 45.3169 17.9809 44.7465 19.288C44.175 20.5958 43.4017 21.7466 42.4264 22.7407C41.4501 23.7355 40.2994 24.518 38.9734 25.0888C37.6475 25.6602 36.2294 25.9448 34.7197 25.9448H7.31876V30.8615H0.689453V0.587914L34.7197 0.532715C36.2294 0.532715 37.6475 0.818588 38.9734 1.38868C40.2994 1.9601 41.4498 2.74204 42.4264 3.73682C43.4017 4.73094 44.1754 5.89129 44.7465 7.21688C45.3169 8.54281 45.6027 9.96095 45.6027 11.471V15.0617ZM34.7197 19.2603C35.8979 19.2603 36.9019 18.8558 37.7305 18.0451C38.559 17.2354 38.9734 16.2413 38.9734 15.0621V11.4713C38.9734 10.2928 38.559 9.28906 37.7305 8.46052C36.9016 7.63165 35.8979 7.21755 34.7197 7.21755H7.31876V19.2606H34.7197V19.2603Z" fill="black"/>
+                        <path d="M55.713 30.8617H49.084V2.41113H55.7133V30.8617H55.713Z" fill="black"/>
+                        <path d="M87.0908 30.8618H69.7444C68.2337 30.8618 66.8166 30.5769 65.4906 30.0058C64.1647 29.4351 63.0133 28.6614 62.038 27.6855C61.0617 26.7098 60.2884 25.5584 59.7176 24.2325C59.1462 22.9069 58.8613 21.4894 58.8613 19.9787C58.8613 18.4691 59.1462 17.0509 59.7176 15.7247C60.2881 14.3991 61.0614 13.2483 62.038 12.272C63.0133 11.2968 64.1647 10.5231 65.4906 9.95167C66.8166 9.38125 68.2337 9.0957 69.7444 9.0957H86.8145C88.3242 9.0957 89.743 9.38158 91.0686 9.95167C92.3942 10.5231 93.5453 11.2968 94.5216 12.272C95.4972 13.2483 96.2705 14.3991 96.8419 15.7247C97.412 17.0506 97.6976 18.4687 97.6976 19.9787V30.8618H91.0686V19.9787C91.0686 18.8002 90.6542 17.7965 89.8256 16.968C88.9968 16.1391 87.9934 15.725 86.8149 15.725H69.7447C68.5655 15.725 67.5625 16.1394 66.7339 16.968C65.9051 17.7969 65.491 18.8005 65.491 19.9787C65.491 21.1579 65.9054 22.161 66.7339 22.9895C67.5625 23.8177 68.5655 24.2322 69.7447 24.2322H87.0911L87.0908 30.8618Z" fill="black"/>
+                        <path d="M105.445 6.27817H100.555C100.075 6.27817 99.6855 5.88886 99.6855 5.40865V1.41005C99.6855 0.929849 100.075 0.540527 100.555 0.540527H105.445C105.926 0.540527 106.315 0.929849 106.315 1.41005V5.40865C106.315 5.88886 105.926 6.27817 105.445 6.27817ZM99.6855 9.09593H106.315V30.862H99.6855V9.09593Z" fill="black"/>
+                        <path d="M109.465 30.8618V19.9787C109.465 18.4691 109.75 17.0509 110.321 15.7247C110.892 14.3991 111.665 13.2483 112.641 12.272C113.617 11.2968 114.768 10.5231 116.094 9.95167C117.42 9.38125 118.837 9.0957 120.348 9.0957H132.225V15.7247H120.348C119.168 15.7247 118.165 16.1391 117.337 16.9677C116.509 17.7965 116.094 18.8002 116.094 19.9784V30.8615H109.465V30.8618Z" fill="black"/>
+                    </svg>    
+                    <button class="btn-purple shadow-purple">Continue</button>
+                </div>
+
+                <div class="form-box forgotpassbox">
+                    <h2>Password Reset</h2>
+                    <p>Enter your email address used in your account</p>
+                    <input name="email" type="text" class="input" placeholder="Email">
+                    <button type="button" class="btn-dark resetbtn">Continue</button>
+                    <div class="text-center">
+                        <a class="backtologin">Back</a>
+                    </div>
+                </div>  
+
+                <div class="forgotpass-notif">
+                    <h1>An email has been sent!</h1>
+                    <p>Follow the instruction in the email to reset your password</p>
+                    <button type="button" class="btn-purple backtologin">Login</button>
+                </div>
+
+
+                <div class="register">
+                    <svg width="133" height="31" viewBox="0 0 133 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45.6027 15.0617C45.6027 16.5724 45.3169 17.9809 44.7465 19.288C44.175 20.5958 43.4017 21.7466 42.4264 22.7407C41.4501 23.7355 40.2994 24.518 38.9734 25.0888C37.6475 25.6602 36.2294 25.9448 34.7197 25.9448H7.31876V30.8615H0.689453V0.587914L34.7197 0.532715C36.2294 0.532715 37.6475 0.818588 38.9734 1.38868C40.2994 1.9601 41.4498 2.74204 42.4264 3.73682C43.4017 4.73094 44.1754 5.89129 44.7465 7.21688C45.3169 8.54281 45.6027 9.96095 45.6027 11.471V15.0617ZM34.7197 19.2603C35.8979 19.2603 36.9019 18.8558 37.7305 18.0451C38.559 17.2354 38.9734 16.2413 38.9734 15.0621V11.4713C38.9734 10.2928 38.559 9.28906 37.7305 8.46052C36.9016 7.63165 35.8979 7.21755 34.7197 7.21755H7.31876V19.2606H34.7197V19.2603Z" fill="black"/>
+                        <path d="M55.713 30.8617H49.084V2.41113H55.7133V30.8617H55.713Z" fill="black"/>
+                        <path d="M87.0908 30.8618H69.7444C68.2337 30.8618 66.8166 30.5769 65.4906 30.0058C64.1647 29.4351 63.0133 28.6614 62.038 27.6855C61.0617 26.7098 60.2884 25.5584 59.7176 24.2325C59.1462 22.9069 58.8613 21.4894 58.8613 19.9787C58.8613 18.4691 59.1462 17.0509 59.7176 15.7247C60.2881 14.3991 61.0614 13.2483 62.038 12.272C63.0133 11.2968 64.1647 10.5231 65.4906 9.95167C66.8166 9.38125 68.2337 9.0957 69.7444 9.0957H86.8145C88.3242 9.0957 89.743 9.38158 91.0686 9.95167C92.3942 10.5231 93.5453 11.2968 94.5216 12.272C95.4972 13.2483 96.2705 14.3991 96.8419 15.7247C97.412 17.0506 97.6976 18.4687 97.6976 19.9787V30.8618H91.0686V19.9787C91.0686 18.8002 90.6542 17.7965 89.8256 16.968C88.9968 16.1391 87.9934 15.725 86.8149 15.725H69.7447C68.5655 15.725 67.5625 16.1394 66.7339 16.968C65.9051 17.7969 65.491 18.8005 65.491 19.9787C65.491 21.1579 65.9054 22.161 66.7339 22.9895C67.5625 23.8177 68.5655 24.2322 69.7447 24.2322H87.0911L87.0908 30.8618Z" fill="black"/>
+                        <path d="M105.445 6.27817H100.555C100.075 6.27817 99.6855 5.88886 99.6855 5.40865V1.41005C99.6855 0.929849 100.075 0.540527 100.555 0.540527H105.445C105.926 0.540527 106.315 0.929849 106.315 1.41005V5.40865C106.315 5.88886 105.926 6.27817 105.445 6.27817ZM99.6855 9.09593H106.315V30.862H99.6855V9.09593Z" fill="black"/>
+                        <path d="M109.465 30.8618V19.9787C109.465 18.4691 109.75 17.0509 110.321 15.7247C110.892 14.3991 111.665 13.2483 112.641 12.272C113.617 11.2968 114.768 10.5231 116.094 9.95167C117.42 9.38125 118.837 9.0957 120.348 9.0957H132.225V15.7247H120.348C119.168 15.7247 118.165 16.1391 117.337 16.9677C116.509 17.7965 116.094 18.8002 116.094 19.9784V30.8615H109.465V30.8618Z" fill="black"/>
+                    </svg>  
+                    <h5>Don't Have an Account?</h5>
+                    <button class="btn-purple registerbtn">Register</button>
+                </div>
+
+
+                
+
+            </div>
+        </section>
+   
+        <footer class="fixed">
+            <span>Plair Studio LLC Allrights Reversed &copy; 2023</span>
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </footer>
+     </div>
+     <script src="./script/login.js"></script>
+ </body>
+ </html>

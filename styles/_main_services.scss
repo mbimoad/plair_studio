@@ -1,0 +1,108 @@
+@import './main';
+.our-services {
+    padding: 100px $padding; 
+    h1 {
+        font-size: 40px;
+        font-family: redhat2;
+        padding-right: 30px;
+        display: inline-block;
+        border-bottom: 2px solid $purple;
+        margin-bottom: 10px;
+    } p.desc {
+        font-size: 20px;
+        width: 70%;
+        font-size: 15px; 
+        margin: 40px 0 100px 0;
+        line-height: 2;
+    }
+
+
+    .service-footer {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            border: unset;
+            padding: unset;
+            font-size: 25px;
+            margin-bottom: 30px;
+        } a.btn {
+            $val: 50px; 
+            padding-left: $val;
+            padding-right: $val;
+            font-size: 20px;
+            font-family: redhat2;
+            
+        }
+    }
+
+    
+
+
+    .cards {
+        
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        .card {
+            
+            width: 363px; 
+            height: 439px;
+            background:white; 
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            padding: 53px; 
+            gap: 30px;
+            position: relative;
+            box-shadow: 0 0 10px 0 #ccc;
+            .vector {
+                width: 84px; 
+                height: 84px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: -50px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                background:$purple;
+                border-radius: 50%;
+
+                svg {
+                    // width: 24px; 
+                    // height: auto;
+                }
+            } 
+            
+            
+            
+            &-body {
+                p {
+                    margin-top: 20px;
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+
+                h5 {
+                    padding-bottom: 4px;
+                    font-size: 20px;
+                    border-bottom: 2px solid $purple;
+                    
+                } 
+            }
+
+            a.btn-purple {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 46px;
+                justify-content: center;
+                box-shadow: 0 0 5px $purple;
+            }
+        }
+    }
+}

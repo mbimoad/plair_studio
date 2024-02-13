@@ -1,0 +1,271 @@
+@import './main';
+
+
+.container {
+    overflow-x:hidden;
+} body {
+    overflow: unset;
+}
+
+
+.hero {
+    margin-top: 82px;
+    height: 736px;
+    gap: 200px;
+    display: flex;
+    background:url('../assets/heroimg.png');
+    background-size: cover;
+}
+
+
+.schedule-form {
+    
+    .box {
+        
+        transform: translate(0,-380px);
+        margin: auto;
+        width: 1247px; 
+        &-title {
+            font-size: 40px;
+            color:white; 
+            font-family: redhatbold;
+        }
+
+        &-white {
+            margin-top: 34px;
+            background: white;
+            padding: 103px 72px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            .layout {
+                box-shadow: 0 0 10px #ddd;
+                border: 1px solid #ddd;
+                display: flex;
+                gap:20px;
+                .left {
+                    padding: 30px;
+                    border-right: 1px solid #ddd;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    width: 380px; 
+                    height: 600px;
+                    a {
+                        color: #3774F6; 
+                        font-size: 18px;
+                    }
+
+                    &-header {
+                        .header {
+
+                            img {
+                                width: 84px; 
+                                height: 84px; 
+                            } h5 {
+                                margin-top: 15px;
+                                font-size: 18px;
+                                color: #767676; 
+                            } h1 {
+                                font-size: 40px;
+                            }
+                        } 
+
+                        .body {
+                            margin-top: 25px;
+                            display:flex; 
+                            flex-direction: column;
+                            gap: 20px; 
+                            .icon {
+                                
+                                span {
+                                    font-size: 16px;
+                                    display: unset;
+                                    width: 80%;
+                                } span.gray {
+                                    font-weight: bold;
+                                    color: #767676;
+                                }
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+                                svg {
+                                    
+                                    height: auto;
+                                    flex: 0 1 30px;
+                                }
+                            }
+                        } p {
+                            margin-top: 30px;
+                            font-size: 18px;
+                            color: #767676; 
+                            line-height: 1.5;
+                        }
+                    }
+                } 
+                
+                
+                
+                
+                
+                
+                
+                .middle {
+                    padding: 30px;
+                    h2 {
+                        font-size: 20px;
+                    } .calendars {
+                        
+                        display: flex;
+                        gap:20px;
+                        .date {
+                            position: relative;
+                            width: 400px;
+                            height: 430px;
+                            &-header {
+                                margin-top: 10px;
+                        
+                                display: flex;
+                                align-items: center;
+                                
+                                justify-content: space-between;
+                                .icon {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px; 
+                                    .button:hover {
+                                        background: #ddd;
+
+                                    }
+                                    .button {
+                                        transition: all 200ms ease 0s;
+                                        border-radius: 50%;
+                                        width: 40px; 
+                                        height: 40px;
+                                        
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        svg {
+                                            width: 7px; 
+                                            height: auto;
+                                        } svg:hover {
+                                            background: #ccc;
+                                        }
+                                    }
+                                }
+                            } ul {
+                                display:flex; 
+                                list-style-type: none;
+                                justify-content: flex-start;
+                                li {
+                                    width: calc(100% / 7);
+                                    
+                                    text-align: center;
+                                }
+                            } ul.weeks {
+
+                                margin-top: 20px;
+                                
+                            } ul.days {
+                                margin-top: 10px;
+                                flex-wrap: wrap;
+                                li::before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 40px; 
+                                    height: 40px; 
+                                    border-radius: 50%;
+                                    z-index: -1;
+                                } 
+
+                                li.active::before {
+                                    background: #F1F5FE;
+                                } li.today::before {
+                                    background: #3774F6; 
+                                } li.today {
+                                    color:white; 
+                                }
+                                li:hover::before {
+                                    background: #3774F6; 
+                                } li:hover {
+                                    color:white; 
+                                }
+                                
+
+                                li {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+                                    position: relative;
+                                    z-index: 2;
+                                } li {
+                                    margin-top: 30px; 
+                                }
+                                
+                                
+                            } .globe {
+                                cursor: pointer;
+                                position: absolute;
+                                bottom: -40px;
+                                margin-top: 40px;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                svg:last-child {
+                                    width: 10px;
+                                    height:auto;
+                                } 
+                                .globe-items.active {
+                                    display: flex;
+                                }
+                                .globe-items {
+                                    display: none;
+                                    background:white; 
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 150px;
+                                    bottom: -160px;
+                                    flex-direction: column;
+                                    overflow: auto;
+                                    box-shadow: 0 0 5px #ccc;
+                                    .globe-item {
+                                        padding: 5px;
+                                    } .globe-item:hover {
+                                        background: #3774F6; 
+                                        color:white; 
+                                    }
+                                }
+                            }
+                        }
+                        .time {
+                            margin-top: 20px;
+                            width: 40%;
+                            
+                            .items {
+                                
+                                margin-top: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px; 
+                                .item {
+                                    border: 1px solid #3774F6;
+                                    text-align: center;
+                                    padding: 15px;
+                                    border-radius: 5px;
+                                    font-size: 16px;
+                                    color: #3774F6;
+                                    font-family: redhatbold;
+                                } .item:hover {
+                                    background: #3774F6;
+                                    color:white; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

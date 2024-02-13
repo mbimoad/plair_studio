@@ -1,0 +1,181 @@
+@import './main';
+
+
+.container {
+    overflow-x:hidden;
+} body {
+    overflow: unset;
+}
+
+
+.hero {
+    margin-top: 82px;
+    height: 736px;
+    gap: 200px;
+    display: flex;
+    background:url('../assets/heroimg.png');
+    background-size: cover;
+}
+
+
+.contact-form {
+    
+    .box {
+        
+        transform: translate(0,-380px);
+        margin: auto;
+        width: 1247px; 
+        &-title {
+            font-size: 40px;
+            color:white; 
+            font-family: redhatbold;
+        }
+
+        &-white {
+            margin-top: 34px;
+            background: white;
+            padding: 103px 72px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            .header {
+                
+                display: flex;
+                justify-content: space-between;;
+                align-items: center;
+                h1 {
+                    font-size: 30px;
+                    padding-right: 30px;
+                    border-bottom: 2px solid $purple;
+                    display: inline-block;
+                    padding-bottom: 10px;;
+                } p  {
+                    font-size: 20px;
+                    font-family: redhat1;
+                    width: 514px;
+                }
+            }
+
+            form {
+                .btn-purple {
+                    margin-top: 46px;
+                    width: 100%;
+                    height: 46px;
+                }
+                .form-group {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+                    label {
+                        font-family: 15px;
+                        font-family: redhat1;
+                        text-transform: uppercase;
+                    } input,textarea {
+                        background: #F9F9F9;
+                        height: 50px;
+                    } textarea {
+                        border-radius: 3px;
+                        height: 294px;
+                        padding: 16px; 
+                        border:unset;
+                        outline: unset;
+                        box-shadow: inset 1px 3px 3px 0 #eee;
+                        color:#ccc;
+                        font-size: 16px;
+                    }
+                    input {
+                        font-size: 16px;
+                    }
+                    input::-webkit-input-placeholder {
+                        font-size: 16px;
+                    }
+                    
+                    input::placeholder {
+                        font-size: 16px;
+                    }
+                }
+                .form-header {
+                    margin-top: 56px;
+                    margin-bottom: 34px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 41px; 
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        gap:22px;
+                        width: 514px; 
+                        .form-group {
+                            .numbers {
+                                display: flex;
+                                select {
+                                    background:white; 
+                                    padding: 13px;
+                                    padding-right: 50px;
+                                    color:black;
+                                    border:unset;
+                                    outline: none;
+                                    -webkit-appearance: none;
+                                    background: url('../assets/arrowselect.svg') no-repeat 65px 23px;
+                                    box-shadow: 0 0 2px #ccc;
+                                    
+                                } input {
+                                    flex:1;
+                                }
+                            }
+                        }
+                    } .left {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        gap:22px;
+                        .username {
+                            display: flex;
+                            gap: 16px;
+                            .form-group {
+                                flex:1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .icon-box {
+            margin-top: 108px;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+                text-align: center;
+                width: 236px;
+                display: flex;
+                flex-direction: column;
+                gap: 29px;
+                svg {
+                    align-self: center;
+                }
+                .detail {
+                    h5,span {
+                        font-size: 20px;
+                    } h5 {
+                        font-family: redhat2;
+                        font-weight: bold;
+                    } span {
+                        margin-top: 5px;
+                        font-family: redhat1;
+                    } .btn {
+                        height: 46px;
+                        width: 100%;
+                        font-size: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

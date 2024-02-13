@@ -1,0 +1,34 @@
+@import './main';
+
+
+.loginas {
+    padding: 0 186px;
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        font-size: 49px;
+        font-family: redhat2;
+    } p {
+        margin-top: 56px;
+        margin-bottom: 37px;
+        font-size: 25px;
+        font-family: redhat1;
+    } .structure {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    } .row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .btn {
+           width: 318px;
+           padding: 13px;  
+           border-radius: 5px;
+           box-shadow: 0 0 5px $purple;
+        }
+    }
+}

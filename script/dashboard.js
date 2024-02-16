@@ -117,5 +117,3 @@ questionsitems.forEach(item => item.addEventListener('click', function() {
 }))
 
 
-
-

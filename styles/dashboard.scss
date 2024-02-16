@@ -6,41 +6,12 @@
     overflow-x:hidden;
 } footer {
     position: relative;
-    z-index: 11;
+    z-index: 5;
 }
 
 
-.chatbot {
-    cursor: pointer;
-    width: 64px; 
-    height: 64px; 
-    flex: 1 0 64px;
-    background: $purple;
-    display: flex;
-    justify-content: center;
-    align-items:center; 
-    border-radius: 50%;
-    position: fixed;
-    right: 63px;
-    bottom: 50px;
-    z-index: 999;
-}
 
 
-.dotted-process {
-    display: none;
-    width: 29px; 
-    margin: 22px auto;
-    span {
-        display: inline-block;
-        width: 7px; 
-        height: 7px; 
-        background: #D9D9D9;
-        border-radius: 50%;
-    } span.active {
-        background: #7B7B7B;
-    }
-}
 
 
 // @keyframes totop {
@@ -170,169 +141,6 @@
 
 
 
-.chatbox.active {
-    transform: scale(1);
-}
-.chatbox {
-    $radius: 20px; 
-    // transition: all 200ms ease 0s;
-    transform: scale(0);
-    border-radius: 30px;
-    width: 378px; 
-    bottom: 130px;
-    right: 60px;
-    height: 530px;
-    position: fixed;
-    z-index: 999;
-    .footer {
-        border-radius: 0 0 $radius $radius;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        position: absolute;
-        background: white;
-        padding: 5px;
-
-        
-        input {
-            flex: 1; 
-            box-shadow: unset;
-            
-            height: 45px;
-        }
-        .option {
-            display: flex;
-            gap:10px; 
-            align-items: center;
-            #fileupload {
-                display: none;
-                
-            }
-
-            .fileupload {
-                svg {
-                    cursor: pointer;
-                }
-            }
-            .sendbtn {
-                border:unset;
-                outline: unset;
-                background: $purple;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                $size: 55px; 
-                width: $size;
-                height: $size;
-                flex: 1 0 $size; 
-                border-radius: 50%;
-            }
-        }
-    }
-
-    .header {
-        border-radius: $radius $radius 0 0;
-        background: $purple; 
-        color:white; 
-        padding-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        padding: 17px; 
-        align-items: center;
-        h5 {
-            font-size: 17px;
-        }
-        .menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-
-            .arrow {
-                cursor: pointer;
-            }
-        }
-    } 
-
-    .body {
-        background:#ECF3FC;
-        
-        height: 400px;
-        padding: 10px;
-        border-radius: 0 0 $radius $radius;
-        .box-white {
-            right: 9.5px;
-            bottom: 15px;
-            border-radius: 5px;
-            position: absolute;
-            transform: translate(0,-30px);
-            height: 410px; 
-            background:white; 
-            width: 95%;
-            .random-chat {
-                text-align: right;
-                margin-top: 25px;
-                span {
-                    margin-right: 10px;
-                    padding: 10px 15px; 
-                    border: 1px solid $purple;
-                    border-radius: 100px; 
-                    color: $purple;
-                }
-            }
-            .chats::-webkit-scrollbar {
-                display: none;
-            }
-            .chats {
-                -ms-overflow-style: none;  /* IE and Edge */
-                scrollbar-width: none;  /* Firefox */
-                
-                max-height: 330px;
-                padding: 15px; 
-                overflow: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 20px; 
-                align-items: flex-end;
-                .bot,
-                .user {
-                    display: flex;
-                    align-items: flex-end;
-                    gap: 10px; 
-                    .vector {
-                        border-radius: 50%;
-                        flex: 0 0 26px; 
-                        height: 26px; 
-                        background:$purple;
-                        display: flex;
-                        justify-content: center;
-                        align-items:center; 
-                    }
-                } .bot {
-                    .bubblechat {
-                        background: #D9D9D9; 
-                        color: black;
-                        padding: 10px; 
-                        font-size: 14px;
-                        border-radius: 4px;
-                    } 
-                } .user {
-                    .bubblechat {
-                        background: $orange; 
-                        color:white; 
-                        font-size: 14px;
-                        padding: 10px; 
-                        border-radius: 7px 7px 3px 7px;
-                    }
-                }
-            }
-        }
-    }
-}
 
 
 
@@ -566,19 +374,9 @@ body.show {
         padding: 95px $padding_1810;
     } .theprocess {
         padding: 95px $padding_1810;
-    } .our-services {
-        padding: 95px $padding_1810;
-    } .our-mission {
-        padding: 55px $padding_1810;
     } .questions {
         padding: 0 $padding_1810;
-    } .stayuptodate {
-        padding: 20px $padding_1810;
-    } .footer-menu {
-        .menu-list:nth-child(2) {
-            gap: 60px;
-        }
-    } .hero {
+    }  .hero {
         gap: unset; 
         justify-content: space-between;
         padding: 0 150px;
@@ -587,28 +385,13 @@ body.show {
 
 
 @media screen and (max-width: 1650px) { 
-    .our-services {
-        .cards {        
-            .card {
-                padding: 40px; 
-                gap: 25px; 
-            }
-        }
-    } .our-mission {
-        gap: 50px;
-    } .footer-menu {
-        padding: 25px; 
-        justify-content: space-around;
-        .menu-list:nth-child(3) {
-            margin-right: unset;
-        }
-    }
+    
 }
 
 
 
 @media screen and (max-width: 1570px) { 
-
+   
     .hero {
         margin-top: 82px;
         padding: 0 150px 0 60px;
@@ -660,21 +443,8 @@ body.show {
         }
     }
 
-    .footer-menu {
-        padding: 25px; 
-      
-        .menu-list:nth-child(3) {
-            margin-right: unset;
-        }
-    }
-    .our-mission {
-        img {
-            width: 662px;
-            height: 408px;
-        } .mission-box {
-            width: 480px;
-        }
-    }
+    
+    
     .consultation::before {
         height: 470px;
     }
@@ -700,89 +470,12 @@ body.show {
         }
     }
 
-    .our-services {
-        p.desc {
-            width: 100%; 
-
-        }
-    }
+    
 }
 
 
 @media screen and (max-width: 1440px) { 
-    .chatbot {
-        width: 50px; 
-        height: 50px; 
-        flex: 1 0 50px;
-        right: 45px;
-        bottom: 35px;
-        svg {
-            width: 27px;
-            height: 27px; 
-        }
-    }
-
-    .chatbox {
-        width: 330px;
-        height: 480px;
-        bottom: 93px;
-        right: 39px;
-        .footer {
-            
-            input {
-                
-                height: 30px; 
-            } .option {
-                
-                .fileupload {
-                    
-                    svg {
-                        
-                    }
-                } .sendbtn {
-                    
-                    $size: 40px; 
-                    width: $size;
-                    height: $size;
-                    flex: 1 0 $size; 
-                    svg {
-                        width: 15px; 
-                        height: 15px; 
-                    }
-                }
-            } 
-        }
-        .header {
-            padding: 13px; 
-            h5 {
-                font-size: 17px;
-            } .menu {
-                
-                gap:15px;
-            }
-        } .body {
-            .box-white {
-                .chats {
-                    max-height: 277px;
-
-                    .bot,
-                    .user {
-                        .bubblechat {
-                            
-                            font-size: 12px;
-                        }
-                    }
-                }
-                height: 366px;
-                .random-chat {
-                    span {
-                        padding: 5px 10px; 
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
+  
 
     .hero {
         gap: unset; 
@@ -795,16 +488,7 @@ body.show {
         padding: 95px $padding_1440;
     } .theprocess {
         padding: 95px $padding_1440;
-    } .our-services {
-        padding: 95px $padding_1440;
-        .cards {
-            .card {
-                padding: 40px 25px;
-            }
-        }
-    } .our-mission {
-        padding: 55px $padding_1440;
-    } .questions {
+    }  .questions {
         padding: 0 $padding_1440;
         margin-top: 120px;
         &-items {
@@ -816,33 +500,14 @@ body.show {
                 }
             }
         }
-    } .stayuptodate {
-        padding: 20px $padding_1440;
-    } .footer-menu {
-        .header {
-            svg {
-                width: 150px; 
-                height: auto; 
-            } 
-        }
-        .menu-list:nth-child(2) {
-            gap: 50px; 
-        }
-        .menu-list {
-            .menu-data {
-                .buttons {
-                    a {
-                        width: 150px; 
-                    }
-                }
-            }
-        }
     }
 }
 
 
 
 @media screen and (max-width: 1350px) { 
+
+   
 
     .hero {
         padding: 0 pxToVw(150, 1350) 0 pxToVw(60, 1350);
@@ -897,185 +562,9 @@ body.show {
 
 
 
-    .footer-menu {
-        height: pxToVw(346, 1350);
-        padding: pxToVw(25, 1350);
-        .header {
-            p {
-                font-size: pxToVw(20, 1350);
-                width: pxToVw(243, 1350); 
-            } svg {
-                width: pxToVw(150, 1350); 
-                height: auto; 
-            } 
-        } 
-        
-        .menu-list:nth-child(2) {
-            gap: pxToVw(50, 1350); 
-        }
-        .menu-list {
-            gap: pxToVw(20, 1350);
-            .menu-data.background::before {
-                width: pxToVw(255, 1350); 
-                height: pxToVw(293, 1350); 
-                left: pxToVw(-30, 1350);
-                top: pxToVw(-30, 1350); 
-                border-radius: pxToVw(30, 1350) 0 0 0;
-            } .menu-data.background {
-                margin: 0 pxToVw(32, 1350); 
-                z-index: 2;
-            } .menu-data {
-                height: pxToVw(195, 1350); 
-                gap: pxToVw(20, 1350); 
-                .information {
-                    gap: pxToVw(15, 1350); 
-                    h5 {
-                        font-size: pxToVw(20, 1350);
-                        margin-bottom: pxToVw(10, 1350);
-
-                    } &-data {
-                        gap: pxToVw(15, 1350); 
-                        svg {
-                            width: pxToVw(18, 1350);
-                            height: pxToVw(18, 1350) ;
-                        } span {
-                            font-size: pxToVw(16, 1350);
-                        }
-                    } 
-                } h5 {
-                    font-size: pxToVw(20, 1350);
-                } .links {
-                    gap: pxToVw(10, 1350); 
-                    a {
-                        font-size: pxToVw(12, 1350);
-                    }
-                } a {
-                    font-size: pxToVw(12, 1350);
-                } ul {
-                    gap: pxToVw(10, 1350); 
-                    li {
-                        a {
-                            font-size: pxToVw(12, 1350); 
-                        }
-                    }
-                } .buttons {
-                    gap: pxToVw(15, 1350); 
-                    a {
-                        width: pxToVw(150, 1350); 
-                        height: pxToVw(40, 1350); 
-                        font-size: pxToVw(14, 1350); 
-                    }
-                } 
-            } .menu-data.sosmed {
-                svg {
-                    
-                    width: pxToVw(27,1350); 
-                    height: pxToVw(27,1350); 
-                }
-            }
-        }
-    }
-    .stayuptodate {
-        gap: pxToVw(20, 1350); 
-        h1 {
-            font-size: pxToVw(30, 1350);
-
-        } input {
-            padding-left: pxToVw(10, 1350);
-            font-size: pxToVw(15, 1350); 
-            height: pxToVw(37, 1350); 
-        } button {
-            width: pxToVw(280, 1350); 
-            gap: pxToVw(10, 1350); 
-            height: pxToVw(34, 1350);
-            font-size: pxToVw(15, 1350);
-            svg {
-                width: pxToVw(20, 1350); 
-                height: pxToVw(20, 1350); 
-            }
-        } input::placeholder {
-            font-size: pxToVw(15, 1350);
-        } input::-webkit-input-placeholder {
-            font-size: pxToVw(15, 1350); 
-        }
-    }
-    .our-mission {
-        gap: pxToVw(50, 1350);
-        img {
-            width: pxToVw(662, 1350);
-            height: pxToVw(408, 1350);
-        } .mission-box {
-            width: pxToVw(480, 1350);
-            gap: pxToVw(30, 1350); 
-            h1 {
-                padding-right: pxToVw(30, 1350);
-                padding-bottom: pxToVw(5, 1350);
-                font-size: pxToVw(40, 1350);
-                border-bottom: pxToVw(4, 1350) solid $purple;
-            } .detail {
-                h5 {
-                    font-size: pxToVw(18, 1350); 
-
-                } p {
-                    font-size: pxToVw(18, 1350); 
-                }
-            } .btn {
-                width: pxToVw(256, 1350); 
-                padding: pxToVw(10, 1350); 
-                box-shadow: 0 0 pxToVw(5, 1350) 0 $purple;
-            }
-        }
-    }
-    .our-services {
-        h1 {
-            // font-size: pxToVw(40, 1350); 
-            padding-right: pxToVw(30, 1350); 
-            margin-bottom: pxToVw(10, 1350);
-            border-bottom: pxToVw(2, 1350) solid $purple;
-        } p.desc {
- 
-            font-size: pxToVw(20, 1350);
-            margin: pxToVw(40, 1350) 0 pxToVw(100, 1350) 0; 
-        } .service-footer {
-            margin-top: pxToVw(70, 1350);
-            h1 {
-                font-size: pxToVw(40, 1350); 
-                margin-bottom: pxToVw(30, 1350);
-            } a.btn {
-                font-size: pxToVw(20, 1350);
-                padding-left: pxToVw(50, 1350);
-                padding-right: pxToVw(50, 1350);
-            }
-        } .cards {
-            gap: pxToVw(20, 1350); 
-            .card {
-                width: pxToVw(363, 1350); 
-                height: pxToVw(439, 1350);
-                padding: pxToVw(40, 1350) pxToVw(25, 1350); 
-                gap: pxToVw(25, 1350); 
-                .vector {
-                    width: pxToVw(84, 1350); 
-                    height: pxToVw(84, 1350);
-                    top: pxToVw(-50, 1350);  
-                    svg {
-                        width: pxToVw(37, 1350); 
-                        height: pxToVw(37, 1350);
-                    }
-                } &-body {
-                    p {
-                        margin-top: pxToVw(20, 1350);
-                        font-size: pxToVw(20, 1350);
-                    } h5 {
-                        padding-bottom: pxToVw(4, 1350);
-                        font-size: pxToVw(20, 1350);
-                    } 
-                } a.btn-purple {
-                    height: pxToVw(46, 1350); 
-                }
-            } 
-        }
-    }
-
+   
+  
+   
 
 
     .consultation::before {
@@ -1166,15 +655,11 @@ body.show {
 
 
 @media screen and (max-width: 1000px) { 
+    
     .consultation {
         gap: pxToVw(20, 1350); 
         padding-left: $padding_1000;
         padding-right: $padding_1000;
-    } .our-services {
-        padding-left: $padding_1000;
-        padding-right: $padding_1000;
-    } .our-mission {
-        padding: 30px $padding_1000;   
     } .questions {
         padding: 0 $padding_1000;
         h3 {
@@ -1183,88 +668,9 @@ body.show {
     } .theprocess {
         padding-left: $padding_1000;
         padding-right: $padding_1000;
-    } .stayuptodate {
-        padding-left: $padding_1000;
-        padding-right: $padding_1000;
     }
 
-    .chatbox {
-        width: 280px;
-        height: 350px;
-        bottom: 93px;
-        right: 39px;
-        .footer {
-            
-            input {
-                
-                height: 30px; 
-            } .option {
-                
-                .fileupload {
-                    
-                    svg {
-                        width: 15px;
-                        height: 15px; 
-                    }
-                } .sendbtn {
-                    
-                    $size: 30px; 
-                    width: $size;
-                    height: $size;
-                    flex: 1 0 $size; 
-                    svg {
-                        width: 10px; 
-                        height: 10px; 
-                    }
-                }
-            } 
-        }
-        .header {
-            padding: 9px 13px; 
-            h5 {
-                font-size: 14px;
-            } .menu {
-                
-                gap:10px;
-                .hamburger {
-                    svg {
-                        width: 20px; 
-                        height: 20px; 
-                    }
-                }
-                .arrow {
-                    svg {
-                        width: 35px; 
-                        height: 35px; 
-                    }
-                }
-            }
-        } .body {
-            height: 270px;
-            .box-white {
-                height: 263px;
-                bottom: 5px; 
-                .chats {
-                    max-height: 200px;
- 
-                    .bot,
-                    .user {
-                        .bubblechat {
-                            
-                            font-size: 10px;
-                        }
-                    }
-                }
-            
-                .random-chat {
-                    span {
-                        padding: 5px 10px; 
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
+   
     
 }
 
@@ -1273,13 +679,62 @@ body.show {
 // Smartphone 
 @media screen and (max-width: 767px) { 
 
+   
 
-    .chatbot {
-        right: 25px;
-        bottom: 25px;
-    } .chatbox {
-        right: 25px;
+    .hero {
+        margin-top: 93px; 
+        height: 539px;
+        gap: unset;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        padding: 0 pxToVw(60, 1350) 0 pxToVw(60, 1350);
+        &-description {
+            svg {
+                width: 203px;
+            } p {
+                font-size: 20px;
+            }
+        } &-animation {
+            .laptop {
+                svg {
+                    width: 300px; 
+                }
+            } .laptop-background {
+                bottom: -19px;
+                left: -24px;
+                svg {
+                    width: 307px; 
+                }
+            } .top-left-rectangle {
+                top: 103px;
+                left: -20px;
+                svg {
+                    width: 80px; 
+                }
+            } .bottom-left-rectangle {
+                top: 214px;
+                left: -80px;
+                svg {
+                    width: 58px; 
+                }
+            } .top-right-rectangle {
+                top: 188px;
+                right: -39px;
+                svg {
+                    width: 58px; 
+                }
+            } .bottom-right-rectangle {
+                top: 232px;
+                right: -69px;
+                svg {
+                    width: 39px;
+                }
+            }
+        }
     }
+
     .questions {
         &-items {
             .questions-item {
@@ -1295,213 +750,12 @@ body.show {
             }
         }
     }
-    footer {
-        flex-direction:column;
-        gap:5px;
-        .links {
-            margin-left: 15px;
-        }
-    }
-    .footer-menu {
-        flex-direction: column;
-        height: unset;
-        padding: 44px 30px; 
-        align-items:flex-start;
-        gap: 33px;
-        height: 570px;
-        justify-content: unset;
-        .header {
-            p {
-                margin-top: 15px;
-                width: 193px; 
-                font-size: 16px;
-            } svg {
-                width: 163px;
-            }
-        }
-        .menu-list:last-child {
-    
-            position:absolute; 
-            left: 25px;
-            bottom:-50px;
-        }
-        .menu-list:nth-child(3) {
-            flex-direction: unset;
-            margin-top: 65px;
-          
-        }
-        .menu-list {
-            flex-direction: column;
-            .menu-data {
-                h5 {
-                    
-                    font-size: 20px;
-                } .links {
-                    a {
-                        font-size: 12px;
-                    } a:nth-child(3),
-                    a:nth-child(4) {
-                        display:none;
-                    }
-                } a {
-                    font-size: 12px; 
-                }
-            }
-            .menu-data:nth-child(2),
-            .menu-data:nth-child(3) {
-                display: none;
-            }
+   
+   
+   
 
-            
-
-            .menu-data.background::before {
-                width: 255px;
-                height: 293px; 
-                background: #532aad21;
-                left: -30px;
-                top: -30px;
-                z-index: -1;
-                border-radius: 30px 0 0 0;
-            } .menu-data.background {
-                height: 290px; 
-                margin: 0 32px; 
-                .information {
-                    gap: 15px; 
-                    margin-top: 15px;
-                    &-data {
-                        
-                        svg {
-                            width: 18px;
-                            height: 18px; 
-                        } span {
-                            font-size: 15px;
-                        }
-                    }
-                }
-            } .menu-data.sosmed {
-                margin-left: 20px;
-                display: flex;
-                height: 100%;
-                gap:20px;
-                transform: translate(0px, -59px);
-                svg {
-                    width: 27px; 
-                    height: 27px;
-                }
-            }
-        }
-    }
-    .our-mission {
-        flex-direction: column-reverse;
-        a.btn.hide {
-            margin-top: 36px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 46px; 
-            box-shadow: 0 0 5px $purple;
-            font-size: 15px;
-        }
-        img {
-            width: 100%; 
-            height: auto; 
-        } .mission-box {
-            width: 100%; 
-            gap: 30px; 
-            h1 {
-                font-family: redhatbold;
-                font-size: 40px;
-                padding-bottom: 10px;
-                border-bottom: 4px solid $purple;
-                width: 100%; 
-            } .detail {
-                h5, p {
-                    font-size: 18px; 
-                }
-            } .btn {
-                width: 100%;
-                height: 46px; 
-                display: none;
-            }
-        }
-    }
-
-    .dotted-process {
-        display: flex;
-        justify-content: space-between;
-        span {
-            cursor: pointer;
-        }
-    }
-    .our-services {
-        h1 {
-            font-size: 40px;
-            padding-right: unset;
-            border-bottom: 2px solid $purple;
-            margin-bottom: 30px;
-            width: 100%; 
-            font-family: redhatbold;
-        } p.desc {
-            font-size: 20px;
-            margin-bottom: 20px;
-        } .service-footer {
-            margin-top:85px; 
-            h1 {
-                font-size: 30px;
-                margin-bottom: 20px;
-            } a.btn {
-                width: 90%; 
-                height: 46px; 
-                font-size: 15px;
-                padding: 12px; 
-                box-shadow: 0 0 5px $purple;
-            }
-        } .cards {
-            
-      
-            gap:unset; 
-            width: 100%; 
-            height: 578px;
-            padding: 1px; 
-            align-items: flex-end;
-            overflow: hidden;
-            .card {
-                transition: all 500ms ease 0s;
-                justify-content: space-between;
-                padding: 30px 53px; 
-                gap: 30px; 
-                @include flexwidth(100%);
-                height: 520px;
-
-                .vector {
-                    width: 84px; 
-                    height: 84px;
-                    top:-42px; 
-                    svg {
-                        width: 37px; 
-                        height: 37px; 
-                    }
-                } &-body {
-                    transform:translate(0, 40px);
-                    p {
-                        margin-top: 20px;
-                        font-size: 20px;
-                    } h5 {
-                        font-size: 20px;
-                        padding-bottom: 4px;
-                        border-bottom: 2px solid $purple;
-                    }
-                } a.btn-purple {
-                    width: 100%; 
-                    height: 46px; 
-                    font-size: 15px;
-                    padding: 12px; 
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    }
+   
+   
 
 
     .consultation::before {
@@ -1591,6 +845,62 @@ body.show {
             .box:last-child {
                 .header {
                     h5 {transform: translate(20px,-22px);}
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 555px) { 
+    .hero {
+        margin-top: 93px; 
+        height: 539px;
+        gap: unset;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        &-description {
+            svg {
+                width: 163px;
+            } p {
+                font-size: 20px
+            }
+        } &-animation {
+            .laptop {
+                svg {
+                    width: 252px; 
+                }
+            } .laptop-background {
+                bottom: -17px;
+                left: -21px;
+                svg {
+                    width: 259px; 
+                }
+            } .top-left-rectangle {
+                top: 88px;
+                left: -20px;
+                svg {
+                    width: 68px; 
+                }
+            } .bottom-left-rectangle {
+                top: 176px;
+                left: -77px;            
+                svg {
+                    width: 48px; 
+                }
+            } .top-right-rectangle {
+                top: 164px;
+                right: -39px;
+                svg {
+                    width: 48px; 
+                }
+            } .bottom-right-rectangle {
+                top: 204px;
+                right: -65px;
+                svg {
+                    width: 29px;
                 }
             }
         }

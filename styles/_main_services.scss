@@ -106,3 +106,181 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1820px) { 
+    .our-services {
+        padding: 95px $padding_1810;
+    }
+}
+
+@media screen and (max-width: 1650px) { 
+    .our-services {
+        .cards {        
+            .card {
+                padding: 40px; 
+                gap: 25px; 
+            }
+        }
+    } 
+ 
+}
+
+
+@media screen and (max-width: 1570px) {
+    .our-services {
+        p.desc {
+            width: 100%; 
+
+        }
+    } 
+ 
+}
+
+@media screen and (max-width: 1440px) { 
+    .our-services {
+        padding: 95px $padding_1440;
+        .cards {
+            .card {
+                padding: 40px 25px;
+            }
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1350px) { 
+    .our-services {
+        h1 {
+            // font-size: pxToVw(40, 1350); 
+            padding-right: pxToVw(30, 1350); 
+            margin-bottom: pxToVw(10, 1350);
+            border-bottom: pxToVw(2, 1350) solid $purple;
+        } p.desc {
+ 
+            font-size: pxToVw(20, 1350);
+            margin: pxToVw(40, 1350) 0 pxToVw(100, 1350) 0; 
+        } .service-footer {
+            margin-top: pxToVw(70, 1350);
+            h1 {
+                font-size: pxToVw(40, 1350); 
+                margin-bottom: pxToVw(30, 1350);
+            } a.btn {
+                font-size: pxToVw(20, 1350);
+                padding-left: pxToVw(50, 1350);
+                padding-right: pxToVw(50, 1350);
+            }
+        } .cards {
+            gap: pxToVw(20, 1350); 
+            .card {
+                width: pxToVw(363, 1350); 
+                height: pxToVw(439, 1350);
+                padding: pxToVw(40, 1350) pxToVw(25, 1350); 
+                gap: pxToVw(25, 1350); 
+                .vector {
+                    width: pxToVw(84, 1350); 
+                    height: pxToVw(84, 1350);
+                    top: pxToVw(-50, 1350);  
+                    svg {
+                        width: pxToVw(37, 1350); 
+                        height: pxToVw(37, 1350);
+                    }
+                } &-body {
+                    p {
+                        margin-top: pxToVw(20, 1350);
+                        font-size: pxToVw(20, 1350);
+                    } h5 {
+                        padding-bottom: pxToVw(4, 1350);
+                        font-size: pxToVw(20, 1350);
+                    } 
+                } a.btn-purple {
+                    height: pxToVw(46, 1350); 
+                }
+            } 
+        }
+    }
+
+ 
+}
+
+
+@media screen and (max-width: 1000px) { 
+    .our-services {
+        padding-left: $padding_1000;
+        padding-right: $padding_1000;
+    } 
+ 
+}
+
+
+@media screen and (max-width: 767px) { 
+    .our-services {
+        h1 {
+            font-size: 40px;
+            padding-right: unset;
+            border-bottom: 2px solid $purple;
+            margin-bottom: 30px;
+            width: 100%; 
+            font-family: redhatbold;
+        } p.desc {
+            font-size: 20px;
+            margin-bottom: 20px;
+        } .service-footer {
+            margin-top:85px; 
+            h1 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            } a.btn {
+                width: 90%; 
+                height: 46px; 
+                font-size: 15px;
+                padding: 12px; 
+                box-shadow: 0 0 5px $purple;
+            }
+        } .cards {
+            
+      
+            gap:unset; 
+            width: 100%; 
+            height: 578px;
+            padding: 1px; 
+            align-items: flex-end;
+            overflow: hidden;
+            .card {
+                transition: all 500ms ease 0s;
+                justify-content: space-between;
+                padding: 30px 53px; 
+                gap: 30px; 
+                @include flexwidth(100%);
+                height: 520px;
+
+                .vector {
+                    width: 84px; 
+                    height: 84px;
+                    top:-42px; 
+                    svg {
+                        width: 37px; 
+                        height: 37px; 
+                    }
+                } &-body {
+                    transform:translate(0, 40px);
+                    p {
+                        margin-top: 20px;
+                        font-size: 20px;
+                    } h5 {
+                        font-size: 20px;
+                        padding-bottom: 4px;
+                        border-bottom: 2px solid $purple;
+                    }
+                } a.btn-purple {
+                    width: 100%; 
+                    height: 46px; 
+                    font-size: 15px;
+                    padding: 12px; 
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+ 
+}

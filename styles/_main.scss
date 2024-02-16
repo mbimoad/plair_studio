@@ -68,6 +68,203 @@ $duration: 500ms;
 body {
     overflow:hidden;
 }
+
+.chatbox.active {
+    transform: scale(1);
+}
+.chatbox {
+    $radius: 20px; 
+    // transition: all 200ms ease 0s;
+    transform: scale(0);
+    border-radius: 30px;
+    width: 378px; 
+    bottom: 130px;
+    right: 60px;
+    height: 530px;
+    position: fixed;
+    z-index: 999;
+    .footer {
+        border-radius: 0 0 $radius $radius;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        position: absolute;
+        background: white;
+        padding: 5px;
+
+        
+        input {
+            flex: 1; 
+            box-shadow: unset;
+            
+            height: 45px;
+        }
+        .option {
+            display: flex;
+            gap:10px; 
+            align-items: center;
+            #fileupload {
+                display: none;
+                
+            }
+
+            .fileupload {
+                svg {
+                    cursor: pointer;
+                }
+            }
+            .sendbtn {
+                border:unset;
+                outline: unset;
+                background: $purple;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                $size: 55px; 
+                width: $size;
+                height: $size;
+                flex: 1 0 $size; 
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .header {
+        border-radius: $radius $radius 0 0;
+        background: $purple; 
+        color:white; 
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        padding: 17px; 
+        align-items: center;
+        h5 {
+            font-size: 17px;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .arrow {
+                cursor: pointer;
+            }
+        }
+    } 
+
+    .body {
+        background:#ECF3FC;
+        
+        height: 400px;
+        padding: 10px;
+        border-radius: 0 0 $radius $radius;
+        .box-white {
+            right: 9.5px;
+            bottom: 15px;
+            border-radius: 5px;
+            position: absolute;
+            transform: translate(0,-30px);
+            height: 410px; 
+            background:white; 
+            width: 95%;
+            .random-chat {
+                text-align: right;
+                margin-top: 25px;
+                span {
+                    margin-right: 10px;
+                    padding: 10px 15px; 
+                    border: 1px solid $purple;
+                    border-radius: 100px; 
+                    color: $purple;
+                }
+            }
+            .chats::-webkit-scrollbar {
+                display: none;
+            }
+            .chats {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                
+                max-height: 330px;
+                padding: 15px; 
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+                align-items: flex-end;
+                .bot,
+                .user {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 10px; 
+                    .vector {
+                        border-radius: 50%;
+                        flex: 0 0 26px; 
+                        height: 26px; 
+                        background:$purple;
+                        display: flex;
+                        justify-content: center;
+                        align-items:center; 
+                    }
+                } .bot {
+                    .bubblechat {
+                        background: #D9D9D9; 
+                        color: black;
+                        padding: 10px; 
+                        font-size: 14px;
+                        border-radius: 4px;
+                    } 
+                } .user {
+                    .bubblechat {
+                        background: $orange; 
+                        color:white; 
+                        font-size: 14px;
+                        padding: 10px; 
+                        border-radius: 7px 7px 3px 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.chatbot {
+    cursor: pointer;
+    width: 64px; 
+    height: 64px; 
+    flex: 1 0 64px;
+    background: $purple;
+    display: flex;
+    justify-content: center;
+    align-items:center; 
+    border-radius: 50%;
+    position: fixed;
+    right: 63px;
+    bottom: 50px;
+    z-index: 999;
+}
+
+.dotted-process {
+    display: none;
+    width: 29px; 
+    margin: 22px auto;
+    span {
+        display: inline-block;
+        width: 7px; 
+        height: 7px; 
+        background: #D9D9D9;
+        border-radius: 50%;
+    } span.active {
+        background: #7B7B7B;
+    }
+}
+
 .container {
     max-width: 1920px;
     margin: auto;
@@ -177,12 +374,18 @@ header {
     padding: 14px;
     justify-content: space-between;
     align-items: center;
+    .mobile-menu {
+        display: none;
+    }
     .logo {
-        margin-left: 20px;
-        font-size: 40px;       
+        margin-left: 20px;  
         font-weight: bold;
         color: black;
-        
+        svg {
+            width: 133px;
+            height: auto;
+        }
+
     } ul {
         align-items: center;
         display:flex;
@@ -195,6 +398,10 @@ header {
             display: flex;
             align-items: center;
             gap: 10px;
+        } 
+        li.navigator,
+        li.mylogo {
+            display:none;
         }
 
         .btn-dark {width: 140px;}
@@ -738,10 +945,52 @@ footer {
 
 
 
+@media screen and (max-width: 1820px) { 
+    .footer-menu {
+        .menu-list:nth-child(2) {
+            gap: 60px;
+        }
+    } .stayuptodate {
+        padding: 20px $padding_1810;
+    }  .our-mission {
+        padding: 55px $padding_1810;
+    } 
+}
+
+@media screen and (max-width: 1650px) { 
+    .footer-menu {
+        padding: 25px; 
+        justify-content: space-around;
+        .menu-list:nth-child(3) {
+            margin-right: unset;
+        }
+    } .our-mission {
+        gap: 50px;
+    } 
+ 
+}
 
 
+@media screen and (max-width: 1570px) {
+    header {
+        ul {
+            gap: 40px; 
+        }
+    } .footer-menu {
+        padding: 25px; 
+      
+        .menu-list:nth-child(3) {
+            margin-right: unset;
+        }
+    } .our-mission {
+        img {
+            width: 662px;
+            height: 408px;
+        } .mission-box {
+            width: 480px;
+        }
+    }
 
-@media screen and (max-width: 1570px) { 
     .statistic {
         height: 636px;
         .box {
@@ -764,8 +1013,267 @@ footer {
     }
 }
 
+@media screen and (max-width: 1440px) { 
+    
+    .chatbox {
+        width: 330px;
+        height: 480px;
+        bottom: 93px;
+        right: 39px;
+        .footer {
+            
+            input {
+                
+                height: 30px; 
+            } .option {
+                
+                .fileupload {
+                    
+                    svg {
+                        
+                    }
+                } .sendbtn {
+                    
+                    $size: 40px; 
+                    width: $size;
+                    height: $size;
+                    flex: 1 0 $size; 
+                    svg {
+                        width: 15px; 
+                        height: 15px; 
+                    }
+                }
+            } 
+        }
+        .header {
+            padding: 13px; 
+            h5 {
+                font-size: 17px;
+            } .menu {
+                
+                gap:15px;
+            }
+        } .body {
+            .box-white {
+                .chats {
+                    max-height: 277px;
+
+                    .bot,
+                    .user {
+                        .bubblechat {
+                            
+                            font-size: 12px;
+                        }
+                    }
+                }
+                height: 366px;
+                .random-chat {
+                    span {
+                        padding: 5px 10px; 
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .chatbot {
+        width: 50px; 
+        height: 50px; 
+        flex: 1 0 50px;
+        right: 45px;
+        bottom: 35px;
+        svg {
+            width: 27px;
+            height: 27px; 
+        }
+    }
+
+     .stayuptodate {
+        padding: 20px $padding_1440;
+    }
+    .footer-menu {
+        .header {
+            svg {
+                width: 150px; 
+                height: auto; 
+            } 
+        }
+        .menu-list:nth-child(2) {
+            gap: 50px; 
+        }
+        .menu-list {
+            .menu-data {
+                .buttons {
+                    a {
+                        width: 150px; 
+                    }
+                }
+            }
+        }
+    } .our-mission {
+        padding: 55px $padding_1440;
+    } 
+ 
+}
 
 @media screen and (max-width: 1350px) { 
+    .our-mission {
+        gap: pxToVw(50, 1350);
+        img {
+            width: pxToVw(662, 1350);
+            height: pxToVw(408, 1350);
+        } .mission-box {
+            width: pxToVw(480, 1350);
+            gap: pxToVw(30, 1350); 
+            h1 {
+                padding-right: pxToVw(30, 1350);
+                padding-bottom: pxToVw(5, 1350);
+                font-size: pxToVw(40, 1350);
+                border-bottom: pxToVw(4, 1350) solid $purple;
+            } .detail {
+                h5 {
+                    font-size: pxToVw(18, 1350); 
+
+                } p {
+                    font-size: pxToVw(18, 1350); 
+                }
+            } .btn {
+                width: pxToVw(256, 1350); 
+                padding: pxToVw(10, 1350); 
+                box-shadow: 0 0 pxToVw(5, 1350) 0 $purple;
+            }
+        }
+    }
+
+    .stayuptodate {
+        gap: pxToVw(20, 1350); 
+        h1 {
+            font-size: pxToVw(30, 1350);
+
+        } input {
+            padding-left: pxToVw(10, 1350);
+            font-size: pxToVw(15, 1350); 
+            height: pxToVw(37, 1350); 
+        } button {
+            width: pxToVw(280, 1350); 
+            gap: pxToVw(10, 1350); 
+            height: pxToVw(34, 1350);
+            font-size: pxToVw(15, 1350);
+            svg {
+                width: pxToVw(20, 1350); 
+                height: pxToVw(20, 1350); 
+            }
+        } input::placeholder {
+            font-size: pxToVw(15, 1350);
+        } input::-webkit-input-placeholder {
+            font-size: pxToVw(15, 1350); 
+        }
+    }
+    .footer-menu {
+        height: pxToVw(346, 1350);
+        padding: pxToVw(25, 1350);
+        .header {
+            p {
+                font-size: pxToVw(20, 1350);
+                width: pxToVw(243, 1350); 
+            } svg {
+                width: pxToVw(150, 1350); 
+                height: auto; 
+            } 
+        } 
+        
+        .menu-list:nth-child(2) {
+            gap: pxToVw(50, 1350); 
+        }
+        .menu-list {
+            gap: pxToVw(20, 1350);
+            .menu-data.background::before {
+                width: pxToVw(255, 1350); 
+                height: pxToVw(293, 1350); 
+                left: pxToVw(-30, 1350);
+                top: pxToVw(-30, 1350); 
+                border-radius: pxToVw(30, 1350) 0 0 0;
+            } .menu-data.background {
+                margin: 0 pxToVw(32, 1350); 
+                z-index: 2;
+            } .menu-data {
+                height: pxToVw(195, 1350); 
+                gap: pxToVw(20, 1350); 
+                .information {
+                    gap: pxToVw(15, 1350); 
+                    h5 {
+                        font-size: pxToVw(20, 1350);
+                        margin-bottom: pxToVw(10, 1350);
+
+                    } &-data {
+                        gap: pxToVw(15, 1350); 
+                        svg {
+                            width: pxToVw(18, 1350);
+                            height: pxToVw(18, 1350) ;
+                        } span {
+                            font-size: pxToVw(16, 1350);
+                        }
+                    } 
+                } h5 {
+                    font-size: pxToVw(20, 1350);
+                } .links {
+                    gap: pxToVw(10, 1350); 
+                    a {
+                        font-size: pxToVw(12, 1350);
+                    }
+                } a {
+                    font-size: pxToVw(12, 1350);
+                } ul {
+                    gap: pxToVw(10, 1350); 
+                    li {
+                        a {
+                            font-size: pxToVw(12, 1350); 
+                        }
+                    }
+                } .buttons {
+                    gap: pxToVw(15, 1350); 
+                    a {
+                        width: pxToVw(150, 1350); 
+                        height: pxToVw(40, 1350); 
+                        font-size: pxToVw(14, 1350); 
+                    }
+                } 
+            } .menu-data.sosmed {
+                svg {
+                    
+                    width: pxToVw(27,1350); 
+                    height: pxToVw(27,1350); 
+                }
+            }
+        }
+    }
+     header {
+        box-shadow: 0 pxToVw(2, 1350) pxToVw(8, 1350) 0 #ccc;
+        padding: pxToVw(14, 1350);
+        .logo {
+            margin-left: pxToVw(20, 1350); 
+            font-size: pxToVw(40, 1350); 
+            svg {
+                width: pxToVw(133, 1350);
+                height: auto;
+            }
+        } ul {
+            gap: pxToVw(40, 1350); 
+            a {
+                font-size: pxToVw(15, 1350);
+            } li:last-child {
+                gap: pxToVw(10, 1350); 
+            }
+
+            .btn-dark {
+                width: pxToVw(140, 1350);
+                font-size: pxToVw(13, 1350); 
+            } .btn-light {
+                width: pxToVw(100, 1350); 
+                font-size: pxToVw(13, 1350); 
+            }
+        }
+    }
     .statistic {
         height: pxToVw(636,1350);
         .box {
@@ -793,8 +1301,341 @@ footer {
     }
 }
 
+@media screen and (max-width: 1000px) { 
+    .stayuptodate {
+        padding-left: $padding_1000;
+        padding-right: $padding_1000;
+    } .our-mission {
+        padding: 30px $padding_1000;   
+    }   .chatbox {
+        width: 280px;
+        height: 350px;
+        bottom: 93px;
+        right: 39px;
+        .footer {
+            
+            input {
+                
+                height: 30px; 
+            } .option {
+                
+                .fileupload {
+                    
+                    svg {
+                        width: 15px;
+                        height: 15px; 
+                    }
+                } .sendbtn {
+                    
+                    $size: 30px; 
+                    width: $size;
+                    height: $size;
+                    flex: 1 0 $size; 
+                    svg {
+                        width: 10px; 
+                        height: 10px; 
+                    }
+                }
+            } 
+        }
+        .header {
+            padding: 9px 13px; 
+            h5 {
+                font-size: 14px;
+            } .menu {
+                
+                gap:10px;
+                .hamburger {
+                    svg {
+                        width: 20px; 
+                        height: 20px; 
+                    }
+                }
+                .arrow {
+                    svg {
+                        width: 35px; 
+                        height: 35px; 
+                    }
+                }
+            }
+        } .body {
+            height: 270px;
+            .box-white {
+                height: 263px;
+                bottom: 5px; 
+                .chats {
+                    max-height: 200px;
+ 
+                    .bot,
+                    .user {
+                        .bubblechat {
+                            
+                            font-size: 10px;
+                        }
+                    }
+                }
+            
+                .random-chat {
+                    span {
+                        padding: 5px 10px; 
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+ 
+}
 
-@media screen and (max-width: 767px) { 
+
+@media screen and (max-width: 767px) {
+    .dotted-process {
+        display: flex;
+        justify-content: space-between;
+        span {
+            cursor: pointer;
+        }
+    }
+    .chatbox {
+        right: 25px;
+    }
+    .chatbot {
+        right: 25px;
+        bottom: 25px;
+    }
+    .our-mission {
+        flex-direction: column-reverse;
+        a.btn.hide {
+            margin-top: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 46px; 
+            box-shadow: 0 0 5px $purple;
+            font-size: 15px;
+        }
+        img {
+            width: 100%; 
+            height: auto; 
+        } .mission-box {
+            width: 100%; 
+            gap: 30px; 
+            h1 {
+                font-family: redhatbold;
+                font-size: 40px;
+                padding-bottom: 10px;
+                border-bottom: 4px solid $purple;
+                width: 100%; 
+            } .detail {
+                h5, p {
+                    font-size: 18px; 
+                }
+            } .btn {
+                width: 100%;
+                height: 46px; 
+                display: none;
+            }
+        }
+    }
+    footer {
+        flex-direction:column;
+        gap:5px;
+        .links {
+            margin-left: 15px;
+        }
+    }  .footer-menu {
+        flex-direction: column;
+        height: unset;
+        padding: 44px 30px; 
+        align-items:flex-start;
+        gap: 33px;
+        height: 570px;
+        justify-content: unset;
+        .header {
+            p {
+                margin-top: 15px;
+                width: 193px; 
+                font-size: 16px;
+            } svg {
+                width: 163px;
+            }
+        }
+        .menu-list:last-child {
+    
+            position:absolute; 
+            left: 25px;
+            bottom:-50px;
+        }
+        .menu-list:nth-child(3) {
+            flex-direction: unset;
+            margin-top: 65px;
+          
+        }
+        .menu-list {
+            flex-direction: column;
+            .menu-data {
+                h5 {
+                    
+                    font-size: 20px;
+                } .links {
+                    a {
+                        font-size: 12px;
+                    } a:nth-child(3),
+                    a:nth-child(4) {
+                        display:none;
+                    }
+                } a {
+                    font-size: 12px; 
+                }
+            }
+            .menu-data:nth-child(2),
+            .menu-data:nth-child(3) {
+                display: none;
+            }
+
+            
+
+            .menu-data.background::before {
+                width: 255px;
+                height: 293px; 
+                background: #532aad21;
+                left: -30px;
+                top: -30px;
+                z-index: -1;
+                border-radius: 30px 0 0 0;
+            } .menu-data.background {
+                height: 290px; 
+                margin: 0 32px; 
+                .information {
+                    gap: 15px; 
+                    margin-top: 15px;
+                    &-data {
+                        
+                        svg {
+                            width: 18px;
+                            height: 18px; 
+                        } span {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            } .menu-data.sosmed {
+                margin-left: 20px;
+                display: flex;
+                height: 100%;
+                gap:20px;
+                transform: translate(0px, -59px);
+                svg {
+                    width: 27px; 
+                    height: 27px;
+                }
+            }
+        }
+    }
+
+    header {
+       
+        height: 48px;
+        padding: 13px; 
+        box-shadow: 0 2px 8px 0 #ccc;
+        .mobile-menu {
+            display: flex;
+            align-items: center;
+            gap: 38px; 
+            margin-right: 16px;
+            button {
+                background:white; 
+                height: 30px; 
+                font-size: 15px; 
+                padding: 5px 32px; 
+                border: 2px solid black;
+                border-radius: 3px;
+                box-shadow: 0 0 5px #ccc;
+
+            } .hamburger {
+                display: flex;
+                flex-direction: column;
+                width: 18px;
+                height: 12px; 
+                cursor: pointer;
+                justify-content: space-between;
+                span {
+                   border-radius: 30px;
+                   height: 2px; 
+                   width: 100%; 
+                   background: black;
+                   transition: all 200ms ease 0s;
+                }
+
+                span.active:first-child {
+                    transform: rotate(30deg) translate(2px, 3px);
+
+                } span.factive:last-child {
+                    transform: rotate(-30deg) translate(3px, -5px);
+                    
+                } span.active:nth-child(2) {
+                    transform: scale(0);
+                }
+            }
+        }
+        .logo {
+            svg {
+                width: 85px;
+            }
+        } 
+        
+        ul.active {
+            transform: translate(0,0);
+        }
+        ul {
+            transition: all 200ms ease 0s;
+            gap: 40px; 
+            top:0; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            background:white; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 44px;
+            z-index: 9999;
+            transform: translate(-100%,0);
+            li {
+                
+                width: 100%;
+            }
+            a {
+                font-size: 15px;
+            } li:last-child {
+                gap:10px;
+                flex-direction: column;
+                
+                .btn-dark {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 15px; 
+                }
+                .btn-light {
+                    width: 100%;
+                    height: 40px;
+                    font-size: 15px; 
+                }
+            }   
+            li.navigator,
+            li.mylogo {
+                width: auto;
+                padding-right: 20px;
+                display:unset;
+            } li.navigator {
+                cursor: pointer;
+            }
+    
+        }
+
+    }
     .stayuptodate.show {
         align-items: unset;
         text-align:center;

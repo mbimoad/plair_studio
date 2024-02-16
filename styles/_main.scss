@@ -301,6 +301,7 @@ footer {
                         color:white; 
                     }
                 } &-sosmed {
+                    
                     flex-direction: column;
                     display: flex;
                     justify-content: flex-start;
@@ -387,6 +388,11 @@ footer {
     } input {
         flex: 1; 
         padding-left: 10px;
+        font-size: 15px;
+    } input::placeholder {
+        font-size: 15px;
+    } input::-webkit-input-placeholder {
+        font-size: 15px; 
     }
     button {
         display: flex;
@@ -398,6 +404,11 @@ footer {
         background:black;
         color:white; 
         border:unset;
+        font-size: 15px;
+        svg {
+            width: 20px; 
+            height: 20px; 
+        }
     }
 }
 
@@ -458,6 +469,10 @@ footer {
     padding: 55px $padding;
     align-items: center;
     gap: 128px;
+
+    a.btn.hide {
+        display: none;
+    }
 
 
 
@@ -780,6 +795,42 @@ footer {
 
 
 @media screen and (max-width: 767px) { 
+    .stayuptodate.show {
+        align-items: unset;
+        text-align:center;
+        h1 {
+            font-size: 30px;
+        }
+        input {
+            margin-top: 18px;
+            padding-left: 10px;
+            font-size: 15px;
+            height: 36px;
+        } input::placeholder {
+            font-size: 15px;
+        } input::-webkit-input-placeholder {
+            font-size: 15px;
+        } button {
+            margin-top: 18px;
+            width: 100%;
+            height: 36px; 
+            font-size: 15px; 
+            svg {
+                width: 20px; 
+                height: 20px; 
+            }
+        }
+    }
+    .stayuptodate {
+
+        flex-direction: column;
+        align-items: unset;
+        justify-content: center;
+        gap:20px;
+        text-align:center;
+        
+        
+    }
     .statistic {
         flex-direction:column;
         height: 516px; 

@@ -67,13 +67,26 @@ window.onload = function(e) {
 
 
     if(window.innerWidth <= 767) {
-        const process = document.querySelectorAll('.dotted-process span');
+        const process = document.querySelectorAll('.theprocess .dotted-process span');
         process.forEach(item => item.addEventListener('click', function() {
             process.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
 
             let turn = this.dataset.turn; 
             const box = document.querySelectorAll('.theprocess .box');    
+            if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
+            if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
+            if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
+        }))
+
+
+        const process2 = document.querySelectorAll('.our-services .dotted-process span');
+        process2.forEach(item => item.addEventListener('click', function() {
+            process2.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+
+            let turn = this.dataset.turn; 
+            const box = document.querySelectorAll('.our-services .cards .card');    
             if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
             if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
             if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');

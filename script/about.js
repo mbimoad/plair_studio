@@ -42,19 +42,50 @@ function GetWidthOfCards() {
     return width; 
 }
 
-window.onload = function() {
-    // Insert Last Element to First Element
-    let lastCards = comment[comment.length - 1]; 
-    comments.insertAdjacentElement('afterbegin', lastCards); 
-    
-    var width = GetWidthOfCards();
-    comment.forEach(item => item.style.transform = `translate(-${width}px, 0)`);
+let typeScroll = "px";
 
-    // Give transition 
-    setTimeout(() => comment.forEach(item => item.style.transition = `all ${time}ms ease 0s`) ,0);
+window.onload = function() {
+   
+
+
+
+    
+    if(window.innerWidth <= 767) {
+      const process = document.querySelectorAll('.our-team .dotted-process span');
+      process.forEach(item => item.addEventListener('click', function() {
+          process.forEach(item => item.classList.remove('active'));
+          this.classList.add('active');
+
+          let turn = this.dataset.turn; 
+          const box = document.querySelectorAll('.our-team .team');    
+          if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
+          if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
+          if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
+      }))
+      typeScroll = "%";
+  } else {
+    typeScroll = "px";
+  }
+
+   // Insert Last Element to First Element
+   let lastCards = comment[comment.length - 1]; 
+   comments.insertAdjacentElement('afterbegin', lastCards); 
+   
+   var width = GetWidthOfCards();
+   comment.forEach(item => item.style.transform = `translate(-${width}${typeScroll}, 0)`);
+
+   // Give transition 
+   setTimeout(() => comment.forEach(item => item.style.transition = `all ${time}ms ease 0s`) ,0);
+
 }
 
-
+window.onresize = function() {
+  if(window.innerWidth <= 767) {
+    typeScroll = "%";
+  } else {
+    typeScroll = "px";
+  }
+}
 //  1      2      3       4     
 //       curr
 
@@ -63,14 +94,16 @@ window.onload = function() {
 
 
 let current = 1; 
-right.addEventListener('click', function() {    
 
+
+
+right.addEventListener('click', function() {    
     current++;
     var width  = GetWidthOfCards();
     var result = current*width; 
     comment.forEach(item => {
         item.style.transition = `all ${time}ms ease 0s`;
-        item.style.transform  = `translate(-${result}px,0)`;
+        item.style.transform  = `translate(-${result}${typeScroll},0)`;
     });
     this.setAttribute('disabled', true);
     
@@ -78,7 +111,7 @@ right.addEventListener('click', function() {
     setTimeout(() => {
         comment.forEach(item => {
             item.style.transition = 'unset';
-            item.style.transform  = `translate(-${width}px,0)`;
+            item.style.transform  = `translate(-${width}${typeScroll},0)`;
         });
         const firstElement = document.querySelectorAll('.comments .comment')[0];
         comments.insertAdjacentElement('beforeend', firstElement); 
@@ -92,7 +125,7 @@ left.addEventListener('click', function() {
   var width  = GetWidthOfCards();
   comment.forEach(item => {
       item.style.transition = `all ${time}ms ease 0s`;
-      item.style.transform  = `translate(0px,0)`;
+      item.style.transform  = `translate(0${typeScroll},0)`;
   });
   this.setAttribute('disabled', true);
   setTimeout(() => {
@@ -101,7 +134,7 @@ left.addEventListener('click', function() {
     
     comment.forEach(item => {
         item.style.transition = 'unset';
-        item.style.transform  = `translate(-${width}px,0)`;
+        item.style.transform  = `translate(-${width}${typeScroll},0)`;
     });
     this.removeAttribute('disabled');
 

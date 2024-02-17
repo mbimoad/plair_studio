@@ -6,11 +6,7 @@
     overflow: unset;
 }
 
-.container {
-    background-image: url('../assets/loginbg.png');
-    background-size: 1700px;
-    background-position: 524px -730px;
-}
+
 
 .hero {
     margin-top: 82px;
@@ -40,6 +36,7 @@
     }
 }
 
+
 .our-team {
     padding: 155px $padding; 
     h1 {
@@ -53,10 +50,16 @@
         margin-top: 58px;
         display: flex;
         justify-content: space-between;
+        gap:20px; 
         .team {
-
+            transition: all 500ms ease 0s; 
+            width: 470px; 
             .images {
                 position: relative;
+                img {
+                    width: 470px;
+                    height: 470px; 
+                }
                 .social-media-box {
                     transition: all 200ms ease 0s;
                     opacity: 0;
@@ -87,11 +90,11 @@
             }
 
 
-            width: 470px; 
             h5, p {
                 font-size: 30px;
             }
             h5 {
+                margin-top: 15px;
                 font-weight: bold;
             } p {
                 color: $purple;
@@ -102,9 +105,6 @@
 
 
 .testimonials {
-
-    
-
     padding: 100px 96px; 
     h1 {
         font-size: 40px;
@@ -124,7 +124,7 @@
             outline: unset;
             background:unset; 
         }
-
+        gap:30px;
         margin-top: 70px;
         display:flex; 
         align-items: center;
@@ -134,20 +134,20 @@
             display:flex;
             width: 1519px; 
             overflow: hidden;
-            height: 437px;
+
             justify-content: flex-start;
             align-items: center;
-            padding: 5px;
+        
+            box-shadow: 0 0 5px 0 #999;
+            -webkit-box-shadow: 0 0 5px 0 #999;
             .comment {
                 background: white;
                 height: 300px;
-                flex: 1 0 1510px;
-                -webkit-flex: 1 0 1510px;
-                box-shadow: 0 0 5px 0 #999;
-                -webkit-box-shadow: 0 0 5px 0 #999;
+                flex: 1 0 1519px;
+                -webkit-flex: 1 0 1519px;
                 display: flex;
                 align-items: center;
-                padding: 76px 137px;
+                padding: 76px 110px;
                 gap: 101px;
                 .desc {
                     width: 718px;
@@ -163,6 +163,8 @@
                         object-fit: cover;
                     }
                     .author {
+                        display: flex;
+                        flex-direction: column;
                         h1 {
                             font-size: 20px;
                             border-bottom: unset;
@@ -179,29 +181,23 @@
 
 
 .statistic {
-    background:unset; 
-    background-size: cover;
+    background-image: unset;
+    background:white; 
     .box {
-        h1,h5 {
-            color:$purple; 
-        } h5 {
-            color:black;
-        }
-        .circle {
+        .detail {
+            h1,h5 {
+                color: $purple;
+            }
+        } .circle {
             border-color: $purple;
-            svg {
-                transition: all 500ms ease 0s;
-            }
-        }
-
-        .circle:hover {
-            svg {
-                filter: brightness(10);
-            }
         }
     }
 }
 
+
+
+
+//====================================
 // // Animation 
 // $move: 50px; 
 // $opac: 0; 
@@ -276,3 +272,443 @@
 // }
 
 
+
+@media screen and (max-width: 1820px) { 
+    .hero {
+        gap: unset; 
+        justify-content: space-between;
+        padding: 0 150px;
+        &-description {
+            margin-left:unset;
+        }
+    }
+
+    .our-team {
+        padding: 155px $padding_1810; 
+        .teams {
+            gap: 10px; 
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1650px) { 
+    .our-team {
+        padding: 100px $padding_1810;
+        .teams {
+            .team {
+                width: 400px; 
+              .images {
+                  img {
+                      width: 400px; 
+                      height: 400px; 
+                  } .social-media-box {
+                      .rectangle {
+                          width: 200px; 
+                          height: 200px; 
+                          gap: 40px; 
+                          padding: 30px;
+                          svg {
+                              width: 40px; 
+                              height: 40px; 
+                          }
+                      }
+                  }
+              } h5 {
+                  font-size: 29px; 
+              } p {
+                  font-size: 29px;
+              }
+            }
+        }
+    }
+
+
+
+    .testimonials {
+        .testimonial {
+            .arrow-right,
+            .arrow-left {
+                svg {
+                    width: 24px;
+                    height: 41px;
+                }
+            }
+
+            margin-top: 50px;
+            .comments {
+                width: unset;
+                .comment {
+                    padding: 60px 100px;
+                    flex: 1 0 1465px;
+                    -webkit-flex: 1 0 1465px;
+                }
+            }
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1570px) { 
+
+    .testimonials {
+        .testimonial {
+            .comments {
+                .comment {
+                    .desc {
+                        width: 550px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .our-mission {
+        .mission-box {
+            width: 480px; 
+        }
+    }
+    .hero {
+        margin-top: 82px;
+        height: 600px; 
+        padding: 0 80px; 
+        &-description {
+            svg {
+                width: 220px;
+            } p {
+                font-size: 21px; 
+                margin-top: 20px;
+            }
+        } 
+    }
+
+    .our-team {
+
+        .teams {
+            .team {
+                width: 380px;
+                h5, p {
+                    font-size: 28px; 
+                }
+                .images {
+                    img {
+                        width: 380px;
+                        height: 380px;
+                    } .social-media-box {
+                        .rectangle {
+                            width: 155px; 
+                            height: 155px; 
+                            gap:30px; 
+                            padding: 25px; 
+                            svg {
+                                width: 35px; 
+                                height: 35px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) { 
+    .hero {
+        gap: unset; 
+        justify-content: space-between;
+    } .our-team {
+        padding: 95px $padding_1440;
+    } .testimonials {
+        padding: 95px $padding_1440;
+        .testimonial {
+            .comments {
+                .comment {
+                    flex: 1 0 1172px;
+                    -webkit-flex: 1 0 1172px;
+                    padding: 50px 50px;
+                    gap: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .testimonials {
+        padding: pxToVw(95, 1350) $padding_1440;
+
+        h1 {
+            font-size: pxToVw(40, 1350);
+            padding-right: pxToVw(30, 1350);
+            border-bottom: pxToVw(2, 1350) solid $purple;
+            margin-bottom: pxToVw(10, 1350);
+        }
+    
+
+        .testimonial {
+            .arrow-right,
+            .arrow-left {
+                svg {
+                    width: pxToVw(24, 1350);
+                    height: pxToVw(41, 1350);
+                }
+            }
+            margin-top: pxToVw(50, 1350); 
+            gap:pxToVw(30, 1350); 
+
+
+            .comments {
+                        
+                box-shadow: 0 0 pxToVw(5, 1350) 0 #999;
+                -webkit-box-shadow: 0 0 pxToVw(5, 1350) 0 #999;
+                .comment {
+                    height: pxToVw(300, 1350);
+                    flex: 1 0 pxToVw(1083, 1350);
+                    -webkit-flex: 1 0 pxToVw(1083, 1350);
+                    padding: pxToVw(50, 1350) pxToVw(50, 1350); 
+                    gap: pxToVw(90,1350);
+                    .desc {
+                        width: pxToVw(550, 1350); 
+                        font-size: pxToVw(20, 1350);
+                    } .detail {
+                        gap:pxToVw(27, 1350); 
+                        img {
+                            width: pxToVw(91, 1350);
+                            height: pxToVw(91, 1350);
+        
+                        }   .author {
+                            h1 {
+                                font-size: pxToVw(20, 1350);                            
+                            } p, a {
+                                font-size: pxToVw(15, 1350);
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .our-team {
+        padding: pxToVw(95, 1350) $padding_1440;
+        h1 {
+            font-size: pxToVw(40, 1350); 
+            padding-right: pxToVw(30, 1350);
+            border-bottom: pxToVw(2, 1350) solid $purple;
+            margin-bottom:pxToVw(10, 1350); 
+        }
+
+        .teams {
+            margin-top: pxToVw(58, 1350); 
+            gap: pxToVw(10, 1350); 
+            .team {
+                width: pxToVw(380, 1350); 
+                h5, p {
+                    font-size: pxToVw(28, 1350); 
+                } h5 {
+                    margin-top: pxToVw(15, 1350); 
+                }
+                     
+                .images {
+                    img {
+                        width: pxToVw(380, 1350); 
+                        height: pxToVw(380, 1350); 
+                    } .social-media-box {
+                        .rectangle {
+                            width: pxToVw(155, 1350); 
+                            height: pxToVw(155, 1350); 
+                            gap: pxToVw(30, 1350); 
+                            padding: pxToVw(25, 1350); 
+                            svg {
+                                width: pxToVw(35, 1350); 
+                                height: pxToVw(35, 1350); 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .our-mission {
+        .mission-box {
+            width: pxToVw(480, 1350); 
+        }
+    }
+
+    .hero {
+        margin-top: pxToVw(82, 1350); 
+        height: pxToVw(710, 1350); 
+        padding: 0 pxToVw(80, 1350); 
+        &-description {
+            svg {
+                width: pxToVw(220, 1350); 
+            } p {
+                font-size: pxToVw(21, 1350); 
+                margin-top: pxToVw(20, 1350); 
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px) { 
+    .our-team {
+        padding-left: $padding_1000;
+        padding-right: $padding_1000;
+    } .testimonials {
+        padding-left: $padding_1000;
+        padding-right: $padding_1000;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .testimonials {
+        h1 {
+            font-size: 40px;
+            padding-right: 30px;
+            margin-bottom: 50px;
+            width: 100%; 
+            border-bottom: 3px solid $purple;
+        } .testimonial {
+
+            margin-top: 22px;
+            gap: 10px; 
+            .arrow-right,
+            .arrow-left {
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    
+                }
+            }
+            .comments {
+                align-items: unset;
+                overflow:unset;
+                overflow-x: clip;
+                .comment {
+                    flex-direction: column;
+                    flex: 1 0 100%;
+                    -webkit-flex: 1 0 100%;
+                    height: unset;
+                    align-items: flex-start;
+                    gap: 15px;
+                    padding: 40px 20px;
+                    .desc {
+                        width: 100%;
+                        font-size: 18px; 
+                    } .detail {
+                        text-align: left;
+                        gap: 10px; 
+                        img {
+                            width: 91px; 
+                            height: 91px; 
+                            position: absolute;
+                            top: -50px;
+        
+                            left: 50%; /* position the left edge of the element at the middle of the parent */
+                        
+                            transform: translate(-50%, 0); 
+                        } .author {
+                            margin-top: 30px; 
+                            h1 {
+                                font-size: 20px;
+                                margin-bottom: unset;
+                            } p,a {
+                                font-size: 15px;
+                            }
+                        } .desc {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .our-team {
+        padding: 62px $padding_1000;
+        .dotted-process {
+            margin-top: 60px;
+           
+        }
+        h1 {
+            width: 100%;
+            padding-right: 30px;
+            border-bottom: 2px solid $purple;
+            margin-bottom: 45px;
+            font-size: 40px;                            
+        } .teams {
+            margin-top: unset;
+            gap:unset;
+            overflow: hidden;
+            .team {
+                width: 100%; 
+                @include flexwidth(100%);
+                .images {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    } .social-media-box {
+                        .rectangle {
+                            width: 48%; 
+                            height: 48%;
+                            
+                            padding: 50px;
+                            gap:unset; 
+                            row-gap: 32px;
+                            justify-content: space-between;
+                            svg {
+                                width: 37%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                h5, p {
+                    font-size: 30px;
+                } h5 {
+                    margin-top: 15px;
+                    font-family: redhatbold;
+                } p {
+                    font-family: redhat2;
+                }
+            }
+        }
+    }
+
+
+    .our-mission {
+        .mission-box {
+            width: 100%; 
+        }
+    } 
+    .hero {
+        margin-top: 82px; 
+        height: 283px; 
+        padding: 0 30px; 
+        &-description {
+            svg {
+                width: 163px; 
+            } p {
+                font-size: 20px; 
+                margin-top: 25px; 
+            }
+        }
+    }
+
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    }
+    
+}

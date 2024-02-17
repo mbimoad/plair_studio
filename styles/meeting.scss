@@ -1,0 +1,124 @@
+@import './main';
+
+
+.container {
+    overflow-x:hidden;
+} body {
+    overflow: unset;
+}
+
+
+
+.schedule-form {
+    
+    .box {
+    
+        width: 1230px;
+        transform: translate(0,-380px);
+        margin: auto;
+        &-title {
+            font-size: 40px;
+            color:white; 
+            font-family: redhatbold;
+        }
+        &-white {
+            margin-top: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 30px;
+            background-color: white;
+            box-shadow: 0 0 5px #ccc;
+            border-radius: 3px;
+            .calendly-inline-widget {
+                width: 1248px;
+                height: 702px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1570px) { 
+    .schedule-form {
+        .box {
+            width: 1147px;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .schedule-form {
+        .box {
+            transform: translate(0,pxToVw(-380, 1350));
+            width: pxToVw(1147, 1350); 
+            &-title {
+                font-size: pxToVw(40, 1350);
+            }
+            &-white {
+                padding-bottom: pxToVw(30, 1350);
+                .calendly-inline-widget {
+              
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1177px) {
+    .schedule-form {
+        .box {
+           width: 800px;
+            &-white {
+                padding-bottom: unset;
+            }
+        }
+    } 
+ 
+}
+
+@media screen and (max-width: 885px) { 
+    .schedule-form {
+        .box {
+            width: 630px; 
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    }
+
+    // Schedule form 
+    .schedule-form {
+        .box {
+            margin: unset;
+            padding: unset;
+            width: 100%;
+            &-title {
+                display: none;
+            }
+            &-white {
+                margin-top: unset;
+                .calendly-inline-widget {
+                    width: 1248px;
+                    height: 516px;
+                }
+            }
+            transform: translate(0,0);
+        }
+    }
+
+    .stayuptodate {
+        margin-top: 50px; 
+    }
+}

@@ -369,6 +369,22 @@ input {
   height: 37px;
 }
 
+.hero2 {
+  margin-top: 62px;
+  height: 736px;
+  gap: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("../assets/heroimg.png");
+  background-size: cover;
+}
+
+.hero2-title {
+  display: none;
+  text-align: center;
+}
+
 input::-webkit-input-placeholder {
   color: #ccc;
   font-size: 11px;
@@ -1348,6 +1364,9 @@ footer .links a {
 }
 
 @media screen and (max-width: 1570px) {
+  .hero2 {
+    height: 600px;
+  }
   header ul {
     gap: 40px;
   }
@@ -1461,6 +1480,10 @@ footer .links a {
 }
 
 @media screen and (max-width: 1350px) {
+  .hero2 {
+    margin-top: 4.59259vw;
+    height: 44.44444vw;
+  }
   .our-mission {
     gap: 3.7037vw;
   }
@@ -1731,6 +1754,23 @@ footer .links a {
 }
 
 @media screen and (max-width: 767px) {
+  .hero2 {
+    margin-top: 48px;
+    height: auto;
+    padding: 77px 32px 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero2-title {
+    display: unset;
+    font-size: 40px;
+    font-family: redhatbold;
+    color: white;
+  }
   .dotted-process {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2127,21 +2167,6 @@ body {
   overflow: unset;
 }
 
-.hero {
-  margin-top: 62px;
-  height: 736px;
-  gap: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("../assets/heroimg.png");
-  background-size: cover;
-}
-
-.hero-title {
-  display: none;
-}
-
 .contact-form .box {
   -webkit-transform: translate(0, -380px);
           transform: translate(0, -380px);
@@ -2405,9 +2430,6 @@ body {
 }
 
 @media screen and (max-width: 1570px) {
-  .hero {
-    height: 600px;
-  }
   .contact-form .box {
     width: 1147px;
   }
@@ -2424,10 +2446,6 @@ body {
 }
 
 @media screen and (max-width: 1350px) {
-  .hero {
-    margin-top: 4.59259vw;
-    height: 44.44444vw;
-  }
   .contact-form .box {
     width: 84.96296vw;
     -webkit-transform: translate(0, -28.14815vw);
@@ -2557,23 +2575,6 @@ body {
   footer {
     position: relative;
     z-index: 99999;
-  }
-  .hero {
-    margin-top: 48px;
-    height: auto;
-    padding: 77px 32px 40px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .hero-title {
-    display: unset;
-    font-size: 40px;
-    font-family: redhatbold;
-    color: white;
   }
   .contact-form {
     margin-bottom: 77px;

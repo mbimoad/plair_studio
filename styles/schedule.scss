@@ -8,15 +8,6 @@
 }
 
 
-.hero {
-    margin-top: 82px;
-    height: 736px;
-    gap: 200px;
-    display: flex;
-    background:url('../assets/heroimg.png');
-    background-size: cover;
-}
-
 
 .schedule-form {
     
@@ -201,6 +192,7 @@
                                     position: relative;
                                     z-index: 2;
                                 } li {
+                                    font-size: 15px;
                                     margin-top: 30px; 
                                 }
                                 
@@ -213,7 +205,17 @@
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
-                                svg:last-child {
+                                svg:first-child {
+                                    
+                                    width: 24px; 
+                                    height: 24px; 
+                                }
+
+                                &-current {
+                                    font-size: 16px; 
+                                }
+                                svg:nth-child(3) {
+                                    
                                     width: 10px;
                                     height:auto;
                                 } 
@@ -242,6 +244,10 @@
                         .time {
                             margin-top: 20px;
                             width: 40%;
+
+                            span {
+                                font-size: 16px; 
+                            }
                             
                             .items {
                                 
@@ -268,4 +274,188 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 1570px) { 
+    .schedule-form {
+        .box {
+            width: 1147px;
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .schedule-form {
+        .box {
+            transform: translate(0,pxToVw(-380, 1350));
+            width: pxToVw(1147, 1350); 
+            &-title {
+                font-size: pxToVw(40, 1350);
+            }
+    
+            &-white {
+                margin-top: pxToVw(34, 1350);
+                padding: pxToVw(103, 1350) pxToVw(72, 1350);
+                border-radius: pxToVw(5, 1350);
+                box-shadow: 0 0 pxToVw(5, 1350) #ccc;
+                .layout {
+                    box-shadow: 0 0 pxToVw(10, 1350) #ddd;
+                    border: pxToVw(1, 1350) solid #ddd;
+                    gap:pxToVw(20, 1350);
+                    .left {
+                        padding: pxToVw(30, 1350);
+                        border-right: pxToVw(1, 1350) solid #ddd;                     
+                        width: pxToVw(380, 1350); 
+                        height: pxToVw(600, 1350);
+                        a {
+                            font-size: pxToVw(18, 1350);
+                        }
+    
+                        &-header {
+                            .header {
+    
+                                img {
+                                    width: pxToVw(84, 1350); 
+                                    height: pxToVw(84, 1350); 
+                                } h5 {
+                                    margin-top: pxToVw(15, 1350);
+                                    font-size: pxToVw(18, 1350);
+                                } h1 {
+                                    font-size: pxToVw(40, 1350);
+                                }
+                            } 
+    
+                            .body {
+                                margin-top: pxToVw(25, 1350);
+                                gap: pxToVw(20, 1350); 
+                                .icon {
+                                    
+                                    span {
+                                        font-size: pxToVw(16, 1350);
+                                        width: 80%;
+                                    } 
+                                    gap: pxToVw(15, 1350);
+                                    svg {
+                                        flex: 0 1 pxToVw(30, 1350);
+                                    }
+                                }
+                            } p {
+                                margin-top: pxToVw(30, 1350);
+                                font-size: pxToVw(18, 1350);
+                            }
+                        }
+                    } 
+                    
+                    .middle {
+                        padding: pxToVw(30, 1350);
+                        h2 {
+                            font-size: pxToVw(20, 1350);
+                        } .calendars {
+                            gap:pxToVw(20, 1350);
+                            .date {
+                                width: pxToVw(400, 1350);
+                                height: pxToVw(430, 1350);
+                                &-header {
+                                    margin-top: pxToVw(10, 1350);                                   
+                                    .icon {
+                                        gap: pxToVw(20, 1350); 
+                                        .button {
+                                            width: pxToVw(40, 1350); 
+                                            height: pxToVw(40, 1350);
+                                            svg {
+                                                width: pxToVw(7, 1350); 
+                                            } 
+                                        }
+                                    }
+                                } ul {
+                                    li {
+                                        width: calc(100% / 7);
+                                    }
+                                } ul.weeks {   
+                                    margin-top: pxToVw(20, 1350);                                    
+                                } ul.days {
+                                    margin-top: pxToVw(10, 1350);
+                                    li::before {
+                                        width: pxToVw(40, 1350); 
+                                        height: pxToVw(40, 1350); 
+                                        z-index: -1;
+                                    } li {
+                                        font-size: pxToVw(15,1350);
+                                        margin-top: pxToVw(30, 1350); 
+                                    }
+                                    
+                                    
+                                } .globe {
+                                    bottom: -pxToVw(40, 1350);
+                                    margin-top: pxToVw(40, 1350);
+                                    gap: pxToVw(10, 1350);
+                                    svg:first-child {
+                                    
+                                        width: pxToVw(24, 1350); 
+                                        height: pxToVw(24, 1350); 
+                                    }
+    
+                                    &-current {
+                                        font-size: pxToVw(16, 1350); 
+                                    }
+                                    svg:nth-child(3) {
+                                        
+                                        width: pxToVw(10, 1350);
+                                        height:auto;
+                                    } 
+
+                                    .globe-items {
+                                        width: 100%;
+                                        height: pxToVw(150, 1350);
+                                        bottom: -pxToVw(160, 1350);
+                                        box-shadow: 0 0 pxToVw(5, 1350) #ccc;
+                                        .globe-item {
+                                            padding: pxToVw(5, 1350);
+                                        } 
+                                    }
+                                }
+                            }
+                            .time {
+                                margin-top: pxToVw(20, 1350);
+                                width: 40%;
+
+                                span {
+                                    font-size: pxToVw(16,1350);
+                                }
+                                
+                                .items {
+                                    margin-top: pxToVw(20, 1350);
+                                    gap: pxToVw(20, 1350); 
+                                    .item {
+                                        border: pxToVw(1, 1350) solid #3774F6;
+                                        padding: pxToVw(15, 1350);
+                                        border-radius: pxToVw(5, 1350);
+                                        font-size: pxToVw(16, 1350);
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    }
+
+    // Schedule form 
+ 
 }

@@ -1955,7 +1955,7 @@ footer .links a {
     -webkit-transform: rotate(30deg) translate(2px, 3px);
             transform: rotate(30deg) translate(2px, 3px);
   }
-  header .mobile-menu .hamburger span.factive:last-child {
+  header .mobile-menu .hamburger span.active:last-child {
     -webkit-transform: rotate(-30deg) translate(3px, -5px);
             transform: rotate(-30deg) translate(3px, -5px);
   }

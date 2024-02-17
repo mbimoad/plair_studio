@@ -8,12 +8,15 @@
 } 
 
 .hero {
-    margin-top: 82px;
+    margin-top: 62px;
     height: 736px;
     gap: 200px;
     display: flex;
     background:url('../assets/heroimg.png');
     background-size: cover;
+    &-title {
+        display: none;
+    }
 }
 
 
@@ -213,6 +216,7 @@
 
 @media screen and (max-width: 1350px) { 
     .hero {
+        margin-top: pxToVw(62, 1350);
         height: pxToVw(600, 1350);
     }
 
@@ -340,10 +344,12 @@
     
     .hero {
         margin-top: 48px; 
-       height: 194px; 
+       height: auto; 
+       padding: 77px 32px 40px;
        justify-content: center;
        align-items: center;
        &-title {
+           display:unset;
            font-size: 40px; 
            font-family: redhatbold;
            color:white; 

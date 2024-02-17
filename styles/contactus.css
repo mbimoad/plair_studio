@@ -2128,7 +2128,7 @@ body {
 }
 
 .hero {
-  margin-top: 82px;
+  margin-top: 62px;
   height: 736px;
   gap: 200px;
   display: -webkit-box;
@@ -2136,6 +2136,10 @@ body {
   display: flex;
   background: url("../assets/heroimg.png");
   background-size: cover;
+}
+
+.hero-title {
+  display: none;
 }
 
 .contact-form .box {
@@ -2421,6 +2425,7 @@ body {
 
 @media screen and (max-width: 1350px) {
   .hero {
+    margin-top: 4.59259vw;
     height: 44.44444vw;
   }
   .contact-form .box {
@@ -2555,7 +2560,8 @@ body {
   }
   .hero {
     margin-top: 48px;
-    height: 194px;
+    height: auto;
+    padding: 77px 32px 40px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2564,6 +2570,7 @@ body {
             align-items: center;
   }
   .hero-title {
+    display: unset;
     font-size: 40px;
     font-family: redhatbold;
     color: white;

@@ -2904,7 +2904,7 @@ body {
             transform: translate(0, 0);
   }
   .current-opening {
-    padding: 0 30px;
+    padding: unset;
     width: 100%;
     margin-top: 33px;
     margin-bottom: 33px;
@@ -2913,7 +2913,11 @@ body {
     font-size: 30px;
     padding: unset;
     width: 100%;
-    border-bottom: 2px solid #4d289c;
+    border-bottom: 4px solid #4d289c;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 8px;
+    font-family: redhatbold;
   }
   .current-opening .cards {
     margin-top: 39px;
@@ -2923,7 +2927,7 @@ body {
     max-height: 2500px;
   }
   .current-opening .cards .card {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 30px;
     -webkit-box-shadow: 0 0 5px #ccc;
             box-shadow: 0 0 5px #ccc;

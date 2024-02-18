@@ -582,7 +582,7 @@
 
 
     .current-opening {
-        padding: 0 $padding_1000;
+        padding: unset;
         width: 100%;
         margin-top: 33px; 
         margin-bottom: 33px;
@@ -590,14 +590,18 @@
             font-size: 30px; 
             padding:unset; 
             width: 100%; 
-            border-bottom: 2px solid $purple;
+            border-bottom: 4px solid $purple;
+            width: 90%; 
+            margin: auto;
+            padding-bottom: 8px;
+            font-family: redhatbold;
         } .cards {
             margin-top: 39px; 
             gap: 20px; 
             .card.unboxed {
                 max-height: 2500px;
             } .card {
-                border-radius: 5px;
+                border-radius: 10px;
                 padding: 30px; 
                 box-shadow: 0 0 5px #ccc;
                 max-height: 164px;

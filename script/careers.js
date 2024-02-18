@@ -1,11 +1,16 @@
+
 document.addEventListener('click', function(e) {
     if(e.target.classList.contains('card')) {
         let element = e.target;
+        element.querySelector('p').classList.toggle('active');
+        console.log(element);
         if(element.classList.contains('unboxed')) {
             element.classList.toggle('unboxed'); 
+      
         } else {
             document.querySelectorAll('.card').forEach(item => item.classList.remove('unboxed'));
             element.classList.toggle('unboxed'); 
+
         }
     }
 

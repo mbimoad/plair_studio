@@ -383,6 +383,18 @@ input {
 .hero2-title {
   display: none;
   text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.hero2 p {
+  display: none;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 816px;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
 }
 
 input::-webkit-input-placeholder {
@@ -1484,6 +1496,14 @@ footer .links a {
     margin-top: 4.59259vw;
     height: 44.44444vw;
   }
+  .hero2-title {
+    font-size: 2.96296vw;
+  }
+  .hero2 p {
+    font-size: 1.48148vw;
+    width: 60.44444vw;
+    margin-top: 2.22222vw;
+  }
   .our-mission {
     gap: 3.7037vw;
   }
@@ -1685,6 +1705,9 @@ footer .links a {
 }
 
 @media screen and (max-width: 1000px) {
+  .hero2 p {
+    width: 90%;
+  }
   .stayuptodate {
     padding-left: 30px;
     padding-right: 30px;
@@ -1770,6 +1793,11 @@ footer .links a {
     font-size: 40px;
     font-family: redhatbold;
     color: white;
+  }
+  .hero2 p {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
   }
   .dotted-process {
     display: -webkit-box;
@@ -2533,6 +2561,18 @@ input {
 .hero2-title {
   display: none;
   text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.hero2 p {
+  display: none;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 816px;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
 }
 
 input::-webkit-input-placeholder {
@@ -3634,6 +3674,14 @@ footer .links a {
     margin-top: 4.59259vw;
     height: 44.44444vw;
   }
+  .hero2-title {
+    font-size: 2.96296vw;
+  }
+  .hero2 p {
+    font-size: 1.48148vw;
+    width: 60.44444vw;
+    margin-top: 2.22222vw;
+  }
   .our-mission {
     gap: 3.7037vw;
   }
@@ -3835,6 +3883,9 @@ footer .links a {
 }
 
 @media screen and (max-width: 1000px) {
+  .hero2 p {
+    width: 90%;
+  }
   .stayuptodate {
     padding-left: 30px;
     padding-right: 30px;
@@ -3920,6 +3971,11 @@ footer .links a {
     font-size: 40px;
     font-family: redhatbold;
     color: white;
+  }
+  .hero2 p {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
   }
   .dotted-process {
     display: -webkit-box;

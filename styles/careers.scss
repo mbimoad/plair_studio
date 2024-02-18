@@ -8,27 +8,17 @@
 }
 
 
-.hero {
-    margin-top: 82px;
-    height: 736px;
-    gap: 200px;
-    display: flex;
-    background:url('../assets/heroimg.png');
-    background-size: cover;
+.hero2 {
+    flex-direction:column;
     justify-content: center;
     align-items: center;
-    &-detail {
-        display: inline-block;
-        width: 816px;
-        text-align: center;
-        color:white; 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        } p {
-            line-height: 1.5;
-            font-size: 20px;
-        }
+    gap:unset;
+    &-title {
+        display: unset;
+   
+    } p {
+        display: unset;
+
     }
 }
 
@@ -71,12 +61,30 @@
                     gap: 60px;
                     display: flex;
                     align-items: center;
+                    img {
+                        width: 78px; 
+                        height: 78px;
+                    }
                     .detail {
                         p {
                             font-size: 20px;
                             margin-top: 15px;
-                        } h2 {
+                            height: 30px;
+                            overflow: hidden;
+                            transition: all 200ms ease 0s;
+                        } p.active {
+                            overflow:unset;
+                            height: auto;
+                        }
+                        
+                        h2 {
                             font-size: 30px;
+                        }
+                        .detail-info {
+                            img {
+                                
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -102,6 +110,7 @@
                         justify-content: space-between;
                         align-items: center;
                         .detail {
+                            
                             
                             flex:1; 
                             span {
@@ -188,7 +197,7 @@
     transform: translate(-50%, 200%);
 
     z-index: 999;
-    margin-top: 34px;
+    margin-top: unset;
     background: white;
     padding: 50px;
     border-radius: 5px;
@@ -227,6 +236,7 @@
                 box-shadow: inset 1px 3px 3px 0 #eee;
                 color:#ccc;
                 font-size: 16px;
+                background-size: 11px ;
                 option {
                     color:#ccc;
                     font-size: 16px;
@@ -236,7 +246,7 @@
             flex-direction: column;
             gap:10px;
             label {
-                font-family: 15px;
+                font-size: 15px;
                 font-family: redhat1;
                 text-transform: uppercase;
             } input,textarea,select {
@@ -297,7 +307,7 @@
                             -webkit-appearance: none;
                             background: url('../assets/arrowselect.svg') no-repeat 65px 23px;
                             box-shadow: 0 0 2px #ccc;
-                            
+                            background-size: 11px ;
                         } input {
                             flex:1;
                         }
@@ -313,6 +323,541 @@
                     gap: 16px;
                     .form-group {
                         flex:1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1570px) { 
+    .current-opening {
+        width: 1070px;
+
+    } .box-white {
+        width: 800px;
+        form {
+            .form-group {
+                textarea {
+                    height: 90px;
+                }
+            }
+        } .header {
+            h2 {
+                margin-top: 30px; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+ .current-opening {
+    width: pxToVw(1194, 1350);
+    margin: pxToVw(98, 1350) auto;
+    margin-bottom: pxToVw(98, 1350);
+    h1 {
+        
+        font-size: pxToVw(40, 1350);
+        padding-right: pxToVw(40, 1350);
+        border-bottom: pxToVw(2, 1350) solid $purple;
+    } .cards {
+        margin-top: pxToVw(56, 1350);
+        display:flex;
+        gap:pxToVw(40, 1350);
+        .card.unboxed {
+            max-height: pxToVw(1500, 1350);
+        }
+
+        .card {
+            border-radius: pxToVw(5, 1350);
+            padding: pxToVw(44, 1350);
+            box-shadow: 0 0 pxToVw(5, 1350) #ccc;
+            max-height: pxToVw(160, 1350);
+            &-header {
+                .information {
+                    gap: pxToVw(60, 1350);
+                    img {
+                        
+                        width: pxToVw(78, 1350);
+                        height: pxToVw(78, 1350);
+                    }
+                    .detail {
+                        p {
+                            font-size: pxToVw(20, 1350);
+                            margin-top: pxToVw(15, 1350);
+                            height: pxToVw(30,1350);
+                        } h2 {
+                            font-size: pxToVw(30, 1350);
+                        }
+                    }
+                }
+            } .arrow {
+                svg {
+                    width: pxToVw(20, 1350);
+                    height: pxToVw(12, 1350);
+                }
+            }
+
+            &-apply {
+                margin-left: pxToVw(135, 1350);
+                width: pxToVw(707, 1350); 
+                padding: pxToVw(52, 1350) pxToVw(33, 1350);
+                margin-top: pxToVw(44, 1350);
+                border-top: pxToVw(15, 1350) solid $purple;
+                border-radius: pxToVw(30, 1350);
+                box-shadow: 0 0 pxToVw(10, 1350) #ccc;
+                svg {
+                    width: pxToVw(20, 1350);
+                    height: pxToVw(20, 1350);
+                }
+                h3 {
+                    font-size: pxToVw(20, 1350);
+                } .apply-layouts {
+                    margin-top: pxToVw(31, 1350);
+                    display: flex;
+                    gap: pxToVw(20, 1350);
+                    .apply-layout {
+                        .detail {
+                            
+                            flex:1; 
+                            span {
+                                font-size: pxToVw(20, 1350);
+                            } h5 {
+                                font-size: pxToVw(20, 1350);
+                            } button {
+                                gap: pxToVw(10, 1350); 
+                                width: pxToVw(191, 1350);
+                                height: pxToVw(36, 1350);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-descriptions {
+                margin-left: pxToVw(135, 1350);
+                width: pxToVw(752, 1350);
+                margin-top: pxToVw(39, 1350);
+                display: flex;
+                gap: pxToVw(30, 1350); 
+                .card-description {
+                    h3,p,ul li {
+                        font-size: pxToVw(20, 1350);
+                    } 
+                    ul {
+                        margin-left: pxToVw(15, 1350);
+                    }
+                    gap: pxToVw(20, 1350); 
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 1000px) { 
+    .box-white {
+
+        padding: pxToVw(50, 1000);
+        border-radius: pxToVw(5, 1000);
+        box-shadow: 0 0 pxToVw(5, 1000) #ccc;
+        width: pxToVw(800, 1000);
+        .header {
+        
+            h1 {
+                font-size: pxToVw(30, 1000);
+                padding-right: pxToVw(30, 1000);
+            } h2 {
+                margin-top: pxToVw(30, 1000); 
+                font-size: pxToVw(20, 1000);
+                border-bottom: pxToVw(1, 1000) solid;
+            }
+        }
+    
+        form {
+            .mybtn.btn-purple {
+                margin-top: pxToVw(46, 1000);
+                height: pxToVw(46, 1000);
+                font-size: pxToVw(15, 1000);
+            }
+            .form-group {
+                select {
+                    padding: pxToVw(13, 1000) pxToVw(8, 1000);
+                    background: url('../assets/arrow2.svg') no-repeat 95% pxToVw(20, 1000);
+                    box-shadow: inset pxToVw(1, 1000) pxToVw(3, 1000) pxToVw(3, 1000) 0 #eee;
+                    font-size: pxToVw(16, 1000);
+                    background-size: pxToVw(11, 1000);
+                    option {
+                        font-size: pxToVw(16, 1000);
+                    }
+                }
+                gap:pxToVw(10, 1000);
+                label {
+                    font-size: pxToVw(15, 1000);
+                } input,textarea,select {
+                    height: pxToVw(45, 1000);
+                } textarea {
+                    border-radius: pxToVw(3, 1000);
+                    height: pxToVw(90, 1000);
+                    padding: pxToVw(16, 1000); 
+                    box-shadow: inset pxToVw(1, 1000) pxToVw(3, 1000) pxToVw(3, 1000) 0 #eee;
+                    font-size: pxToVw(16, 1000);
+                }
+                input {
+                    font-size: pxToVw(16, 1000);
+                }
+                input::-webkit-input-placeholder {
+                    font-size: pxToVw(16, 1000);
+                }
+                
+                input::placeholder {
+                    font-size: pxToVw(16, 1000);
+                } label.btn-purple {
+                    width: pxToVw(188, 1000); 
+                    height: pxToVw(36, 1000); 
+                    border-radius: pxToVw(5, 1000);
+                    font-size: pxToVw(13, 1000);
+                    gap: pxToVw(10, 1000);
+                }
+            }
+            .form-header {
+                margin-top: pxToVw(36, 1000);
+                margin-bottom: pxToVw(34, 1000);
+                gap: pxToVw(41, 1000); 
+                .right {
+                    gap:pxToVw(22, 1000);
+                    flex: 1; 
+                    .form-group {
+                        .numbers {
+                            select {
+                                padding: pxToVw(13, 1000);
+                                padding-right: pxToVw(50, 1000);
+                                background: url('../assets/arrowselect.svg') no-repeat pxToVw(65, 1000) pxToVw(23, 1000);
+                                box-shadow: 0 0 pxToVw(2, 1000) #ccc;
+                                background-size: pxToVw(11, 1000);
+                            } input {
+                                flex:1;
+                            }
+                        }
+                    }
+                } .left {
+                    flex: 1;
+                    gap:pxToVw(22, 1000);
+                    .username {
+                        gap: pxToVw(16, 1000);
+                        .form-group {
+                            flex:1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+ 
+}
+
+@media screen and (max-width: 767px) { 
+    
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    }
+
+
+    .current-opening {
+        padding: 0 $padding_1000;
+        width: 100%;
+        margin-top: 33px; 
+        margin-bottom: 33px;
+        h1 {
+            font-size: 30px; 
+            padding:unset; 
+            width: 100%; 
+            border-bottom: 2px solid $purple;
+        } .cards {
+            margin-top: 39px; 
+            gap: 20px; 
+            .card.unboxed {
+                max-height: 2500px;
+            } .card {
+                border-radius: 5px;
+                padding: 30px; 
+                box-shadow: 0 0 5px #ccc;
+                max-height: 164px;
+                &-header {
+                    gap:30px; 
+                    .information {
+                        img {
+                            display: none;
+                        }
+                        gap: 21px; 
+                 
+                        .detail {
+                           
+                            &-info {
+                                display: flex;
+                                align-items: center;
+                                gap:10px;
+                                 h2 {
+                                    font-family: redhatbold;
+                                }
+                            }
+                            .detail-info {
+                                img {
+                                    display: unset;
+                                }
+                            }
+
+                            p {
+                                margin-top: 15px; 
+                                font-size: 20px;
+                                height: 50px;
+                            } h2 {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                } .arrow {
+                    svg {
+                        width: 14px;
+                        height: 14px; 
+                    }
+                }
+                &-apply {
+                    margin-left: unset;
+                    width: 100%;
+                    padding: 50px ;
+                    margin-top: 45px;
+                    border-top: 10px solid $purple;
+                    border-radius: 30px;
+                    box-shadow: 0 0 10px #ccc;
+                    text-align: center;
+                    svg {
+                        width: 20px; 
+                        height: 20px; 
+
+                    } h3 {
+                        font-size: 20px; 
+                    } .apply-layouts {
+                        
+                        margin-top: 31px;
+                        gap:20px; 
+                        .apply-layout {
+                            flex-direction: column;
+                            gap: 27px;
+                            text-align: center;
+                            .detail {
+                                span {
+                                    font-size: 20px;
+                                    font-family: redhat2;
+                                } h5 {
+                                    font-size: 20px; 
+                                } button {
+                                    gap: 10px; 
+                                    width: 191px; 
+                                    height: 36px; 
+                                    font-size: 15px; 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .card-descriptions {
+                    margin-left: unset;
+                    width: 100%;
+                    margin-top: 39px; 
+                    gap: 30px; 
+                    .card-description {
+                        gap: 20px; 
+                        h3,p,ul li {
+                            font-size: 20px; 
+                        } ul {
+                            margin-left: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+ 
+
+
+    .box-white {
+        width: 90%;
+        padding: 30px; 
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ccc;
+        .header {
+            h1 {
+                font-size: 20px;
+            } h2 {
+                font-size: 17px;
+                margin-top: 9px;
+                margin-bottom: 20px;
+            }
+        }
+        form {
+
+            .mybtn.btn-purple {
+                margin-top: 8px;
+                width: 100%;
+                height: 30px;
+                font-size: 13px;
+            }
+
+            .form-header {
+                margin-top: 8px;
+                margin-bottom: 8px;
+                gap: 8px;
+                flex-direction: column;
+                .left,
+                .right {
+                    gap: 8px;
+                }
+
+                .right {
+                    .form-group {
+                        .numbers {
+                            select {
+                                
+                                padding: 0 6px; 
+                                padding-right: 50px;
+                                background: url('../assets/arrowselect.svg') no-repeat 65px 13px;
+                                box-shadow: 0 0 2px #ccc;
+                                background-size: 11px ; 
+                            }
+                        }
+                    }
+                } .left {
+                    // gap: unset;
+                    .username {
+                        gap: unset; 
+                    }
+                }
+            }
+
+            .form-group {
+                select {
+                    padding: 0 6px; 
+                    
+                    background: url('../assets/arrow2.svg') no-repeat 95% 13px;
+                    font-size: 11px;
+                    option {
+                        font-size: 11px; 
+                    }
+                }
+                gap: 8px; 
+                label {
+                    font-size: 11px; 
+                    
+
+                } input,textarea,select {
+                    height: 36px;
+                } textarea {
+                    font-size: 11px;
+                    height: 50px; 
+                    padding: 11px; 
+                } input::-webkit-input-placeholder {
+                    font-size: 11px;
+                }
+                
+                input::placeholder {
+                    font-size: 11px;
+                } label.btn-purple {
+                    width: 188px; 
+                    height: 30px; 
+                    border-radius: 5px;
+                    font-size: 11px;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 560px) { 
+    $fontSize: 15px; 
+    .current-opening {
+  .cards {
+ .card {
+                &-header {
+        
+                    .information {
+                 
+                        .detail {
+                           
+                           
+
+                            p {
+                                margin-top: 15px; 
+                                font-size: 16px;
+                                height: 60px;
+                            } h2 {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                } .arrow {
+                    svg {
+                        width: 10px;
+                        height: 10px; 
+                    }
+                }
+                &-apply {
+                     h3 {
+                        font-size: $fontSize; 
+                    } .apply-layouts {
+                        
+                        margin-top: 31px;
+                        gap:20px; 
+                        .apply-layout {
+                            gap: 27px;
+                            .detail {
+                                span {
+                                    font-size: $fontSize;
+                                } h5 {
+                                    font-size: $fontSize; 
+                                } button {
+                                    height: 25px; 
+                                    svg {
+                                        width: 14px; 
+                                        height: 14px; 
+                                    }
+                                   span {
+                                       font-size: 12px;
+                                   }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .card-descriptions {
+                    .card-description {
+                        h3,p,ul li {
+                            font-size: $fontSize; 
+                        } 
                     }
                 }
             }

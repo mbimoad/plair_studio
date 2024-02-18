@@ -307,6 +307,16 @@ input {
     &-title {
         display: none;
         text-align: center;
+        font-size: 40px; 
+        color:white; 
+    } p {
+        display: none;
+        line-height: 1.5;
+        font-size: 20px; 
+        width: 816px;
+        color:white; 
+        margin-top: 30px;
+        text-align: center;
     }
 }
 
@@ -1138,6 +1148,13 @@ footer {
     .hero2 {
         margin-top: pxToVw(62, 1350);
         height: pxToVw(600, 1350);
+        &-title {
+            font-size: pxToVw(40, 1350); 
+        } p {
+            font-size: pxToVw(20, 1350); 
+            width: pxToVw(816, 1350);
+            margin-top: pxToVw(30, 1350);
+        }
     }
     .our-mission {
         gap: pxToVw(50, 1350);
@@ -1324,6 +1341,13 @@ footer {
 }
 
 @media screen and (max-width: 1000px) { 
+
+    .hero2 {
+        p {
+            width: 90%;
+        }
+    }
+
     .stayuptodate {
         padding-left: $padding_1000;
         padding-right: $padding_1000;
@@ -1406,6 +1430,8 @@ footer {
             }
         }
     }
+
+   
  
 }
 
@@ -1422,8 +1448,11 @@ footer {
            font-size: 40px; 
            font-family: redhatbold;
            color:white; 
-
-       } 
+       } p {
+            margin-top: 30px; 
+            font-size: 20px; 
+            text-align:justify;
+       }
     }
 
     .dotted-process {

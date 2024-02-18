@@ -383,6 +383,18 @@ input {
 .hero2-title {
   display: none;
   text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.hero2 p {
+  display: none;
+  line-height: 1.5;
+  font-size: 20px;
+  width: 816px;
+  color: white;
+  margin-top: 30px;
+  text-align: center;
 }
 
 input::-webkit-input-placeholder {
@@ -1484,6 +1496,14 @@ footer .links a {
     margin-top: 4.59259vw;
     height: 44.44444vw;
   }
+  .hero2-title {
+    font-size: 2.96296vw;
+  }
+  .hero2 p {
+    font-size: 1.48148vw;
+    width: 60.44444vw;
+    margin-top: 2.22222vw;
+  }
   .our-mission {
     gap: 3.7037vw;
   }
@@ -1685,6 +1705,9 @@ footer .links a {
 }
 
 @media screen and (max-width: 1000px) {
+  .hero2 p {
+    width: 90%;
+  }
   .stayuptodate {
     padding-left: 30px;
     padding-right: 30px;
@@ -1770,6 +1793,11 @@ footer .links a {
     font-size: 40px;
     font-family: redhatbold;
     color: white;
+  }
+  .hero2 p {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
   }
   .dotted-process {
     display: -webkit-box;
@@ -2167,38 +2195,26 @@ body {
   overflow: unset;
 }
 
-.hero {
-  margin-top: 82px;
-  height: 736px;
-  gap: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("../assets/heroimg.png");
-  background-size: cover;
+.hero2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: unset;
 }
 
-.hero-detail {
-  display: inline-block;
-  width: 816px;
-  text-align: center;
-  color: white;
+.hero2-title {
+  display: unset;
 }
 
-.hero-detail h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.hero-detail p {
-  line-height: 1.5;
-  font-size: 20px;
+.hero2 p {
+  display: unset;
 }
 
 .current-opening {
@@ -2270,13 +2286,31 @@ body {
           align-items: center;
 }
 
+.current-opening .cards .card-header .information img {
+  width: 78px;
+  height: 78px;
+}
+
 .current-opening .cards .card-header .information .detail p {
   font-size: 20px;
   margin-top: 15px;
+  height: 30px;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+
+.current-opening .cards .card-header .information .detail p.active {
+  overflow: unset;
+  height: auto;
 }
 
 .current-opening .cards .card-header .information .detail h2 {
   font-size: 30px;
+}
+
+.current-opening .cards .card-header .information .detail .detail-info img {
+  display: none;
 }
 
 .current-opening .cards .card-apply {
@@ -2425,7 +2459,7 @@ body {
   -webkit-transform: translate(-50%, 200%);
           transform: translate(-50%, 200%);
   z-index: 999;
-  margin-top: 34px;
+  margin-top: unset;
   background: white;
   padding: 50px;
   border-radius: 5px;
@@ -2477,6 +2511,7 @@ body {
           box-shadow: inset 1px 3px 3px 0 #eee;
   color: #ccc;
   font-size: 16px;
+  background-size: 11px;
 }
 
 .box-white form .form-group select option {
@@ -2485,7 +2520,7 @@ body {
 }
 
 .box-white form .form-group label {
-  font-family: 15px;
+  font-size: 15px;
   font-family: redhat1;
   text-transform: uppercase;
 }
@@ -2590,6 +2625,7 @@ body {
   background: url("../assets/arrowselect.svg") no-repeat 65px 23px;
   -webkit-box-shadow: 0 0 2px #ccc;
           box-shadow: 0 0 2px #ccc;
+  background-size: 11px;
 }
 
 .box-white form .form-header .right .form-group .numbers input {
@@ -2623,5 +2659,499 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media screen and (max-width: 1570px) {
+  .current-opening {
+    width: 1070px;
+  }
+  .box-white {
+    width: 800px;
+  }
+  .box-white form .form-group textarea {
+    height: 90px;
+  }
+  .box-white .header h2 {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .current-opening {
+    width: 88.44444vw;
+    margin: 7.25926vw auto;
+    margin-bottom: 7.25926vw;
+  }
+  .current-opening h1 {
+    font-size: 2.96296vw;
+    padding-right: 2.96296vw;
+    border-bottom: 0.14815vw solid #4d289c;
+  }
+  .current-opening .cards {
+    margin-top: 4.14815vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.96296vw;
+  }
+  .current-opening .cards .card.unboxed {
+    max-height: 111.11111vw;
+  }
+  .current-opening .cards .card {
+    border-radius: 0.37037vw;
+    padding: 3.25926vw;
+    -webkit-box-shadow: 0 0 0.37037vw #ccc;
+            box-shadow: 0 0 0.37037vw #ccc;
+    max-height: 11.85185vw;
+  }
+  .current-opening .cards .card-header .information {
+    gap: 4.44444vw;
+  }
+  .current-opening .cards .card-header .information img {
+    width: 5.77778vw;
+    height: 5.77778vw;
+  }
+  .current-opening .cards .card-header .information .detail p {
+    font-size: 1.48148vw;
+    margin-top: 1.11111vw;
+    height: 2.22222vw;
+  }
+  .current-opening .cards .card-header .information .detail h2 {
+    font-size: 2.22222vw;
+  }
+  .current-opening .cards .card .arrow svg {
+    width: 1.48148vw;
+    height: 0.88889vw;
+  }
+  .current-opening .cards .card-apply {
+    margin-left: 10vw;
+    width: 52.37037vw;
+    padding: 3.85185vw 2.44444vw;
+    margin-top: 3.25926vw;
+    border-top: 1.11111vw solid #4d289c;
+    border-radius: 2.22222vw;
+    -webkit-box-shadow: 0 0 0.74074vw #ccc;
+            box-shadow: 0 0 0.74074vw #ccc;
+  }
+  .current-opening .cards .card-apply svg {
+    width: 1.48148vw;
+    height: 1.48148vw;
+  }
+  .current-opening .cards .card-apply h3 {
+    font-size: 1.48148vw;
+  }
+  .current-opening .cards .card-apply .apply-layouts {
+    margin-top: 2.2963vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.48148vw;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail span {
+    font-size: 1.48148vw;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail h5 {
+    font-size: 1.48148vw;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail button {
+    gap: 0.74074vw;
+    width: 14.14815vw;
+    height: 2.66667vw;
+  }
+  .current-opening .cards .card .card-descriptions {
+    margin-left: 10vw;
+    width: 55.7037vw;
+    margin-top: 2.88889vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2.22222vw;
+  }
+  .current-opening .cards .card .card-descriptions .card-description {
+    gap: 1.48148vw;
+  }
+  .current-opening .cards .card .card-descriptions .card-description h3, .current-opening .cards .card .card-descriptions .card-description p, .current-opening .cards .card .card-descriptions .card-description ul li {
+    font-size: 1.48148vw;
+  }
+  .current-opening .cards .card .card-descriptions .card-description ul {
+    margin-left: 1.11111vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .box-white {
+    padding: 5vw;
+    border-radius: 0.5vw;
+    -webkit-box-shadow: 0 0 0.5vw #ccc;
+            box-shadow: 0 0 0.5vw #ccc;
+    width: 80vw;
+  }
+  .box-white .header h1 {
+    font-size: 3vw;
+    padding-right: 3vw;
+  }
+  .box-white .header h2 {
+    margin-top: 3vw;
+    font-size: 2vw;
+    border-bottom: 0.1vw solid;
+  }
+  .box-white form .mybtn.btn-purple {
+    margin-top: 4.6vw;
+    height: 4.6vw;
+    font-size: 1.5vw;
+  }
+  .box-white form .form-group {
+    gap: 1vw;
+  }
+  .box-white form .form-group select {
+    padding: 1.3vw 0.8vw;
+    background: url("../assets/arrow2.svg") no-repeat 95% 2vw;
+    -webkit-box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+            box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+    font-size: 1.6vw;
+    background-size: 1.1vw;
+  }
+  .box-white form .form-group select option {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group label {
+    font-size: 1.5vw;
+  }
+  .box-white form .form-group input, .box-white form .form-group textarea, .box-white form .form-group select {
+    height: 4.5vw;
+  }
+  .box-white form .form-group textarea {
+    border-radius: 0.3vw;
+    height: 9vw;
+    padding: 1.6vw;
+    -webkit-box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+            box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group input {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group input::-webkit-input-placeholder {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group input:-ms-input-placeholder {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group input::-ms-input-placeholder {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group input::placeholder {
+    font-size: 1.6vw;
+  }
+  .box-white form .form-group label.btn-purple {
+    width: 18.8vw;
+    height: 3.6vw;
+    border-radius: 0.5vw;
+    font-size: 1.3vw;
+    gap: 1vw;
+  }
+  .box-white form .form-header {
+    margin-top: 3.6vw;
+    margin-bottom: 3.4vw;
+    gap: 4.1vw;
+  }
+  .box-white form .form-header .right {
+    gap: 2.2vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .box-white form .form-header .right .form-group .numbers select {
+    padding: 1.3vw;
+    padding-right: 5vw;
+    background: url("../assets/arrowselect.svg") no-repeat 6.5vw 2.3vw;
+    -webkit-box-shadow: 0 0 0.2vw #ccc;
+            box-shadow: 0 0 0.2vw #ccc;
+    background-size: 1.1vw;
+  }
+  .box-white form .form-header .right .form-group .numbers input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .box-white form .form-header .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 2.2vw;
+  }
+  .box-white form .form-header .left .username {
+    gap: 1.6vw;
+  }
+  .box-white form .form-header .left .username .form-group {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-menu .menu-list:last-child {
+    position: unset;
+  }
+  .footer-menu .menu-list .menu-data.sosmed {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .current-opening {
+    padding: 0 30px;
+    width: 100%;
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+  .current-opening h1 {
+    font-size: 30px;
+    padding: unset;
+    width: 100%;
+    border-bottom: 2px solid #4d289c;
+  }
+  .current-opening .cards {
+    margin-top: 39px;
+    gap: 20px;
+  }
+  .current-opening .cards .card.unboxed {
+    max-height: 2500px;
+  }
+  .current-opening .cards .card {
+    border-radius: 5px;
+    padding: 30px;
+    -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+    max-height: 164px;
+  }
+  .current-opening .cards .card-header {
+    gap: 30px;
+  }
+  .current-opening .cards .card-header .information {
+    gap: 21px;
+  }
+  .current-opening .cards .card-header .information img {
+    display: none;
+  }
+  .current-opening .cards .card-header .information .detail-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .current-opening .cards .card-header .information .detail-info h2 {
+    font-family: redhatbold;
+  }
+  .current-opening .cards .card-header .information .detail .detail-info img {
+    display: unset;
+  }
+  .current-opening .cards .card-header .information .detail p {
+    margin-top: 15px;
+    font-size: 20px;
+    height: 50px;
+  }
+  .current-opening .cards .card-header .information .detail h2 {
+    font-size: 25px;
+  }
+  .current-opening .cards .card .arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+  .current-opening .cards .card-apply {
+    margin-left: unset;
+    width: 100%;
+    padding: 50px;
+    margin-top: 45px;
+    border-top: 10px solid #4d289c;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 0 10px #ccc;
+    text-align: center;
+  }
+  .current-opening .cards .card-apply svg {
+    width: 20px;
+    height: 20px;
+  }
+  .current-opening .cards .card-apply h3 {
+    font-size: 20px;
+  }
+  .current-opening .cards .card-apply .apply-layouts {
+    margin-top: 31px;
+    gap: 20px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 27px;
+    text-align: center;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail span {
+    font-size: 20px;
+    font-family: redhat2;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail h5 {
+    font-size: 20px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail button {
+    gap: 10px;
+    width: 191px;
+    height: 36px;
+    font-size: 15px;
+  }
+  .current-opening .cards .card .card-descriptions {
+    margin-left: unset;
+    width: 100%;
+    margin-top: 39px;
+    gap: 30px;
+  }
+  .current-opening .cards .card .card-descriptions .card-description {
+    gap: 20px;
+  }
+  .current-opening .cards .card .card-descriptions .card-description h3, .current-opening .cards .card .card-descriptions .card-description p, .current-opening .cards .card .card-descriptions .card-description ul li {
+    font-size: 20px;
+  }
+  .current-opening .cards .card .card-descriptions .card-description ul {
+    margin-left: 32px;
+  }
+  .box-white {
+    width: 90%;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+  }
+  .box-white .header h1 {
+    font-size: 20px;
+  }
+  .box-white .header h2 {
+    font-size: 17px;
+    margin-top: 9px;
+    margin-bottom: 20px;
+  }
+  .box-white form .mybtn.btn-purple {
+    margin-top: 8px;
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+  }
+  .box-white form .form-header {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    gap: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .box-white form .form-header .left,
+  .box-white form .form-header .right {
+    gap: 8px;
+  }
+  .box-white form .form-header .right .form-group .numbers select {
+    padding: 0 6px;
+    padding-right: 50px;
+    background: url("../assets/arrowselect.svg") no-repeat 65px 13px;
+    -webkit-box-shadow: 0 0 2px #ccc;
+            box-shadow: 0 0 2px #ccc;
+    background-size: 11px;
+  }
+  .box-white form .form-header .left .username {
+    gap: unset;
+  }
+  .box-white form .form-group {
+    gap: 8px;
+  }
+  .box-white form .form-group select {
+    padding: 0 6px;
+    background: url("../assets/arrow2.svg") no-repeat 95% 13px;
+    font-size: 11px;
+  }
+  .box-white form .form-group select option {
+    font-size: 11px;
+  }
+  .box-white form .form-group label {
+    font-size: 11px;
+  }
+  .box-white form .form-group input, .box-white form .form-group textarea, .box-white form .form-group select {
+    height: 36px;
+  }
+  .box-white form .form-group textarea {
+    font-size: 11px;
+    height: 50px;
+    padding: 11px;
+  }
+  .box-white form .form-group input::-webkit-input-placeholder {
+    font-size: 11px;
+  }
+  .box-white form .form-group input:-ms-input-placeholder {
+    font-size: 11px;
+  }
+  .box-white form .form-group input::-ms-input-placeholder {
+    font-size: 11px;
+  }
+  .box-white form .form-group input::placeholder {
+    font-size: 11px;
+  }
+  .box-white form .form-group label.btn-purple {
+    width: 188px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 11px;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .current-opening .cards .card-header .information .detail p {
+    margin-top: 15px;
+    font-size: 16px;
+    height: 60px;
+  }
+  .current-opening .cards .card-header .information .detail h2 {
+    font-size: 17px;
+  }
+  .current-opening .cards .card .arrow svg {
+    width: 10px;
+    height: 10px;
+  }
+  .current-opening .cards .card-apply h3 {
+    font-size: 15px;
+  }
+  .current-opening .cards .card-apply .apply-layouts {
+    margin-top: 31px;
+    gap: 20px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout {
+    gap: 27px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail span {
+    font-size: 15px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail h5 {
+    font-size: 15px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail button {
+    height: 25px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail button svg {
+    width: 14px;
+    height: 14px;
+  }
+  .current-opening .cards .card-apply .apply-layouts .apply-layout .detail button span {
+    font-size: 12px;
+  }
+  .current-opening .cards .card .card-descriptions .card-description h3, .current-opening .cards .card .card-descriptions .card-description p, .current-opening .cards .card .card-descriptions .card-description ul li {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=careers.css.map */

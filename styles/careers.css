@@ -3113,6 +3113,11 @@ body {
     font-size: 11px;
     gap: 8px;
   }
+  footer {
+    background: black;
+    z-index: 9999;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 560px) {

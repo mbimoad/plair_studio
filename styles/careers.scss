@@ -795,6 +795,10 @@
                 }
             }
         }
+    } footer {
+        background: black;
+        z-index: 9999;
+        position: relative;
     }
  
 }

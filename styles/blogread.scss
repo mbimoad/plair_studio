@@ -8,27 +8,28 @@
 }
 
 
-.hero {
-    margin-top: 82px;
+.hero2 {
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap:unset;
     height: 518px;
-    display: flex;
-    background:url('../assets/blogreadhero.png');
-    background-size: cover;
-    justify-content: flex-start;
-    align-items: flex-end;
-    &-detail {
-        margin-left: 242px;
+    padding:unset;
+    background-image: url('../assets/blogreadhero.png');
+    &-title {
+        display: unset;
+   
+    } p {
+        font-size: 24px;
+        text-transform: uppercase;
+        display: unset;
+        width:unset; 
+        margin-left: 242px; 
         margin-bottom: 32px;
-        display: inline-block;
-        color:white; 
-        p {
-            margin: auto;
-            line-height: 1.5;
-            font-size: 24px;
-            text-transform: uppercase;
-        }
     }
 }
+
+
 
 .blogread {
     padding: 50px 242px;
@@ -48,10 +49,12 @@
             font-size: 40px;
             margin: 26px 0;
             width: 1000px; 
+            
         } h5 {
             font-size: 28px;
             font-family: redhat1;
             width: 675px; 
+            
         }
     }
 
@@ -63,6 +66,7 @@
             font-family: redhat1;
         } img {
             margin: 45px 0;
+            width: 100%; 
         } .paragraph {
             display: flex;
             flex-direction: column;
@@ -83,7 +87,7 @@
     padding: 0 242px;
     .items {
         display: flex;
-        gap: 65px;
+        gap: 10px;
         justify-content: space-between;
         .item {
             width: 301px; 
@@ -127,6 +131,7 @@
 .pagination2 {
     padding: 0 242px;
     margin: 123px 0;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,4 +139,352 @@
         font-size: 24px;
         font-family: redhat2;
     }
+}
+
+
+
+
+@media screen and (max-width: 1890px) { 
+    .blogread {
+        padding: 50px 190px;
+    }
+
+    .other-blog {
+        padding: 0 190px;
+    }
+
+    .pagination2 {
+        padding: 0 190px;
+    }
+
+    .hero2 {
+        p {
+            margin-left: 190px;
+        }
+    }
+}
+
+@media screen and (max-width: 1820px) { 
+    .blogread {
+        padding: 50px 170px;
+    }
+
+    .pagination2 {
+        padding: 0 170px;
+    }
+
+
+    .other-blog {
+        padding: 0 170px;
+    }
+
+
+
+    .hero2 {
+        p {
+            margin-left: 170px;
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1770px) { 
+    .blogread {
+        padding: 50px 140px;
+    }
+
+    .pagination2 {
+        padding: 0 140px;
+    }
+
+    .other-blog {
+        padding: 0 140px;
+    }
+
+    .hero2 {
+        p {
+            margin-left: 140px;
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1700px) { 
+    .blogread {
+        padding: 50px 100px;
+    }
+
+    .pagination2 {
+        padding: 0 100px;
+    }
+
+    .other-blog {
+        padding: 0 100px;
+    }
+
+    .hero2 {
+        p {
+            margin-left: 100px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .blogread {
+        padding: 50px $padding_1440;
+    }
+    
+    .pagination2 {
+        padding: 0 $padding_1440;
+    }
+
+    .other-blog {
+        padding: 0 $padding_1440;
+
+        .items {
+            .item {
+                width: 285px;
+            }
+
+            .item.card {
+                img {
+                    height: 200px; 
+                }
+            }
+        }
+    }
+
+    .hero2 {
+        p {
+            margin-left: $padding_1440;
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 1350px) { 
+    .hero2 {
+        height: pxToVw(518, 1350);
+         p {
+            font-size: pxToVw(24, 1350);
+            margin-bottom: pxToVw(32, 1350);
+        }
+    }
+
+
+    .other-blog {
+        .items {
+
+            gap:pxToVw(10, 1350); 
+            .item {
+                width: pxToVw(285, 1350);
+            } .item.author {
+                padding: pxToVw(62, 1350) pxToVw(40, 1350); 
+                box-shadow: 0 0 pxToVw(5, 1350) #ccc;
+                span {
+                    font-size: pxToVw(24, 1350);
+                } h5 {
+                    font-size: pxToVw(28, 1350);   
+                }
+            }
+
+            .item.card {
+                img {
+                    height: pxToVw(200, 1350); 
+                } .detail {
+                    margin-top: pxToVw(30, 1350);
+                    gap: pxToVw(20, 1350); 
+                    p {
+                        font-size: pxToVw(24, 1350);
+                    } .author {
+                        font-size: pxToVw(20, 1350);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .blogread {
+        .back {
+            font-size: pxToVw(24, 1350);
+        }
+        &-header {
+            margin-top: pxToVw(73, 1350);
+            .author {
+                font-size: pxToVw(24, 1350);
+            } h3 {
+                font-size: pxToVw(40, 1350);
+                margin: pxToVw(26, 1350) 0;
+                width: pxToVw(1000, 1350); 
+            } h5 {
+                font-size: pxToVw(28, 1350);
+                width: pxToVw(675, 1350); 
+            }
+        }
+    
+        &-description {
+            margin-top: pxToVw(84, 1350);
+            p {
+                font-size: pxToVw(24, 1350);
+            } img {
+                margin: pxToVw(45, 1350) 0;
+                
+            } .paragraph {
+
+                gap: pxToVw(30, 1350); 
+            } .quote {
+                font-size: pxToVw(30, 1350);
+            }
+        }
+    }
+
+    .pagination2 {
+        padding: 0 pxToVw(242, 1350);
+        margin: pxToVw(123, 1350) 0;
+        span {
+            font-size: pxToVw(24, 1350);
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1240px) { 
+    .blogread {
+        &-header {
+            h3 {
+                width: unset; 
+
+            } h5 {
+                width: unset; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) { 
+    .blogread {
+        padding: pxToVw(50, 1350) $padding_1000;
+
+        
+    }  .hero2 {
+        p {
+            margin-left: $padding_1000;
+        }
+    }
+
+    
+    .other-blog {
+        padding: 0 $padding_1000;
+    }
+    
+    .pagination2 {
+        padding: 0 $padding_1000;
+    }
+    
+}
+
+@media screen and (max-width: 767px) { 
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    } footer {
+        background: black;
+        z-index: 9999;
+        position: relative;
+    }
+
+    .hero2 {
+        height: 264px; 
+        p {
+            font-size: 20px;
+        }
+    }
+
+
+    .blogread {
+        padding: 24px 30px; 
+        .back {
+            font-size: 24px; 
+
+        } &-header {
+            margin-top: 38px;
+            .author {
+                font-size: 18px; 
+            } h3 {
+                font-size: 25px;
+                font-family: redhatbold;
+                margin: 18px 0;
+            } h5 {
+                font-size: 20px; 
+                font-family: redhat3;
+            }
+        } &-description {
+            margin-top: 44px; 
+            p {
+                font-size: 16px;
+            } img {
+                height: 173px;
+            } .paragraph {
+                gap: 15px; 
+            } .quote {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .other-blog {
+        .items {
+            gap: 20px; 
+            flex-direction: column;
+            .item {
+                width: 100%;
+            } .item.author {
+                padding: 34px 24px; 
+                .item-header {
+                    span {
+                        font-size: 20px;
+                    } h5 {
+                        font-size: 22px; 
+                    }
+                } h5 {
+                    font-size: 18px;
+                }
+            } .item.card {
+                img {
+                    height: 234px; 
+                } .detail {
+                    margin-top: 30px; 
+                    gap: 20px; 
+                    p {
+                        font-size: 24px;
+                    } .author {
+                        color: #7B7B7B;
+                        font-size: 20px;
+                    }
+                }
+            }
+        } 
+    }
+
+    .pagination2 {
+        margin: 47px 0;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 24px; 
+        } span:first-child {
+            color: #7B7B7B;
+        }
+    }
+
 }

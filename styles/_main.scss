@@ -317,6 +317,33 @@ input {
         color:white; 
         margin-top: 30px;
         text-align: center;
+    } .search-input {
+        display:flex;
+        position:relative; 
+        svg {
+            position:absolute; 
+            top: 38px;
+            right: 18px;
+            width: 17px; 
+            height: 17px; 
+        }
+        input {
+            width: 724px;
+            color:  #BBBBBB;
+            font-size: 15px;
+            padding: 8px 16px;
+            font-family: redhat1;
+            box-shadow: inset 0 -5px 5px #ccc;
+            background: url('../assets/search.svg') no-repeat 95% 20px;
+            background: #F9F9F9;
+            margin-top: 29px;
+        } input:-ms-input-placeholder  {
+            color: #BBBBBB;
+            font-size: 15px; 
+        } input::placeholder {
+            color: #BBBBBB; 
+            font-size: 15px;
+        }
     }
 }
 
@@ -1154,6 +1181,25 @@ footer {
             font-size: pxToVw(20, 1350); 
             width: pxToVw(816, 1350);
             margin-top: pxToVw(30, 1350);
+        } .search-input {
+            input {
+                width: pxToVw(724, 1350);
+                font-size: pxToVw(15, 1350);
+                padding: pxToVw(8, 1350) pxToVw(16, 1350);
+                box-shadow: inset 0 pxToVw(-5, 1350) pxToVw(5, 1350) #ccc;
+                background: url('../assets/search.svg') no-repeat 95% pxToVw(20, 1350);
+                background: #F9F9F9;
+                margin-top: pxToVw(29, 1350);
+            } input:-ms-input-placeholder  {
+                font-size: pxToVw(15, 1350); 
+            } input::placeholder {
+                font-size: pxToVw(15, 1350);
+            } svg {
+                top: pxToVw(38, 1350);
+                right: pxToVw(18, 1350);
+                // width: pxToVw(17, 1350); 
+                // height: pxToVw(17, 1350);  
+            }
         }
     }
     .our-mission {
@@ -1341,7 +1387,28 @@ footer {
 }
 
 @media screen and (max-width: 1000px) { 
+    .hero2 {
+        .search-input {
+            svg {
+                top: pxToVw(32, 1000);
+                right: pxToVw(18, 1000); 
+            } 
 
+            input {
+                font-size: pxToVw(15, 1000);
+            }
+
+            input:-ms-input-placeholder {
+                font-size: pxToVw(15, 1000);
+            }
+
+            input::placeholder {
+                font-size: pxToVw(15, 1000);
+            }
+
+          
+        }
+    }
     .hero2 {
         p {
             width: 90%;
@@ -1452,6 +1519,23 @@ footer {
             margin-top: 30px; 
             font-size: 20px; 
             text-align:justify;
+       } .search-input {
+            width: 100%;
+            input {
+                font-size: 15px;
+                width: 100%;
+            } svg {
+                top: 27px;
+                right: 18px; 
+            }
+
+            input:-ms-input-placeholder {
+                font-size: 15px;
+            }
+
+            input::placeholder {
+                font-size: 15px;
+            }
        }
     }
 

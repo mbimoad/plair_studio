@@ -8,47 +8,22 @@
 }
 
 
-.hero {
-    margin-top: 82px;
-    height: 518px;
-    gap: 200px;
-    display: flex;
-    background:url('../assets/heroimg.png');
-    background-size: cover;
+
+.hero2 {
+    flex-direction:column;
     justify-content: center;
     align-items: center;
-    &-detail {
-        display: inline-block;
-        width: 816px;
-        text-align: center;
-        color:white; 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        } p {
-            margin: auto;
-            line-height: 1.5;
-            font-size: 20px;
-            width: 542px; 
-        } input {
-            width: 724px;
-            color:  #BBBBBB;
-            font-size: 15px;
-            padding: 8px 16px;
-            font-family: redhat1;
-            box-shadow: inset 0 -5px 5px #ccc;
-            background: url('../assets/search.svg') no-repeat 95% 20px;
-            background: #F9F9F9;
-            margin-top: 29px;
-        } input:-ms-input-placeholder  {
-            color: #BBBBBB;
-            font-size: 15px; 
-        } input::placeholder {
-            color: #BBBBBB; 
-            font-size: 15px;
-        }
+    gap:unset;
+    &-title {
+        display: unset;
+   
+    } p {
+        width: 542px;
+        display: unset;
     }
 }
+
+
 
 
 
@@ -58,7 +33,7 @@
 
     .menu {
         text-align: right;
-        margin-bottom: 7px;
+        margin-bottom: 26px;
         select {
             background:white; 
             width: 67px; 
@@ -67,14 +42,16 @@
             border:unset;
             outline: unset;
             border: 1px solid #eee;
+         
         }
     }
 
     .items {
         display:flex;
         flex-wrap: wrap;
-        gap: 35px;
+        gap: 0;
         justify-content: space-between;
+        row-gap:35px; 
         .item {
             width: 450px; 
 
@@ -108,7 +85,7 @@
                 font-family: redhat1;
                 font-size: 28px;
             } p {
-                margin-top: 25px;
+                margin-top: 10px;
                 font-size: 20px;
                 font-family: redhat1;
             }
@@ -129,14 +106,241 @@
         display: flex;
         align-items: center;
         gap:10px; 
+        svg {
+            width: 16px;
+            height: 16px; 
+        }
     } .number {
         display: flex;
         align-items: center;
         gap: 10px; 
+        span {
+            font-size: 16px; 
+        }
         .current {
             color:red;
             
 
         }
     }
+}
+
+
+@media screen and (max-width: 1890px) { 
+    .blogs {
+        padding: 0 190px;
+    }
+}
+
+@media screen and (max-width: 1820px) { 
+    .blogs {
+        padding: 0 170px;
+    }
+ 
+}
+
+@media screen and (max-width: 1770px) { 
+    .blogs {
+        padding: 0 140px;
+    }
+ 
+}
+
+@media screen and (max-width: 1700px) { 
+    .blogs {
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 1620px) { 
+    .blogs {
+        .items {
+            .item {
+                width: 390px; 
+                .img {
+                    img {
+                        height: 300px; 
+                    }
+                } h3 {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) { 
+    .blogs {
+        padding: 0 $padding_1440;
+    }
+
+    .pagination {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 1400px) { 
+    .blogs {
+        margin-top: 50px; 
+        .items {
+            .item {
+                width: 380px; 
+                .img {
+                    img {
+                        height: 260px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    
+.blogs {
+    margin-top: pxToVw(50, 1350);
+    padding: 0 $padding_1440;
+
+    .menu {
+        margin-bottom: pxToVw(26, 1350);
+        select {
+            // width: pxToVw(67, 1350); 
+            // height:pxToVw(38, 1350); 
+            // padding: pxToVw(10, 1350);
+        }
+    }
+    .items {
+        row-gap:pxToVw(35, 1350); 
+        .item {
+            width: pxToVw(450, 1350); 
+            width: pxToVw(380, 1350); 
+            .img {
+                img {
+                    height: pxToVw(260, 1350);
+                } 
+            }
+             h3 {
+                margin-top: pxToVw(25, 1350);
+                font-size: pxToVw(23, 1350);
+            } p {
+                margin-top: pxToVw(10, 1350);
+                font-size: pxToVw(20, 1350);
+            }
+        }
+    }
+}
+
+}
+
+
+@media screen and (max-width: 1000px) { 
+    .blogs {
+        padding: 0 $padding_1000;
+    }
+
+    .pagination {
+        margin-top: pxToVw(100, 1000);
+        margin-bottom: pxToVw(100, 1000);
+        gap:pxToVw(50, 1000);
+        .previous,
+        .next {
+            gap:pxToVw(10, 1000); 
+            font-size: pxToVw(16, 1000); 
+            svg {
+                width: pxToVw(16, 1000);
+                height: pxToVw(16, 1000); 
+            }
+        } .number {
+            gap: pxToVw(10, 1000); 
+            span {
+                font-size: pxToVw(16, 1000); 
+            }
+        }
+    }
+ 
+}
+
+@media screen and (max-width: 767px) { 
+    .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    } footer {
+        background: black;
+        z-index: 9999;
+        position: relative;
+    }
+
+
+    .hero2 {
+        p {
+            width: 100%; 
+        }
+
+        
+    }
+
+    .blogs {
+        .menu {
+            select {
+                font-size: 12px;
+                option {
+                    font-size: 12px; 
+                }
+            }
+        }
+        .items {
+            flex-direction:column;
+            row-gap: 35px;
+            .item {
+                width: 100%; 
+                .img {
+                    img {
+                        height: auto; 
+                    }
+                }     h3 {
+                    margin-top: 15px;
+                    font-family: redhat1;
+                    font-size: 28px;
+                } p {
+                    margin-top: 10px;
+                    font-size: 20px;
+                    font-family: redhat1;
+                }
+            }
+        }
+    }
+
+
+    .pagination {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        gap: 35px;
+        .previous,
+        .next {
+            gap:10px; 
+            cursor: pointer;
+            svg {
+                width: 16px;
+                height: 16px; 
+            } span {
+                font-size: 16px; 
+            }
+        } .number {
+            gap: 10px; 
+            span {
+                font-size: 16px; 
+                cursor: pointer;
+            }
+        }
+    }
+
 }

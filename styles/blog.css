@@ -2323,6 +2323,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: unset;
+  height: 518px;
 }
 
 .hero2-title {
@@ -2545,6 +2546,9 @@ body {
     margin-top: 0.74074vw;
     font-size: 1.48148vw;
   }
+  .hero2 {
+    height: 38.37037vw;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2575,6 +2579,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .hero2 {
+    height: auto;
+    padding: 77px 32px 77px;
+  }
   .footer-menu .menu-list:last-child {
     position: unset;
   }

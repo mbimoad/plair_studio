@@ -36,3 +36,128 @@
 body {
     overflow: unset;
 }
+
+
+@media screen and (max-width: 1350px) { 
+    .questions {
+        width: 880px;
+        margin: 140px auto 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) { 
+    .questions {
+        padding:0 $padding_1000;
+        width: pxToVw(880, 1000);
+        margin: pxToVw(140, 1000) auto pxToVw(140, 1000);
+
+        h3 {
+            font-size: pxToVw(26, 1000);
+        } p {
+            margin-bottom: pxToVw(20, 1000);
+        } 
+
+        &-items {
+            .questions-item {
+                .questions-item-header {
+                    span {
+                        font-size: pxToVw(15, 1000);
+                    }
+                }
+            }
+        }
+    
+        p.for {
+            margin-top: pxToVw(60, 1000);
+            margin-left: pxToVw(30, 1000);
+        } 
+        p.for:first-of-type {
+            margin-top: pxToVw(30, 1000);
+        }
+        &-items {
+            .questions-item {
+                .questions-item-body {
+                    p {
+                        font-size: pxToVw(15, 1000);
+                        width: 95%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    footer {
+        background: black;
+        z-index: 9999;
+        position: relative;
+    }  .footer-menu {
+        .menu-list:last-child {
+            position:unset; 
+        } 
+
+        .menu-list {
+            .menu-data.sosmed {
+                transform: translate(0,0);
+            }
+        }
+    }
+
+
+    .questions {
+        width: 100%; 
+        margin: 100px auto 43px;
+        h3 {
+            font-size: 26px; 
+        } p {
+            font-size: 15px; 
+        } p.for {
+            margin-top: 50px;
+            margin-left: unset; 
+        } p.for:first-of-type {
+            margin-top: 20px;
+        } &-items {
+            .questions-item {
+                max-height: 54px;
+                .questions-item-body {
+                    p {
+                        width: 100%;
+                        font-size: 15px; 
+                    }
+                }
+                .questions-item-header {
+                    span {
+                        font-size: 15px; 
+                    } span:first-child {
+                        width: 90%;
+                        height: 24px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 550px) { 
+    .questions {
+        &-items {
+            .questions-item {
+                .questions-item-header {
+                    span {
+                        font-size: 12px; 
+                    } span:first-child {
+                        width: 90%;
+                        height: 18px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

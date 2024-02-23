@@ -2420,6 +2420,11 @@ body {
     white-space: nowrap;
     overflow: hidden;
   }
+  .questions-items .questions-item .questions-item-header span:first-child.active {
+    white-space: unset;
+    overflow: unset;
+    height: unset;
+  }
 }
 
 @media screen and (max-width: 550px) {

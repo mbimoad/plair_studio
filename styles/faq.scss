@@ -134,6 +134,10 @@ body {
                         height: 24px;
                         white-space: nowrap;
                         overflow: hidden;
+                    } span:first-child.active {
+                        white-space: unset;
+                        overflow: unset;
+                        height: unset;
                     }
                 }
             }

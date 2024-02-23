@@ -10,15 +10,18 @@ const backtologin = document.querySelectorAll('.backtologin');
 const layer1   = document.querySelector('.main .layer:first-child');
 const layer2   = document.querySelector('.main .layer:last-child');
 const register = layer2.querySelector('.register'); 
-const forgotpassbox = layer2.querySelector('.forgotpassbox'); 
+const forgotpassbox = layer1.querySelector('.forgotpassbox'); 
 const login    = layer1.querySelector('.login'); 
 const circles  = document.querySelectorAll('.circle');
 console.log(register);
 forgotpassword.addEventListener('click', function() {
+    console.log("Helo");
     layer1.classList.add('forgotpass');
     layer2.classList.add('forgotpass');
     register.classList.add('forgotpass');
     login.classList.add('forgotpass');
+    forgotpassbox.classList.remove('sended');
+    forgotpassbox.classList.remove('active');
     forgotpassbox.classList.add('active');
 })
 
@@ -42,6 +45,7 @@ backtologin.forEach(item => item.addEventListener('click', function() {
     register.classList.remove('forgotpass');
     login.classList.remove('forgotpass');
     forgotpassbox.classList.remove('active');
+    forgotpassbox.classList.remove('sended');
     forgotpassnotif.classList.remove('sended');
     registerbox.classList.remove('active');
     processstep.classList.remove('active');
@@ -53,6 +57,21 @@ const registernext = document.querySelector('.registernext');
 const process      = document.querySelector('progress');
 
 registerbtn.addEventListener('click', function() {
+
+    if(window.innerWidth <= 767) {
+        layer1.classList.add('swap');
+        layer2.classList.add('swap');
+        layer1.classList.add('forgotpass');
+        layer2.classList.add('forgotpass');
+        login.classList.add('forgotpass');
+        register.classList.add('forgotpass');
+        setTimeout(() => {
+            registerbox.classList.add('active');
+            processstep.classList.add('active');
+        },300);
+        return; 
+    }
+
     layer1.classList.add('forgotpass');
     layer2.classList.add('forgotpass');
     login.classList.add('forgotpass');

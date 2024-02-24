@@ -2382,6 +2382,7 @@ footer .links a {
     border-radius: 3px;
     -webkit-box-shadow: 0 0 5px #ccc;
             box-shadow: 0 0 5px #ccc;
+    cursor: pointer;
   }
   header .mobile-menu .hamburger {
     display: -webkit-box;
@@ -2723,6 +2724,16 @@ body {
   border-color: #4d289c;
 }
 
+.statistic .box .circle svg {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+}
+
+.statistic .box .circle:hover svg {
+  -webkit-filter: invert(100%) sepia(100%) saturate(22%) hue-rotate(41deg) brightness(106%) contrast(106%);
+          filter: invert(100%) sepia(100%) saturate(22%) hue-rotate(41deg) brightness(106%) contrast(106%);
+}
+
 @media screen and (max-width: 1820px) {
   .hero {
     gap: unset;
@@ -2960,6 +2971,12 @@ body {
   .footer-menu .menu-list .menu-data.sosmed {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .our-team .teams .team .images .social-media-box .rectangle {
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=about.css.map */

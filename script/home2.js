@@ -105,18 +105,34 @@ window.onload = function() {
     document.querySelector('.footer-menu').classList.add('show');
    
     if(window.innerWidth <= 767) {
-      const process = document.querySelectorAll('.our-team .dotted-process span');
+      const process = document.querySelectorAll('.theprocess .dotted-process span');
       process.forEach(item => item.addEventListener('click', function() {
           process.forEach(item => item.classList.remove('active'));
           this.classList.add('active');
-
+        clearInterval(processint)
           let turn = this.dataset.turn; 
-          const box = document.querySelectorAll('.our-team .team');    
+          const box = document.querySelectorAll('.theprocess .box');    
           if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
           if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
           if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
       }))
       typeScroll = "%";
+
+      let index = 0; 
+const processdot = document.querySelectorAll('.theprocess .dotted-process span'); 
+const processbox = document.querySelectorAll('.theprocess .box'); 
+const processint = setInterval(() => {
+
+  if(index == processbox.length - 1) {
+    index = -1; 
+  }
+
+  index++;
+  processdot.forEach(item => item.classList.remove('active'));
+  processdot[index].classList.add('active');
+  processbox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+ 
+}, 2000)
   } else {
     typeScroll = "px";
   }
@@ -224,3 +240,5 @@ const chatbot = document.querySelector('.chatbot');
 chatbot.addEventListener('click', function() {
     chatbox.classList.toggle('active');
 })
+
+

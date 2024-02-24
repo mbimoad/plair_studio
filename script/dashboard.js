@@ -71,7 +71,7 @@ window.onload = function(e) {
         process.forEach(item => item.addEventListener('click', function() {
             process.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
-
+            clearInterval(processint)
             let turn = this.dataset.turn; 
             const box = document.querySelectorAll('.theprocess .box');    
             if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
@@ -84,13 +84,48 @@ window.onload = function(e) {
         process2.forEach(item => item.addEventListener('click', function() {
             process2.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
-
+            clearInterval(servicesint)
             let turn = this.dataset.turn; 
             const box = document.querySelectorAll('.our-services .cards .card');    
             if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
             if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
             if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
         }))
+
+        
+let index = 0; 
+const processdot = document.querySelectorAll('.theprocess .dotted-process span'); 
+const processbox = document.querySelectorAll('.theprocess .box'); 
+const processint = setInterval(() => {
+
+  if(index == processbox.length - 1) {
+    index = -1; 
+  }
+
+  index++;
+  processdot.forEach(item => item.classList.remove('active'));
+  processdot[index].classList.add('active');
+  processbox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+ 
+}, 2000)
+
+
+let index2 = 0; 
+const servicesdot = document.querySelectorAll('.our-services .dotted-process span'); 
+const servicesbox = document.querySelectorAll('.our-services .cards .card'); 
+const servicesint = setInterval(() => {
+
+  if(index2 == servicesbox.length - 1) {
+    index2 = -1; 
+  }
+
+  index2++;
+  servicesdot.forEach(item => item.classList.remove('active'));
+  servicesdot[index2].classList.add('active');
+  servicesbox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+ 
+}, 2000)
+
     }
     
 }
@@ -115,5 +150,9 @@ questionsitems.forEach(item => item.addEventListener('click', function() {
     }
 
 }))
+
+
+
+
 
 

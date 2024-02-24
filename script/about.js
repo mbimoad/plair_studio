@@ -51,7 +51,7 @@ window.onload = function() {
       process.forEach(item => item.addEventListener('click', function() {
           process.forEach(item => item.classList.remove('active'));
           this.classList.add('active');
-
+          clearInterval(teamint)
           let turn = this.dataset.turn; 
           const box = document.querySelectorAll('.our-team .team');    
           if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
@@ -59,6 +59,22 @@ window.onload = function() {
           if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
       }))
       typeScroll = "%";
+
+      let index = 0; 
+const teambox = document.querySelectorAll('.our-team .team'); 
+const teamdot = document.querySelectorAll('.our-team .dotted-process span'); 
+const teamint = setInterval(() => {
+
+  if(index == teambox.length - 1) {
+    index = -1; 
+  }
+
+  index++;
+  teamdot.forEach(item => item.classList.remove('active'));
+  teamdot[index].classList.add('active');
+  teambox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+ 
+}, 2000)
   } else {
     typeScroll = "px";
   }
@@ -136,3 +152,115 @@ left.addEventListener('click', function() {
 
   }, time);
 })
+
+
+
+
+// const teams = document.querySelector('.teams');
+// const process = document.querySelectorAll('.our-team .teams .team');
+
+
+// let start = 0; 
+// let moves = 0; 
+// let index = 0; 
+// let left1 = false; 
+// let left2 = true; 
+// let right1 = true; 
+// let right2 = true; 
+// teams.addEventListener('touchstart',function(e) {
+//     start = e.touches[0].clientX; 
+// })
+
+// teams.addEventListener('touchmove',function(e) {
+//     moves      = e.touches[0].clientX; 
+//     result     = start-moves;
+//     console.log(result)
+    
+
+//     // Detect Left scroll 
+//     if(!left1) process.forEach(item => item.style.transform = `translate(-${result}px, 0)`)
+//     if(result >= 150 && !left1) {
+//       right1 = true; 
+//       right2 = true; 
+//       left1  = true; 
+//       setTimeout(() => left2 = false, 500)
+//       process.forEach(item => item.style.transform = `translate(-${100}%, 0)`)
+//       return;
+//     } 
+//     if(!left2) process.forEach(item => item.style.transform = `translate(-${result}px, 0)`)
+//     if(result >= 150 && !left2) {
+//       // right1 = true; 
+//       setTimeout(() => right2 = false, 500) 
+    
+//       left1 = true; 
+//       left2 = true;
+//       process.forEach(item => item.style.transform = `translate(-${200}%, 0)`)
+//       return; 
+//     }
+
+//     if(!right2) process.forEach(item => item.style.transform = `translate(${result}px, 0)`)
+//     if(result >= -150 && !right2) {
+//       left1  = true; 
+//       left2  = true;
+//       right2 = true; 
+//       setTimeout(() => right1 = false, 500) 
+//       process.forEach(item => item.style.transform = `translate(-${100}%, 0)`)
+//       return; 
+//     }
+
+//     if(!right1) process.forEach(item => item.style.transform = `translate(${result}px, 0)`)
+//     if(result >= -150 && !right1) {
+//       setTimeout(() => left1 = false, 500) 
+//       left2  = true;
+//       right2 = true; 
+//       right1 = true; 
+//       process.forEach(item => item.style.transform = `translate(-${0}%, 0)`)
+//       return; 
+//     }
+    
+    
+
+//     // // left scroll
+//     // if(leftscroll1 == false) {
+//     //   process.forEach(item => item.style.transform = `translate(${leftvalue}px, 0)`)
+//     // }
+//     // if(third >= 150 && leftscroll1 == false) {
+//     //   console.log("Tengah")
+//     //   index = 1; 
+//     //   leftscroll1 = true; 
+//     //   rightscroll1 = false; 
+//     //   setTimeout(() => {leftscroll2 = false}, 500)
+//     //   process.forEach(item => item.style.transform = `translate(-${100*index}%, 0)`)
+//     // }
+
+//     // if(leftscroll2 == false) {
+//     //   process.forEach(item => item.style.transform = `translate(${leftvalue}px, 0)`)
+//     // }
+//     // if(third >= 150 && leftscroll2 == false) {
+      
+//     //   index = 1; 
+//     //   leftscroll1 = true; 
+//     //   leftscroll2 = true; 
+//     //   process.forEach(item => item.style.transform = `translate(-${100*2}%, 0)`)
+//     // }
+
+//     // // right scroll 
+//     // if(rightscroll1 == false) {
+//     //   process.forEach(item => item.style.transform = `translate(${rightvalue}px, 0)`)
+//     // }
+//     // console.log(rightvalue)
+//     // if(rightvalue >= -150 && rightscroll1 == false) {
+//     //   index = 1; 
+//     //   leftscroll1 = true; 
+//     //   rightscroll1 = false; 
+//     //   setTimeout(() => {leftscroll2 = false}, 500)
+//     //   process.forEach(item => item.style.transform = `translate(${0}%, 0)`)
+//     // }
+    
+// })
+
+
+// teams.addEventListener('touchend',function() {
+//   console.log("Helo")
+// })
+

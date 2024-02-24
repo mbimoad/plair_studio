@@ -2382,6 +2382,7 @@ footer .links a {
     border-radius: 3px;
     -webkit-box-shadow: 0 0 5px #ccc;
             box-shadow: 0 0 5px #ccc;
+    cursor: pointer;
   }
   header .mobile-menu .hamburger {
     display: -webkit-box;

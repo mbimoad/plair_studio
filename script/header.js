@@ -33,6 +33,10 @@ const llogin = document.querySelector('header ul li:nth-child(9) a:last-child');
 const privacy = document.querySelector('footer .links a:first-child');
 const cookie = document.querySelector('footer .links a:nth-child(2)');
 const term = document.querySelector('footer .links a:last-child');
+const mobilequote = document.querySelector('.mobile-menu button.quotebtn')
+mobilequote.addEventListener('click', function() {
+  window.location = "./project.html"
+})
 
 about.setAttribute("href", "./about.html");
 privacy.setAttribute("href", "./about.html");

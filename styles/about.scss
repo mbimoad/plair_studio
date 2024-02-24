@@ -115,6 +115,14 @@
             }
         } .circle {
             border-color: $purple;
+            svg {
+                transition: all 500ms ease 0s;
+            }
+        } .circle:hover {
+            svg {
+               
+filter: invert(100%) sepia(100%) saturate(22%) hue-rotate(41deg) brightness(106%) contrast(106%);
+            }
         }
     }
 }
@@ -477,4 +485,21 @@
         }
     }
     
+}
+
+@media screen and (max-width: 550px) { 
+    .our-team {
+        .teams {
+            .team {
+                .images {
+                    .social-media-box {
+                        .rectangle {
+                            padding: 20px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
 }

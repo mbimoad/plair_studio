@@ -74,7 +74,7 @@ body {
 }
 .chatbox {
     $radius: 20px; 
-    // transition: all 200ms ease 0s;
+    transition: all 200ms ease 0s;
     transform: scale(0);
     border-radius: 30px;
     width: 378px; 
@@ -274,7 +274,6 @@ body {
     background-image: url('../assets/loginbg.png');
     background-size: 1700px;
     background-position: 524px -730px;
-    border: 1px solid blue;
 } .text-center {
     text-align: center;
 }
@@ -429,6 +428,7 @@ header {
         display: none;
     }
     .logo {
+        cursor: pointer;
         margin-left: 20px;  
         font-weight: bold;
         color: black;
@@ -532,7 +532,11 @@ footer {
             margin: 0 32px;
             z-index: 2;
         }
-
+        .menu-data.sosmed {
+            svg {
+                cursor: pointer;
+            }
+        }
         
 
         .menu-data {
@@ -564,6 +568,9 @@ footer {
                     display: flex;
                     justify-content: flex-start;
                     gap: 10px;
+                   
+                } .menu-data.sosmed {
+                   
                 }
             }
 

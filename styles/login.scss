@@ -84,7 +84,7 @@
             opacity: 1;
             transform: translate(0,0);
         } .forgotpassbox {
-            border: 1px solid red;
+            
             position: absolute;
             left: 50%;
             transform: translate(-100%, 0);
@@ -383,7 +383,7 @@
         
         .forgotpassbox {
             height: auto; 
-            border: 1px solid red;
+            
             transition: all $duration ease 0s;
             position: absolute;
             pointer-events: none;

@@ -10,39 +10,39 @@ url = url[url.length-1];
 switch(url) {
     case "mobile": 
         herotitle.innerText = "Mobile Development";
-        heroimage.setAttribute("src", "./assets/mobile1.png");
+        heroimage.setAttribute("src", "./assets/mobile1.webp");
         heroimage.classList.add('mobile');
         ourmissionh1.innerText = "Whatever you need, we can create!"
         ourmissionp.innerText = "We create customized mobile applications for iOS and Android platforms that meet the unique needs of your business.";
-        ourmissionimg.setAttribute("src", "./assets/mobile2.png");
-        statistic.style.backgroundImage = 'url("./assets/mobile3.png")';
+        ourmissionimg.setAttribute("src", "./assets/mobile2.webp");
+        statistic.style.backgroundImage = 'url("./assets/mobile3.webp")';
         break;
     case "backend":
         herotitle.innerText = "Backend Development";
-        heroimage.setAttribute("src", "./assets/backend1.png");
+        heroimage.setAttribute("src", "./assets/backend1.webp");
         heroimage.classList.add('backend');
         ourmissionh1.innerText = "Your application is in good hands"
         ourmissionp.innerText = "Our expert developers design and build robust, scalable, and secure back-end systems to power your applications.";
-        ourmissionimg.setAttribute("src", "./assets/backend2.png");
-        statistic.style.backgroundImage = 'url("./assets/backend3.png")';
+        ourmissionimg.setAttribute("src", "./assets/backend2.webp");
+        statistic.style.backgroundImage = 'url("./assets/backend3.webp")';
         break;
     case "frontend":
         herotitle.innerText = "Frontend Development";
-        heroimage.setAttribute("src", "./assets/frontend1.png");
+        heroimage.setAttribute("src", "./assets/frontend1.webp");
         heroimage.classList.add('frontend');
         ourmissionh1.innerText = "Consistency is key"
         ourmissionp.innerText = "We create sleek and responsive user interfaces that provide a seamless user experience across all devices and platforms.";
-        ourmissionimg.setAttribute("src", "./assets/frontend2.png");
-        statistic.style.backgroundImage = 'url("./assets/frontend3.png")';
+        ourmissionimg.setAttribute("src", "./assets/frontend2.webp");
+        statistic.style.backgroundImage = 'url("./assets/frontend3.webp")';
         break;
     case "ui":
          herotitle.innerText = "UI Design";
-        heroimage.setAttribute("src", "./assets/ui1.png");
+        heroimage.setAttribute("src", "./assets/ui1.webp");
         heroimage.classList.add('ui');
         ourmissionh1.innerText = "Design is more than our passion"
         ourmissionp.innerText = "Our designers create visually appealing and intuitive user interfaces that enhance the usability and overall experience of your applications.";
-        ourmissionimg.setAttribute("src", "./assets/ui2.png");
-        statistic.style.backgroundImage = 'url("./assets/ui3.png")';
+        ourmissionimg.setAttribute("src", "./assets/ui2.webp");
+        statistic.style.backgroundImage = 'url("./assets/ui3.webp")';
         break;
 }
 

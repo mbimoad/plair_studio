@@ -372,7 +372,7 @@
     } 
 
     .layer:last-child {
-        background-image: url('../assets/loginbg.png');
+        background-image: url('../assets/loginbg.webp');
         background-size: cover;
         background-position: 160px -430px;
         width: 1090px;
@@ -752,7 +752,7 @@
 @media screen and (max-width: 767px) { 
     .main {
         flex-direction: column-reverse;
-        background-image: url('../assets/loginbg.png');
+        background-image: url('../assets/loginbg.webp');
         background-size: 150%;
         .layer:first-child.forgotpass {
             // display:none;

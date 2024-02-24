@@ -451,7 +451,7 @@ body {
   margin: auto;
   overflow: hidden;
   font-family: redhat;
-  background-image: url("../assets/loginbg.png");
+  background-image: url("../assets/loginbg.webp");
   background-size: 1700px;
   background-position: 524px -730px;
 }
@@ -488,7 +488,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../assets/heroimg.png");
+  background: url("../assets/heroimg.webp");
   background-size: cover;
 }
 
@@ -1050,7 +1050,7 @@ footer .links a {
   display: -ms-flexbox;
   display: flex;
   height: 736px;
-  background-image: url("../assets/bgdashboard.png");
+  background-image: url("../assets/bgdashboard.webp");
   background-size: cover;
 }
 
@@ -3023,7 +3023,7 @@ body {
   margin: auto;
   overflow: hidden;
   font-family: redhat;
-  background-image: url("../assets/loginbg.png");
+  background-image: url("../assets/loginbg.webp");
   background-size: 1700px;
   background-position: 524px -730px;
 }
@@ -3060,7 +3060,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../assets/heroimg.png");
+  background: url("../assets/heroimg.webp");
   background-size: cover;
 }
 
@@ -3622,7 +3622,7 @@ footer .links a {
   display: -ms-flexbox;
   display: flex;
   height: 736px;
-  background-image: url("../assets/bgdashboard.png");
+  background-image: url("../assets/bgdashboard.webp");
   background-size: cover;
 }
 

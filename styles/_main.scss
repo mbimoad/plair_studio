@@ -346,7 +346,7 @@ body {
     margin: auto;
     overflow: hidden;
     font-family: redhat;
-    background-image: url('../assets/loginbg.png');
+    background-image: url('../assets/loginbg.webp');
     background-size: 1700px;
     background-position: 524px -730px;
 } .text-center {
@@ -376,7 +376,7 @@ input {
     height: 736px;
     gap: 200px;
     display: flex;
-    background:url('../assets/heroimg.png');
+    background:url('../assets/heroimg.webp');
     background-size: cover;
     &-title {
         display: none;
@@ -766,7 +766,7 @@ footer {
     align-items:center;
     display:flex; 
     height: 736px;
-    background-image: url('../assets/bgdashboard.png');
+    background-image: url('../assets/bgdashboard.webp');
     background-size: cover;
     .box {
         width: 380px; 

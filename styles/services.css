@@ -1001,9 +1001,9 @@ footer .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   background: #F7F7F7;
   padding: 55px 198px;
   -webkit-box-align: center;
@@ -3301,9 +3301,9 @@ footer .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   background: #F7F7F7;
   padding: 55px 198px;
   -webkit-box-align: center;

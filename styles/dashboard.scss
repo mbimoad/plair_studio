@@ -53,13 +53,187 @@
 //     background-position: 838px -300px;
 // }
 
+.hero.hero3 {
+    .hero-description {
+        h1 {
+            font-size: 60px; 
+            width: 307px; 
+            font-family: redhat3;
+        }
+    } .hero-animation {
+        img {
+            position: absolute; 
+        }
+
+        img.mobile {
+            
+            position: absolute;
+            bottom: -428px;
+            left: -1200px;
+        } img.backend {
+            width: 765px;
+            right: -90px; 
+        } img.frontend {
+            right: -55px;
+            width: 900px;
+            bottom: -170px;
+        } img.ui {
+            right: -90px; 
+        }
+    }
+}
+
+@media screen and (max-width: 1570px) { 
+    .hero.hero3 {
+        .hero-animation {
+            img {
+                position: absolute; 
+            }
+    
+            img.mobile {
+                bottom: -328px;
+                left: -900px;
+                position: absolute;
+                width: 1150px; 
+            } img.backend {
+                width: 600px; 
+            } img.frontend {
+                right: -55px;
+                width: 700px;
+                bottom: -100px;
+            } img.ui {
+                right: -50px; 
+                width: 700px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .hero.hero3 {
+        .hero-description {
+            h1 {
+                font-size: pxToVw(60, 1350); 
+                width: pxToVw(307, 1350); 
+                font-family: redhat3;
+            }
+        }
+        .hero-animation {
+            img {
+                position: absolute; 
+            }
+    
+            img.mobile {
+                bottom: pxToVw(-328, 1350);
+                left: pxToVw(-900, 1350);
+                position: absolute;
+                width: pxToVw(1150, 1350); 
+            } img.backend {
+                width: pxToVw(600, 1350); 
+                right: pxToVw(-90, 1350); 
+            } img.frontend {
+                right: pxToVw(-55, 1350);
+                width: pxToVw(700, 1350);
+                bottom: pxToVw(-100, 1350);
+            } img.ui {
+                right: pxToVw(-50, 1350); 
+                width: pxToVw(700, 1350);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) { 
+    .hero.hero3 {
+     
+        .hero-animation {
+
+            img.mobile {
+                bottom: pxToVw(-280, 1350);
+                left: pxToVw(-900, 1350);
+                position: absolute;
+                width: pxToVw(850, 1000); 
+            } img.backend {
+                width: 600px;
+                right: -90px;
+            } img.frontend {
+               
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .hero.hero3 {
+        justify-content: flex-start;
+
+        .hero-description {
+            text-align: center;
+            h1 {
+                font-size: 40px; 
+                width:unset; 
+            
+            } 
+        }
+
+        .hero-animation {
+
+            img.mobile {
+                width: 703px;
+                left: -399px;
+                bottom: -500px;
+            } img.backend {
+                width: 400px;
+                right: unset;
+                bottom: -322px;
+            } img.frontend {
+                bottom: -459px;
+                width: 480px;
+                right: unset;
+            } img.ui {
+               right: unset; 
+               width: 500px; 
+               bottom: -330px; 
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 550px) { 
+    .hero.hero3 {
+        .hero-animation {
+            img.mobile {
+                width: pxToVw(703, 550);
+                left: pxToVw(-399, 550);
+                bottom: pxToVw(-500, 550);
+            } img.backend {
+                width: pxToVw(400, 550);
+                right: unset;
+                bottom: pxToVw(-322, 550);
+            }   img.frontend {
+                bottom: pxToVw(-459, 550);
+                width: pxToVw(480, 550);
+                right: unset;
+            } img.ui {
+                right: unset; 
+                width: pxToVw(500, 550); 
+                bottom: pxToVw(330, -550); 
+             }
+        }
+    }
+}
+
 .hero {
     margin-top: 82px;
     height: 710px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 $padding;
     gap: 200px;
     &-description {
+        // margin-left: $padding;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -72,6 +246,7 @@
             font-size: 30px;
         }
     } &-animation {
+        // margin-right: $padding;
         position: relative;
 
         display: flex;
@@ -394,7 +569,7 @@ body.show {
    
     .hero {
         margin-top: 82px;
-        padding: 0 150px 0 60px;
+        padding: 0 150px 0 100px;
         height: 600px; 
         &-description {
             svg {

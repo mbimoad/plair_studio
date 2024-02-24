@@ -1001,9 +1001,9 @@ footer .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   background: #F7F7F7;
   padding: 55px 198px;
   -webkit-box-align: center;
@@ -3301,9 +3301,9 @@ footer .links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   background: #F7F7F7;
   padding: 55px 198px;
   -webkit-box-align: center;
@@ -4968,15 +4968,172 @@ footer {
   }
 }
 
+.hero.hero3 .hero-description h1 {
+  font-size: 60px;
+  width: 307px;
+  font-family: redhat3;
+}
+
+.hero.hero3 .hero-animation img {
+  position: absolute;
+}
+
+.hero.hero3 .hero-animation img.mobile {
+  position: absolute;
+  bottom: -428px;
+  left: -1200px;
+}
+
+.hero.hero3 .hero-animation img.backend {
+  width: 765px;
+  right: -90px;
+}
+
+.hero.hero3 .hero-animation img.frontend {
+  right: -55px;
+  width: 900px;
+  bottom: -170px;
+}
+
+.hero.hero3 .hero-animation img.ui {
+  right: -90px;
+}
+
+@media screen and (max-width: 1570px) {
+  .hero.hero3 .hero-animation img {
+    position: absolute;
+  }
+  .hero.hero3 .hero-animation img.mobile {
+    bottom: -328px;
+    left: -900px;
+    position: absolute;
+    width: 1150px;
+  }
+  .hero.hero3 .hero-animation img.backend {
+    width: 600px;
+  }
+  .hero.hero3 .hero-animation img.frontend {
+    right: -55px;
+    width: 700px;
+    bottom: -100px;
+  }
+  .hero.hero3 .hero-animation img.ui {
+    right: -50px;
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .hero.hero3 .hero-description h1 {
+    font-size: 4.44444vw;
+    width: 22.74074vw;
+    font-family: redhat3;
+  }
+  .hero.hero3 .hero-animation img {
+    position: absolute;
+  }
+  .hero.hero3 .hero-animation img.mobile {
+    bottom: -24.2963vw;
+    left: -66.66667vw;
+    position: absolute;
+    width: 85.18519vw;
+  }
+  .hero.hero3 .hero-animation img.backend {
+    width: 44.44444vw;
+    right: -6.66667vw;
+  }
+  .hero.hero3 .hero-animation img.frontend {
+    right: -4.07407vw;
+    width: 51.85185vw;
+    bottom: -7.40741vw;
+  }
+  .hero.hero3 .hero-animation img.ui {
+    right: -3.7037vw;
+    width: 51.85185vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero.hero3 .hero-animation img.mobile {
+    bottom: -20.74074vw;
+    left: -66.66667vw;
+    position: absolute;
+    width: 85vw;
+  }
+  .hero.hero3 .hero-animation img.backend {
+    width: 600px;
+    right: -90px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero.hero3 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hero.hero3 .hero-description {
+    text-align: center;
+  }
+  .hero.hero3 .hero-description h1 {
+    font-size: 40px;
+    width: unset;
+  }
+  .hero.hero3 .hero-animation img.mobile {
+    width: 703px;
+    left: -399px;
+    bottom: -500px;
+  }
+  .hero.hero3 .hero-animation img.backend {
+    width: 400px;
+    right: unset;
+    bottom: -322px;
+  }
+  .hero.hero3 .hero-animation img.frontend {
+    bottom: -459px;
+    width: 480px;
+    right: unset;
+  }
+  .hero.hero3 .hero-animation img.ui {
+    right: unset;
+    width: 500px;
+    bottom: -330px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero.hero3 .hero-animation img.mobile {
+    width: 127.81818vw;
+    left: -72.54545vw;
+    bottom: -90.90909vw;
+  }
+  .hero.hero3 .hero-animation img.backend {
+    width: 72.72727vw;
+    right: unset;
+    bottom: -58.54545vw;
+  }
+  .hero.hero3 .hero-animation img.frontend {
+    bottom: -83.45455vw;
+    width: 87.27273vw;
+    right: unset;
+  }
+  .hero.hero3 .hero-animation img.ui {
+    right: unset;
+    width: 90.90909vw;
+    bottom: -60vw;
+  }
+}
+
 .hero {
   margin-top: 82px;
   height: 710px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 198px;
   gap: 200px;
 }
 
@@ -5416,7 +5573,7 @@ body.show {
 @media screen and (max-width: 1570px) {
   .hero {
     margin-top: 82px;
-    padding: 0 150px 0 60px;
+    padding: 0 150px 0 100px;
     height: 600px;
   }
   .hero-description svg {

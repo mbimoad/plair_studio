@@ -67,6 +67,117 @@ body {
   overflow: hidden;
 }
 
+.testimonials {
+  padding: 100px 96px;
+}
+
+.testimonials h1 {
+  font-size: 40px;
+  font-family: redhat2;
+  padding-right: 30px;
+  display: inline-block;
+  border-bottom: 2px solid #4d289c;
+  margin-bottom: 10px;
+}
+
+.testimonials .testimonial {
+  gap: 30px;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.testimonials .testimonial .arrow-right,
+.testimonials .testimonial .arrow-left {
+  cursor: pointer;
+  pointer-events: unset;
+  border: unset;
+  outline: unset;
+  background: unset;
+}
+
+.testimonials .testimonial .comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1519px;
+  overflow: hidden;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 0 0 5px 0 #999;
+  -webkit-box-shadow: 0 0 5px 0 #999;
+}
+
+.testimonials .testimonial .comments .comment {
+  background: white;
+  height: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1519px;
+          flex: 1 0 1519px;
+  -webkit-flex: 1 0 1519px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 76px 110px;
+  gap: 101px;
+}
+
+.testimonials .testimonial .comments .comment .desc {
+  width: 718px;
+  font-size: 20px;
+}
+
+.testimonials .testimonial .comments .comment .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials .testimonial .comments .comment .detail img {
+  width: 91px;
+  height: 91px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonials .testimonial .comments .comment .detail .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials .testimonial .comments .comment .detail .author h1 {
+  font-size: 20px;
+  border-bottom: unset;
+}
+
+.testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+  font-size: 15px;
+  color: #4d289c;
+}
+
 .chatbox.active {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1427,11 +1538,32 @@ footer .links a {
   .our-mission {
     gap: 50px;
   }
+  .testimonials .testimonial {
+    margin-top: 50px;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 24px;
+    height: 41px;
+  }
+  .testimonials .testimonial .comments {
+    width: unset;
+  }
+  .testimonials .testimonial .comments .comment {
+    padding: 60px 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 1465px;
+            flex: 1 0 1465px;
+    -webkit-flex: 1 0 1465px;
+  }
 }
 
 @media screen and (max-width: 1570px) {
   .hero2 {
     height: 600px;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 550px;
   }
   header ul {
     gap: 40px;
@@ -1471,6 +1603,17 @@ footer .links a {
 }
 
 @media screen and (max-width: 1440px) {
+  .testimonials {
+    padding: 95px 60px;
+  }
+  .testimonials .testimonial .comments .comment {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 1172px;
+            flex: 1 0 1172px;
+    -webkit-flex: 1 0 1172px;
+    padding: 50px 50px;
+    gap: 90px;
+  }
   .chatbox {
     width: 330px;
     height: 480px;
@@ -1546,6 +1689,54 @@ footer .links a {
 }
 
 @media screen and (max-width: 1350px) {
+  .testimonials {
+    padding: 7.03704vw 60px;
+  }
+  .testimonials h1 {
+    font-size: 2.96296vw;
+    padding-right: 2.22222vw;
+    border-bottom: 0.14815vw solid #4d289c;
+    margin-bottom: 0.74074vw;
+  }
+  .testimonials .testimonial {
+    margin-top: 3.7037vw;
+    gap: 2.22222vw;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 1.77778vw;
+    height: 3.03704vw;
+  }
+  .testimonials .testimonial .comments {
+    box-shadow: 0 0 0.37037vw 0 #999;
+    -webkit-box-shadow: 0 0 0.37037vw 0 #999;
+  }
+  .testimonials .testimonial .comments .comment {
+    height: 22.22222vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 80.22222vw;
+            flex: 1 0 80.22222vw;
+    -webkit-flex: 1 0 80.22222vw;
+    padding: 3.7037vw 3.7037vw;
+    gap: 6.66667vw;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 40.74074vw;
+    font-size: 1.48148vw;
+  }
+  .testimonials .testimonial .comments .comment .detail {
+    gap: 2vw;
+  }
+  .testimonials .testimonial .comments .comment .detail img {
+    width: 6.74074vw;
+    height: 6.74074vw;
+  }
+  .testimonials .testimonial .comments .comment .detail .author h1 {
+    font-size: 1.48148vw;
+  }
+  .testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+    font-size: 1.11111vw;
+  }
   .hero2 {
     margin-top: 4.59259vw;
     height: 44.44444vw;
@@ -1785,6 +1976,10 @@ footer .links a {
 }
 
 @media screen and (max-width: 1000px) {
+  .testimonials {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .hero2 .search-input svg {
     top: 3.2vw;
     right: 1.8vw;
@@ -1876,6 +2071,76 @@ footer .links a {
 }
 
 @media screen and (max-width: 767px) {
+  .testimonials h1 {
+    font-size: 40px;
+    padding-right: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+    border-bottom: 3px solid #4d289c;
+  }
+  .testimonials .testimonial {
+    margin-top: 22px;
+    gap: 10px;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 40px;
+    height: 40px;
+  }
+  .testimonials .testimonial .comments {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    overflow: unset;
+    overflow-x: clip;
+  }
+  .testimonials .testimonial .comments .comment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-flex: 1 0 100%;
+    height: unset;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 15px;
+    padding: 40px 20px;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 100%;
+    font-size: 18px;
+  }
+  .testimonials .testimonial .comments .comment .detail {
+    text-align: left;
+    gap: 10px;
+  }
+  .testimonials .testimonial .comments .comment .detail img {
+    width: 91px;
+    height: 91px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .testimonials .testimonial .comments .comment .detail .author {
+    margin-top: 30px;
+  }
+  .testimonials .testimonial .comments .comment .detail .author h1 {
+    font-size: 20px;
+    margin-bottom: unset;
+  }
+  .testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+    font-size: 15px;
+  }
+  .testimonials .testimonial .comments .comment .detail .desc {
+    font-size: 18px;
+  }
   .hero2 {
     margin-top: 48px;
     height: auto;
@@ -2367,6 +2632,117 @@ body {
   overflow: hidden;
 }
 
+.testimonials {
+  padding: 100px 96px;
+}
+
+.testimonials h1 {
+  font-size: 40px;
+  font-family: redhat2;
+  padding-right: 30px;
+  display: inline-block;
+  border-bottom: 2px solid #4d289c;
+  margin-bottom: 10px;
+}
+
+.testimonials .testimonial {
+  gap: 30px;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.testimonials .testimonial .arrow-right,
+.testimonials .testimonial .arrow-left {
+  cursor: pointer;
+  pointer-events: unset;
+  border: unset;
+  outline: unset;
+  background: unset;
+}
+
+.testimonials .testimonial .comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1519px;
+  overflow: hidden;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 0 0 5px 0 #999;
+  -webkit-box-shadow: 0 0 5px 0 #999;
+}
+
+.testimonials .testimonial .comments .comment {
+  background: white;
+  height: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1519px;
+          flex: 1 0 1519px;
+  -webkit-flex: 1 0 1519px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 76px 110px;
+  gap: 101px;
+}
+
+.testimonials .testimonial .comments .comment .desc {
+  width: 718px;
+  font-size: 20px;
+}
+
+.testimonials .testimonial .comments .comment .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials .testimonial .comments .comment .detail img {
+  width: 91px;
+  height: 91px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.testimonials .testimonial .comments .comment .detail .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials .testimonial .comments .comment .detail .author h1 {
+  font-size: 20px;
+  border-bottom: unset;
+}
+
+.testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+  font-size: 15px;
+  color: #4d289c;
+}
+
 .chatbox.active {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -3727,11 +4103,32 @@ footer .links a {
   .our-mission {
     gap: 50px;
   }
+  .testimonials .testimonial {
+    margin-top: 50px;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 24px;
+    height: 41px;
+  }
+  .testimonials .testimonial .comments {
+    width: unset;
+  }
+  .testimonials .testimonial .comments .comment {
+    padding: 60px 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 1465px;
+            flex: 1 0 1465px;
+    -webkit-flex: 1 0 1465px;
+  }
 }
 
 @media screen and (max-width: 1570px) {
   .hero2 {
     height: 600px;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 550px;
   }
   header ul {
     gap: 40px;
@@ -3771,6 +4168,17 @@ footer .links a {
 }
 
 @media screen and (max-width: 1440px) {
+  .testimonials {
+    padding: 95px 60px;
+  }
+  .testimonials .testimonial .comments .comment {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 1172px;
+            flex: 1 0 1172px;
+    -webkit-flex: 1 0 1172px;
+    padding: 50px 50px;
+    gap: 90px;
+  }
   .chatbox {
     width: 330px;
     height: 480px;
@@ -3846,6 +4254,54 @@ footer .links a {
 }
 
 @media screen and (max-width: 1350px) {
+  .testimonials {
+    padding: 7.03704vw 60px;
+  }
+  .testimonials h1 {
+    font-size: 2.96296vw;
+    padding-right: 2.22222vw;
+    border-bottom: 0.14815vw solid #4d289c;
+    margin-bottom: 0.74074vw;
+  }
+  .testimonials .testimonial {
+    margin-top: 3.7037vw;
+    gap: 2.22222vw;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 1.77778vw;
+    height: 3.03704vw;
+  }
+  .testimonials .testimonial .comments {
+    box-shadow: 0 0 0.37037vw 0 #999;
+    -webkit-box-shadow: 0 0 0.37037vw 0 #999;
+  }
+  .testimonials .testimonial .comments .comment {
+    height: 22.22222vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 80.22222vw;
+            flex: 1 0 80.22222vw;
+    -webkit-flex: 1 0 80.22222vw;
+    padding: 3.7037vw 3.7037vw;
+    gap: 6.66667vw;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 40.74074vw;
+    font-size: 1.48148vw;
+  }
+  .testimonials .testimonial .comments .comment .detail {
+    gap: 2vw;
+  }
+  .testimonials .testimonial .comments .comment .detail img {
+    width: 6.74074vw;
+    height: 6.74074vw;
+  }
+  .testimonials .testimonial .comments .comment .detail .author h1 {
+    font-size: 1.48148vw;
+  }
+  .testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+    font-size: 1.11111vw;
+  }
   .hero2 {
     margin-top: 4.59259vw;
     height: 44.44444vw;
@@ -4085,6 +4541,10 @@ footer .links a {
 }
 
 @media screen and (max-width: 1000px) {
+  .testimonials {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .hero2 .search-input svg {
     top: 3.2vw;
     right: 1.8vw;
@@ -4176,6 +4636,76 @@ footer .links a {
 }
 
 @media screen and (max-width: 767px) {
+  .testimonials h1 {
+    font-size: 40px;
+    padding-right: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+    border-bottom: 3px solid #4d289c;
+  }
+  .testimonials .testimonial {
+    margin-top: 22px;
+    gap: 10px;
+  }
+  .testimonials .testimonial .arrow-right svg,
+  .testimonials .testimonial .arrow-left svg {
+    width: 40px;
+    height: 40px;
+  }
+  .testimonials .testimonial .comments {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    overflow: unset;
+    overflow-x: clip;
+  }
+  .testimonials .testimonial .comments .comment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-flex: 1 0 100%;
+    height: unset;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 15px;
+    padding: 40px 20px;
+  }
+  .testimonials .testimonial .comments .comment .desc {
+    width: 100%;
+    font-size: 18px;
+  }
+  .testimonials .testimonial .comments .comment .detail {
+    text-align: left;
+    gap: 10px;
+  }
+  .testimonials .testimonial .comments .comment .detail img {
+    width: 91px;
+    height: 91px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .testimonials .testimonial .comments .comment .detail .author {
+    margin-top: 30px;
+  }
+  .testimonials .testimonial .comments .comment .detail .author h1 {
+    font-size: 20px;
+    margin-bottom: unset;
+  }
+  .testimonials .testimonial .comments .comment .detail .author p, .testimonials .testimonial .comments .comment .detail .author a {
+    font-size: 15px;
+  }
+  .testimonials .testimonial .comments .comment .detail .desc {
+    font-size: 18px;
+  }
   .hero2 {
     margin-top: 48px;
     height: auto;
@@ -4922,6 +5452,48 @@ footer .links a {
 footer {
   position: relative;
   z-index: 5;
+}
+
+.our-services.our-services2 {
+  padding-top: unset;
+}
+
+.our-services.our-services2 .service-footer {
+  margin-top: unset;
+}
+
+.our-mission.our-mission2 .mission-box h1 {
+  font-family: redhatbold;
+}
+
+.our-mission.our-mission2 .mission-box .detail p {
+  font-size: 20px;
+}
+
+.our-mission.our-mission2 .mission-box a {
+  font-size: 16px;
+}
+
+.statistic {
+  height: 1000px;
+}
+
+@media screen and (max-width: 1570px) {
+  .statistic {
+    height: 836px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .statistic {
+    height: 61.92593vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .statistic {
+    height: 516px;
+  }
 }
 
 @-webkit-keyframes totop {

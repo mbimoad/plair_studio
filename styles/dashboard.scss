@@ -10,6 +10,51 @@
 }
 
 
+.our-services.our-services2 {
+    padding-top: unset; 
+    .service-footer {
+        margin-top: unset; 
+    }
+}
+
+.our-mission.our-mission2 {
+    .mission-box {
+        h1 {
+            font-family: redhatbold;
+        }
+        .detail {
+            p {
+                font-size: 20px; 
+            }
+        } a {
+            font-size: 16px; 
+        }
+    }
+}
+
+
+.statistic {
+    height: 1000px; 
+}
+
+@media screen and (max-width: 1570px) { 
+    .statistic {
+        height: 836px; 
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .statistic {
+        height: pxToVw(836,1350);
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .statistic {
+        height: 516px; 
+    }
+ 
+}
 
 
 

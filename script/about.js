@@ -46,10 +46,6 @@ let typeScroll = "px";
 
 window.onload = function() {
    
-
-
-
-    
     if(window.innerWidth <= 767) {
       const process = document.querySelectorAll('.our-team .dotted-process span');
       process.forEach(item => item.addEventListener('click', function() {

@@ -582,6 +582,7 @@ footer {
             color:$purple;
             font-size: 20px;
             width: 243px; 
+            margin-top: 15px;
         }
     } 
     
@@ -1439,6 +1440,7 @@ footer {
             p {
                 font-size: pxToVw(20, 1350);
                 width: pxToVw(243, 1350); 
+                margin-top: pxToVw(15, 1350);
             } svg {
                 width: pxToVw(150, 1350); 
                 height: auto; 

@@ -52,7 +52,7 @@ quote.setAttribute("href", "./project.html");
 
 
 // faq
-const faqmenu = document.querySelectorAll('.footer-menu .menu-data:first-child .links a');
+const faqmenu = document.querySelectorAll('.footer-menu .menu-data:first-child a');
 
 if(faqmenu.length != 0) {
   console.log(faqmenu)

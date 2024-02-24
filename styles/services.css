@@ -780,6 +780,7 @@ footer .links a {
   color: #4d289c;
   font-size: 20px;
   width: 243px;
+  margin-top: 15px;
 }
 
 .footer-menu .menu-list {
@@ -1847,6 +1848,7 @@ footer .links a {
   .footer-menu .header p {
     font-size: 1.48148vw;
     width: 18vw;
+    margin-top: 1.11111vw;
   }
   .footer-menu .header svg {
     width: 11.11111vw;
@@ -3346,6 +3348,7 @@ footer .links a {
   color: #4d289c;
   font-size: 20px;
   width: 243px;
+  margin-top: 15px;
 }
 
 .footer-menu .menu-list {
@@ -4413,6 +4416,7 @@ footer .links a {
   .footer-menu .header p {
     font-size: 1.48148vw;
     width: 18vw;
+    margin-top: 1.11111vw;
   }
   .footer-menu .header svg {
     width: 11.11111vw;

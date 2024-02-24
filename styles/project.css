@@ -2581,11 +2581,6 @@ footer .links a {
   }
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
 .container {
   height: 100vh;
 }
@@ -2898,7 +2893,7 @@ footer {
     width: 200px;
     height: 200px;
     opacity: 0;
-    height: 80vh;
+    height: 75vh;
     width: 70%;
     top: 50%;
     left: 50%;
@@ -3105,8 +3100,8 @@ footer {
             flex: 1;
   }
   footer {
+    position: fixed;
     bottom: 0;
-    position: absolute;
   }
 }
 
@@ -3114,5 +3109,10 @@ footer {
   .project-form-container {
     width: 85%;
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 /*# sourceMappingURL=project.css.map */

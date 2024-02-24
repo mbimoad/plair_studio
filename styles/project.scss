@@ -1,8 +1,5 @@
 @import './main';
-footer {
-    position:fixed;
-    bottom: 0; 
-}
+
 
 
 .container {
@@ -372,7 +369,7 @@ footer {
         width: 200px; 
         height: 200px;
         opacity: 0;
-        height: 80vh;
+        height: 75vh;
         width: 70%;
         top: 50%;
         left: 50%;
@@ -536,10 +533,10 @@ footer {
         }
     }
     
- footer {
-    bottom: 0;
-    position: absolute;
- }
+    footer {
+        position:fixed;
+        bottom: 0; 
+    }
 }
 
 
@@ -549,4 +546,9 @@ footer {
         width: 85%;
     }
  
+}
+
+footer {
+    position:fixed;
+    bottom: 0; 
 }

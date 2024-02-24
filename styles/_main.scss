@@ -1172,6 +1172,7 @@ footer {
 }
 
 @media screen and (max-width: 1350px) { 
+ 
     .hero2 {
         margin-top: pxToVw(62, 1350);
         height: pxToVw(600, 1350);
@@ -1387,6 +1388,8 @@ footer {
 }
 
 @media screen and (max-width: 1000px) { 
+    
+
     .hero2 {
         .search-input {
             svg {

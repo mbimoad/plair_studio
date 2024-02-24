@@ -1199,8 +1199,6 @@ footer .links a {
   background: white;
   padding: 103px 72px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px #ccc;
-          box-shadow: 0 0 5px #ccc;
   width: 855px;
   z-index: 999;
 }

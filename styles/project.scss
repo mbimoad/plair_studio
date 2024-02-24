@@ -1,2 +1,547 @@
 @import './main';
+footer {
+    position:fixed;
+    bottom: 0; 
+}
+.project-form {
+    z-index: 1;
+    position: static;
+    transform: unset;
+    -webkit-transform: unset;
+    opacity: 1; 
+    margin-top: unset; 
+    pointer-events: unset;
+    box-shadow: unset;
+}
+.project-form.active.finished {
+    position: static;
+    transform: unset;
+    -webkit-transform: unset;
+    opacity: 1; 
+    pointer-events: unset;
+    box-shadow: unset;
+}
+.project-form.active {
+    box-shadow: unset;
+    position: static;
+    transform: unset;
+    -webkit-transform: unset;
+    opacity: 1; 
+            pointer-events: unset;
+}
 
+.project-form-container.active.finished {
+    transform: translate(-500%, -50%);
+    opacity: 0;
+}
+
+
+.project-form-container.active {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: unset;
+}
+
+
+.project-form-container {
+    box-shadow: 0 0 5px #ccc;
+    transition: all 500ms ease 0s;
+    width: 855px; 
+    pointer-events: none;
+    
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    opacity: 0; 
+    transform: translate(-50%, 100%);/* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+
+    height: 810px;
+    overflow:hidden; 
+    
+
+}
+
+@media screen and (max-width: 1350px) { 
+    .project-form {
+            
+        width: 100%; 
+        padding: 65px;
+    }
+
+    .project-form-container {
+        width: 750px; 
+    }
+ 
+}
+@media screen and (max-width: 1000px) {
+
+    .project-form-container {
+        width: pxToVw(750, 1000); 
+        height: pxToVw(650, 1000);
+        height: 80vw;  
+    }
+
+
+    .project-form {
+        // margin-top: pxToVw(34, 1000);
+        // border-radius: pxToVw(5, 1000);
+        // box-shadow: 0 0 pxToVw(5, 1000) #ccc;
+    
+        // width: pxToVw(750, 1000); 
+        padding: pxToVw(65, 1000); 
+        .header {
+            h1 {
+                font-size: pxToVw(26, 1000);
+                padding-right: pxToVw(30, 1000);
+                padding-bottom: pxToVw(10, 1000);
+            } p {
+                font-size: pxToVw(20, 1000);
+                 width: pxToVw(514, 1000);
+            }
+        }
+    
+        form {
+            .btn-purple {
+                margin-top: pxToVw(46, 1000);
+                width: 100%;
+                height: pxToVw(46, 1000);
+            }
+            .form-group {
+                
+    
+                gap:pxToVw(10, 1000);
+                label {
+                    font-size: pxToVw(15, 1000);
+                  
+                } input,textarea {
+                   
+                    height: pxToVw(37, 1000);
+          
+                } textarea {
+                    border-radius: pxToVw(3, 1000);
+                    height: pxToVw(294, 1000);
+                    padding: pxToVw(15, 1000); 
+    
+                    box-shadow: inset pxToVw(1, 1000) pxToVw(3, 1000) pxToVw(3, 1000) 0 #eee;
+             
+                    font-size: pxToVw(15, 1000);
+                } textarea.project {
+                    height:pxToVw(129, 1000); 
+                }
+                input {
+                    font-size: pxToVw(15, 1000);
+                }
+                input::-webkit-input-placeholder {
+                    font-size: pxToVw(15, 1000);
+                }
+                
+                input::placeholder {
+                    font-size: pxToVw(15, 1000);
+                }
+            }
+            .form-header.dotted {
+                padding-top: pxToVw(36, 1000);
+                margin-top:pxToVw(30, 1000);
+                border-top: pxToVw(2, 1000) dotted black;
+            }
+            .form-header {
+                margin-top: pxToVw(56, 1000);
+                margin-bottom: pxToVw(34, 1000);
+               
+                gap: pxToVw(41, 1000); 
+                .right {
+                  
+                    gap:pxToVw(22, 1000);
+                    flex: 1;
+                    .form-group {
+                        .numbers {
+                          
+                            select {
+                            
+                                padding: pxToVw(13, 1000);
+                                padding-right: pxToVw(50, 1000);
+                            
+                            
+                                background: url('../assets/arrowselect.svg') no-repeat pxToVw(65, 1000) pxToVw(23, 1000);
+                                box-shadow: 0 0 pxToVw(2, 1000) #ccc;
+                                
+                            } input {
+                                flex:1;
+                            }
+                        }
+    
+                        .inputs {
+            
+                            gap: pxToVw(10, 1000); 
+                            input.date {
+                                width: pxToVw(53, 1000); 
+                            } input.month {
+                                width: pxToVw(53, 1000); 
+                            } input.years {
+                                width: pxToVw(72, 1000); 
+                            }
+                        }
+                    }
+                } .left {
+                    flex: 1;
+            
+                    gap:pxToVw(22, 1000);
+                    .username {
+                     
+                        gap: pxToVw(16, 1000);
+                        .form-group {
+                            flex:1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
+}
+
+
+
+@media  
+       screen and (min-height: 900px) and (max-height: 1000px) {
+      .project-form {
+          padding: 60px ;
+      }
+
+      .project-form-container {
+          height: 732px; 
+      }
+}
+
+
+
+@media  
+       screen and (min-height: 800px) and (max-height: 899px) {
+      .project-form {
+          padding: 40px 60px ;
+
+          form {
+              .form-header {
+                margin-top: 35px;
+              }
+              button.btn-purple {
+                margin-top: 15px; 
+            }
+          }
+      }
+
+      .project-form-container {
+          height: 650px; 
+          
+      }
+}
+
+
+@media  
+       screen and  (max-height: 798px) {
+      .project-form {
+          padding: 20px 40px;
+
+          form {
+              .form-header {
+                margin-top: 20px;
+                margin-bottom: 20px; 
+              } .form-header.dotted {
+                padding-top: 30px;
+                margin-top: 25px;
+            
+              }
+              button.btn-purple {
+                margin-top: 5px; 
+            }
+          }
+      }
+
+      .project-form-container {
+          height: 556px; 
+      }
+}
+
+
+
+
+
+
+
+
+
+// ========================
+@media  
+       screen and (max-width: 1000px) and (min-height: 900px) and (max-height: 1000px) {
+      .project-form {
+          padding: pxToVw(60, 1000);
+      }
+
+      .project-form-container {
+          height: pxToVw(732, 1000); 
+      }
+}
+
+
+
+@media  
+       screen and (max-width: 1000px) and (min-height: 800px) and (max-height: 899px) {
+      .project-form {
+          padding: pxToVw(40, 1000) pxToVw(60, 1000);
+
+          form {
+              .form-header {
+                margin-top: pxToVw(35, 1000);
+              }
+              button.btn-purple {
+                margin-top: pxToVw(15, 1000); 
+            }
+          }
+      }
+
+      .project-form-container {
+          height: pxToVw(650, 1000); 
+      }
+}
+
+
+@media  
+       screen and (max-width: 1000px)  and  (max-height: 798px) {
+      .project-form {
+          padding: pxToVw(20, 1000) pxToVw(40, 1000);
+
+          form {
+              .form-header {
+                margin-top: pxToVw(20, 1000);
+                margin-bottom: pxToVw(20, 1000); 
+              } .form-header.dotted {
+                padding-top: pxToVw(30, 1000);
+                margin-top: pxToVw(25, 1000);
+            
+              }
+              button.btn-purple {
+                margin-top: pxToVw(5, 1000); 
+            }
+          }
+      }
+
+      .project-form-container {
+          height: pxToVw(556, 1000); 
+      }
+}
+
+
+
+
+@media screen and (max-width: 767px) { 
+    .project-form-container::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    .project-form-container::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        border-radius: 10px;
+    }
+    
+    .project-form-container::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+
+    .project-form-container.active.finished {
+        transform: translate(-500%, -50%);
+        opacity: 0;
+    }
+    
+
+    .project-form-container.active {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .project-form-container {
+        transition: all 500ms ease 0s;
+        pointer-events: none;
+        width: 200px; 
+        height: 200px;
+        opacity: 0;
+        height: 80vh;
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        position:absolute; 
+        transform: translate(-50%, 100%);
+        overflow:auto;
+          box-shadow: 0 0 5px #ccc;
+          border-radius:5px; 
+    }
+    .project-form.active {
+        position: static;
+        transform: unset;
+        -webkit-transform: unset;
+    }
+
+    .project-form.active.finished {
+        transform:unset; 
+        opacity: 1; 
+    }
+
+    .success-form.active {
+        text-align:center;
+    }
+
+    .success-form {
+        h1 {
+            font-size: 40px; 
+        } svg {
+            width: 98px;
+            height: 98px; 
+        }
+    }
+
+    .project-form {
+        opacity:1; 
+        pointer-events: unset;
+        position: static;
+        transform: unset;
+        -webkit-transform: unset;
+        margin-top: unset;
+        padding: 22px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ccc;
+        width: 100%; 
+        .header {   
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1 {
+                font-size: 20px;
+   
+                padding-bottom: unset;
+                padding-right: unset;
+            } 
+        }
+    
+        form {
+            // display: flex;
+            // flex-direction: column;
+            .btn-purple {
+                margin-top: 24px;
+                font-size: 16px;
+                width: 100%;
+                height: 46px;
+            }
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                label {
+                    font-size: 15px;
+                } input,textarea {
+                    height: 37px;
+
+                } textarea {
+                  
+                    height: 128px;
+                    padding: 15px; 
+                    border:unset;
+                    outline: unset;
+                    box-shadow: inset 1px 3px 3px 0 #eee;
+
+                    font-size: 15px;
+                } textarea.project {
+                    height:128px; 
+                }
+                input {
+                    font-size: 15px;
+                }
+                input::-webkit-input-placeholder {
+                    font-size: 15px;
+                }
+                
+                input::placeholder {
+                    font-size: 15px;
+                }
+            }
+            .form-header.dotted {
+                padding-top: 36px;
+                margin-top:30px;
+                border-top: 2px dotted black;
+                flex-direction: column;
+            }
+            .form-header {
+                margin-top: 16px;
+                margin-bottom: 34px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 21px; 
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap:22px;
+                    width: 100%; 
+                    .form-group {
+                        .numbers {
+                            display: flex;
+                            select {
+                                background:white; 
+                                padding: 13px;
+                                padding-right: 50px;
+                                color:black;
+                                border:unset;
+                                outline: none;
+                                -webkit-appearance: none;
+                                background: url('../assets/arrowselect.svg') no-repeat 65px 23px;
+                                box-shadow: 0 0 2px #ccc;
+                                
+                            } input {
+                                flex:1;
+                            }
+                        }
+    
+                        .inputs {
+                            display: flex;
+                            gap: 10px; 
+                            input.date {
+                                width: 30%; 
+                            } input.month {
+                                width: 30%; 
+                            } input.years {
+                                width: 60%; 
+                            }
+                        }
+                    }
+                } .left {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap:22px;
+                    .username {
+                        display: flex;
+                        gap: 16px;
+                        .form-group {
+                            flex:1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+ footer {
+    bottom: 0;
+    position: absolute;
+ }
+}
+
+
+
+@media screen and (max-width: 600px) { 
+    .project-form-container {
+        width: 85%;
+    }
+ 
+}

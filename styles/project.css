@@ -2302,4 +2302,535 @@ footer .links a {
     width: 34px;
   }
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.project-form {
+  z-index: 1;
+  position: static;
+  transform: unset;
+  -webkit-transform: unset;
+  opacity: 1;
+  margin-top: unset;
+  pointer-events: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.project-form.active.finished {
+  position: static;
+  transform: unset;
+  -webkit-transform: unset;
+  opacity: 1;
+  pointer-events: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.project-form.active {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  position: static;
+  transform: unset;
+  -webkit-transform: unset;
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.project-form-container.active.finished {
+  -webkit-transform: translate(-500%, -50%);
+          transform: translate(-500%, -50%);
+  opacity: 0;
+}
+
+.project-form-container.active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.project-form-container {
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  width: 855px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  /* position the top  edge of the element at the middle of the parent */
+  left: 50%;
+  /* position the left edge of the element at the middle of the parent */
+  opacity: 0;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+  height: 810px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1350px) {
+  .project-form {
+    width: 100%;
+    padding: 65px;
+  }
+  .project-form-container {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .project-form-container {
+    width: 75vw;
+    height: 65vw;
+    height: 80vw;
+  }
+  .project-form {
+    padding: 6.5vw;
+  }
+  .project-form .header h1 {
+    font-size: 2.6vw;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+  }
+  .project-form .header p {
+    font-size: 2vw;
+    width: 51.4vw;
+  }
+  .project-form form .btn-purple {
+    margin-top: 4.6vw;
+    width: 100%;
+    height: 4.6vw;
+  }
+  .project-form form .form-group {
+    gap: 1vw;
+  }
+  .project-form form .form-group label {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group input, .project-form form .form-group textarea {
+    height: 3.7vw;
+  }
+  .project-form form .form-group textarea {
+    border-radius: 0.3vw;
+    height: 29.4vw;
+    padding: 1.5vw;
+    -webkit-box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+            box-shadow: inset 0.1vw 0.3vw 0.3vw 0 #eee;
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group textarea.project {
+    height: 12.9vw;
+  }
+  .project-form form .form-group input {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group input::-webkit-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group input:-ms-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group input::-ms-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-group input::placeholder {
+    font-size: 1.5vw;
+  }
+  .project-form form .form-header.dotted {
+    padding-top: 3.6vw;
+    margin-top: 3vw;
+    border-top: 0.2vw dotted black;
+  }
+  .project-form form .form-header {
+    margin-top: 5.6vw;
+    margin-bottom: 3.4vw;
+    gap: 4.1vw;
+  }
+  .project-form form .form-header .right {
+    gap: 2.2vw;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .project-form form .form-header .right .form-group .numbers select {
+    padding: 1.3vw;
+    padding-right: 5vw;
+    background: url("../assets/arrowselect.svg") no-repeat 6.5vw 2.3vw;
+    -webkit-box-shadow: 0 0 0.2vw #ccc;
+            box-shadow: 0 0 0.2vw #ccc;
+  }
+  .project-form form .form-header .right .form-group .numbers input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .project-form form .form-header .right .form-group .inputs {
+    gap: 1vw;
+  }
+  .project-form form .form-header .right .form-group .inputs input.date {
+    width: 5.3vw;
+  }
+  .project-form form .form-header .right .form-group .inputs input.month {
+    width: 5.3vw;
+  }
+  .project-form form .form-header .right .form-group .inputs input.years {
+    width: 7.2vw;
+  }
+  .project-form form .form-header .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 2.2vw;
+  }
+  .project-form form .form-header .left .username {
+    gap: 1.6vw;
+  }
+  .project-form form .form-header .left .username .form-group {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (min-height: 900px) and (max-height: 1000px) {
+  .project-form {
+    padding: 60px;
+  }
+  .project-form-container {
+    height: 732px;
+  }
+}
+
+@media screen and (min-height: 800px) and (max-height: 899px) {
+  .project-form {
+    padding: 40px 60px;
+  }
+  .project-form form .form-header {
+    margin-top: 35px;
+  }
+  .project-form form button.btn-purple {
+    margin-top: 15px;
+  }
+  .project-form-container {
+    height: 650px;
+  }
+}
+
+@media screen and (max-height: 798px) {
+  .project-form {
+    padding: 20px 40px;
+  }
+  .project-form form .form-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .project-form form .form-header.dotted {
+    padding-top: 30px;
+    margin-top: 25px;
+  }
+  .project-form form button.btn-purple {
+    margin-top: 5px;
+  }
+  .project-form-container {
+    height: 556px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-height: 900px) and (max-height: 1000px) {
+  .project-form {
+    padding: 6vw;
+  }
+  .project-form-container {
+    height: 73.2vw;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-height: 800px) and (max-height: 899px) {
+  .project-form {
+    padding: 4vw 6vw;
+  }
+  .project-form form .form-header {
+    margin-top: 3.5vw;
+  }
+  .project-form form button.btn-purple {
+    margin-top: 1.5vw;
+  }
+  .project-form-container {
+    height: 65vw;
+  }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 798px) {
+  .project-form {
+    padding: 2vw 4vw;
+  }
+  .project-form form .form-header {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  .project-form form .form-header.dotted {
+    padding-top: 3vw;
+    margin-top: 2.5vw;
+  }
+  .project-form form button.btn-purple {
+    margin-top: 0.5vw;
+  }
+  .project-form-container {
+    height: 55.6vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-form-container::-webkit-scrollbar {
+    width: 12px;
+  }
+  .project-form-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  .project-form-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  .project-form-container.active.finished {
+    -webkit-transform: translate(-500%, -50%);
+            transform: translate(-500%, -50%);
+    opacity: 0;
+  }
+  .project-form-container.active {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: unset;
+  }
+  .project-form-container {
+    -webkit-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+    pointer-events: none;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    height: 80vh;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
+    overflow: auto;
+    -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+  }
+  .project-form.active {
+    position: static;
+    transform: unset;
+    -webkit-transform: unset;
+  }
+  .project-form.active.finished {
+    -webkit-transform: unset;
+            transform: unset;
+    opacity: 1;
+  }
+  .success-form.active {
+    text-align: center;
+  }
+  .success-form h1 {
+    font-size: 40px;
+  }
+  .success-form svg {
+    width: 98px;
+    height: 98px;
+  }
+  .project-form {
+    opacity: 1;
+    pointer-events: unset;
+    position: static;
+    transform: unset;
+    -webkit-transform: unset;
+    margin-top: unset;
+    padding: 22px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+    width: 100%;
+  }
+  .project-form .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project-form .header h1 {
+    font-size: 20px;
+    padding-bottom: unset;
+    padding-right: unset;
+  }
+  .project-form form .btn-purple {
+    margin-top: 24px;
+    font-size: 16px;
+    width: 100%;
+    height: 46px;
+  }
+  .project-form form .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .project-form form .form-group label {
+    font-size: 15px;
+  }
+  .project-form form .form-group input, .project-form form .form-group textarea {
+    height: 37px;
+  }
+  .project-form form .form-group textarea {
+    height: 128px;
+    padding: 15px;
+    border: unset;
+    outline: unset;
+    -webkit-box-shadow: inset 1px 3px 3px 0 #eee;
+            box-shadow: inset 1px 3px 3px 0 #eee;
+    font-size: 15px;
+  }
+  .project-form form .form-group textarea.project {
+    height: 128px;
+  }
+  .project-form form .form-group input {
+    font-size: 15px;
+  }
+  .project-form form .form-group input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .project-form form .form-group input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .project-form form .form-group input::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .project-form form .form-group input::placeholder {
+    font-size: 15px;
+  }
+  .project-form form .form-header.dotted {
+    padding-top: 36px;
+    margin-top: 30px;
+    border-top: 2px dotted black;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-form form .form-header {
+    margin-top: 16px;
+    margin-bottom: 34px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 21px;
+  }
+  .project-form form .form-header .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 22px;
+    width: 100%;
+  }
+  .project-form form .form-header .right .form-group .numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .project-form form .form-header .right .form-group .numbers select {
+    background: white;
+    padding: 13px;
+    padding-right: 50px;
+    color: black;
+    border: unset;
+    outline: none;
+    -webkit-appearance: none;
+    background: url("../assets/arrowselect.svg") no-repeat 65px 23px;
+    -webkit-box-shadow: 0 0 2px #ccc;
+            box-shadow: 0 0 2px #ccc;
+  }
+  .project-form form .form-header .right .form-group .numbers input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .project-form form .form-header .right .form-group .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .project-form form .form-header .right .form-group .inputs input.date {
+    width: 30%;
+  }
+  .project-form form .form-header .right .form-group .inputs input.month {
+    width: 30%;
+  }
+  .project-form form .form-header .right .form-group .inputs input.years {
+    width: 60%;
+  }
+  .project-form form .form-header .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 22px;
+  }
+  .project-form form .form-header .left .username {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+  }
+  .project-form form .form-header .left .username .form-group {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  footer {
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-form-container {
+    width: 85%;
+  }
+}
 /*# sourceMappingURL=project.css.map */

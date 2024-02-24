@@ -1,4 +1,4 @@
-const projectForm = document.querySelector('.project-form');
+const projectForm = document.querySelector('.project-form-container');
 const successForm = document.querySelector('.success-form');
 
 
@@ -15,6 +15,7 @@ setTimeout(() => {
 
 
 const submitProject = document.querySelector('.project-form button');
+console.log(submitProject)
 submitProject.addEventListener('click', function() {
     projectForm.classList.add('finished');
 

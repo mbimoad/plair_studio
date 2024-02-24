@@ -78,6 +78,7 @@ window.onload = function(e) {
             if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
             if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
             if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
+            if(turn == '4') box.forEach(item => item.style.transform = 'translate(-300%,0)');
         }))
 
         
@@ -110,7 +111,7 @@ const servicesint = setInterval(() => {
   index2++;
   servicesdot.forEach(item => item.classList.remove('active'));
   servicesdot[index2].classList.add('active');
-  servicesbox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+  servicesbox.forEach(item => item.style.transform = `translate(-${100*index2}%,0)`);
  
 }, 2000)
 

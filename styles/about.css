@@ -814,6 +814,10 @@ footer .links a {
   cursor: pointer;
 }
 
+.footer-menu .menu-list .menu-data:nth-child(2) svg {
+  cursor: pointer;
+}
+
 .footer-menu .menu-list .menu-data {
   position: relative;
   height: 195px;

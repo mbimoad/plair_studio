@@ -79,7 +79,7 @@ if(toolsmenu.length != 0) {
 
 
 // sosmed 
-const sosmedmenu = document.querySelectorAll('.footer-menu .menu-data.sosmed svg');
+const sosmedmenu = document.querySelectorAll('.footer-menu .menu-data:nth-child(2) svg');
 if(sosmedmenu.length != 0) {
   sosmedmenu.forEach((item, index) => item.addEventListener('click', function() {
     switch(index) {

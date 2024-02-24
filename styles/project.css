@@ -452,8 +452,8 @@ body {
   overflow: hidden;
   font-family: redhat;
   background-image: url("../assets/loginbg.webp");
-  background-size: 1700px;
-  background-position: 524px -730px;
+  background-size: 1444px;
+  background-position: 299px -1030px;
 }
 
 .text-center {
@@ -2584,6 +2584,10 @@ footer .links a {
 footer {
   position: fixed;
   bottom: 0;
+}
+
+.container {
+  height: 100vh;
 }
 
 .project-form {

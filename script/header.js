@@ -74,7 +74,7 @@ if(indexmenu.length != 0) {
 const toolsmenu = document.querySelectorAll('.footer-menu .menu-data:nth-child(3) .buttons a');
 if(toolsmenu.length != 0) {
   toolsmenu[0].setAttribute("href", "./project.html");
-  toolsmenu[1].setAttribute("href", "./index.html");
+  if(toolsmenu[1]) toolsmenu[1].setAttribute("href", "./index.html");
 }
 
 

@@ -36,20 +36,8 @@ const chatbot = document.querySelector('.chatbot');
 
 
 
-const arrowchat = document.querySelector('.chatbox .arrow'); 
-
-console.log(arrowchat);
-arrowchat.addEventListener('click', function() {
-    console.log('sini');
-    console.log(chatbox);
-    chatbox.classList.remove('active');
-})
 
 
-
-chatbot.addEventListener('click', function() {
-    chatbox.classList.toggle('active');
-})
 
 
 

@@ -234,11 +234,21 @@ questionsitems.forEach(item => item.addEventListener('click', function() {
 }))
 
 
+if(chatbot) {
 
-const chatbox = document.querySelector('.chatbox'); 
-const chatbot = document.querySelector('.chatbot'); 
-chatbot.addEventListener('click', function() {
+  chatbot.addEventListener('click', function() {
     chatbox.classList.toggle('active');
 })
+}
 
 
+const arrowchat = document.querySelector('.chatbox .arrow'); 
+if(arrowchat) {
+  arrowchat.addEventListener('click', function() {
+    console.log('sini');
+    console.log(chatbox);
+    chatbox.classList.remove('active');
+})
+}
+
+console.log(arrowchat);

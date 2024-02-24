@@ -5,7 +5,7 @@ const ourmissionimg = document.querySelector('.our-mission.our-mission2 img');
 const ourmissionh1 = document.querySelector('.our-mission.our-mission2 .mission-box h1');
 const ourmissionp = document.querySelector('.our-mission.our-mission2 .mission-box p');
 const statistic = document.querySelector('.statistic');
-
+console.log("Helo")
 url = url[url.length-1];
 switch(url) {
     case "mobile": 

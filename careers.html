@@ -336,7 +336,8 @@
                         <div class="form-group">
                             <label for="country">Country of Origin</label>
                             <select name="country" id="country" class="input">
-                                <option value="select">Select</option>
+                                <option selected value = "">Select</option>
+                                <option value = "indonesia">Indonesia</option>
                             </select>
                         </div>
                     </div>
@@ -348,12 +349,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="number">Phone Number</label>
+                            <label for="phone">Phone Number</label>
                             <div class="numbers">
                                 <select name="" id="">
                                     <option selected>Select</option>
+                                    <option value="+62">+62</option>
                                 </select>
-                                <input type="number" id="number" class="input" placeholder="Enter phone number">
+                                <input type="number" id="phone" class="input" placeholder="Enter phone number">
                             </div>
                         </div>
 
@@ -527,5 +529,6 @@
     </div>
     <script src="./script/header.js"></script>
     <script src="./script/careers.js"></script>
+    <script src="./script/api_careers.js"></script>
 </body>
 </html>

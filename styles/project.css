@@ -1032,6 +1032,7 @@ footer .links a {
   color: white;
   border: unset;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .stayuptodate button svg {
@@ -2579,6 +2580,17 @@ footer .links a {
   .statistic .box .circle svg {
     width: 34px;
   }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 .container {

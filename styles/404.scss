@@ -1,0 +1,139 @@
+@import './main';
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.container {
+    height: 100vh;
+}
+
+.notfoundmsg {
+    position: absolute; 
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 26px; 
+    width: 100%;
+
+    h1 {
+        font-size: 50px;
+        font-family: redhat3;
+        text-align:center;
+    } .sub {
+        text-align: center;
+        h3 {
+            font-size: 26px;
+            font-family: redhat3;
+        } p {
+            font-size: 14px;
+            font-family: redhat1;
+            width: 474px;
+            margin:auto;
+        }
+    } a {
+        display: flex;
+        width: 380px; 
+        height: 45px; 
+        font-size: 16px; 
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+
+footer {
+    position:fixed;
+    bottom: 0; 
+}
+
+
+
+@media screen and (max-width: 1440px) { 
+    .notfoundmsg {  
+        width:85%;  
+        gap: 20px; 
+        h1 {
+            font-size: 45px;
+        } .sub {
+            text-align: center;
+            h3 {
+                font-size: 24;
+            } p {
+                font-size: 14px;
+                width: 474px;
+            
+            }
+        } a {
+            display: flex;
+            width: 360px; 
+            height: 40px; 
+            font-size: 15px; 
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 5px $purple;
+    
+        }
+    }
+}
+
+@media screen and (max-width: 870px) { 
+    .notfoundmsg { 
+        .sub {
+            h3 {
+                width: 400px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) { 
+
+    .notfoundmsg { 
+        h1 {
+            font-size: 40px;
+        }
+        .sub {
+            h3 {
+                width: 400px;
+                margin: auto;
+                font-size: 20px; 
+            } p {
+                font-size: 14px; 
+            }
+        } a {
+            font-size: 15px;
+        }
+    } 
+}
+
+
+@media screen and (max-width: 550px) { 
+    .notfoundmsg { 
+        width: 90%;
+        .sub {
+            h3 {
+                width: unset;
+                margin: auto;
+                font-size: 20px; 
+            } p {
+                font-size: 14px; 
+                width: 286px;
+            }
+        } a {
+            width: 70%;
+            font-size: 15px;
+        }
+    } 
+}

@@ -98,3 +98,38 @@ if(sosmedmenu.length != 0) {
     }
   }))
 }
+
+
+
+
+// Api Newslatter 
+const emailInput   = document.querySelector('.stayuptodate input');
+if(emailInput) {
+  
+emailInput.setAttribute('type', 'email')
+const btnSubscribe = document.querySelector('.stayuptodate button');
+// Production
+// let base_url  = "https://api.plairstudio.com";
+
+// Development
+let base_url  = "http://localhost:5000";
+let end_point = "/newsletter";
+let url_fetch = base_url + end_point; 
+
+btnSubscribe.addEventListener('click', function() {
+  if(emailInput.value && emailInput.value.includes('@')) {
+    let data = {email: emailInput.value}
+    fetch(url_fetch, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data), 
+        mode: 'cors'
+    })
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+  } else {
+    alert("Please fill / fix the email!")
+  }
+})
+}

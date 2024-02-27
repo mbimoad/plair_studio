@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/project.css">
+    <link rel="stylesheet" href="./styles/404.css">
     <title>Document</title>
 </head>
 <body>
@@ -68,81 +68,22 @@
     </div>
 
 
-    <div class="success-form">
-        <h1>Submitted Successfully!</h1>
-        <svg width="121" height="120" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M52.224 70.7585L39.3737 57.9082C38.2779 56.8124 36.8833 56.2645 35.1899 56.2645C33.4964 56.2645 32.1018 56.8124 31.006 57.9082C29.9103 59.0039 29.3624 60.3985 29.3624 62.092C29.3624 63.7854 29.9103 65.18 31.006 66.2758L48.0402 83.3099C49.2355 84.5053 50.6302 85.103 52.224 85.103C53.8178 85.103 55.2124 84.5053 56.4078 83.3099L90.1772 49.5405C91.273 48.4448 91.8209 47.0502 91.8209 45.3567C91.8209 43.6633 91.273 42.2686 90.1772 41.1729C89.0815 40.0771 87.6869 39.5292 85.9934 39.5292C84.2999 39.5292 82.9053 40.0771 81.8096 41.1729L52.224 70.7585ZM60.5916 119.769C52.3236 119.769 44.5536 118.2 37.2818 115.062C30.0099 111.924 23.6843 107.666 18.3052 102.287C12.926 96.9074 8.66742 90.5818 5.52955 83.3099C2.39169 76.0381 0.822754 68.2681 0.822754 60.0001C0.822754 51.7321 2.39169 43.9621 5.52955 36.6902C8.66742 29.4183 12.926 23.0928 18.3052 17.7136C23.6843 12.3344 30.0099 8.07587 37.2818 4.938C44.5536 1.80013 52.3236 0.231201 60.5916 0.231201C68.8597 0.231201 76.6296 1.80013 83.9015 4.938C91.1734 8.07587 97.4989 12.3344 102.878 17.7136C108.257 23.0928 112.516 29.4183 115.654 36.6902C118.792 43.9621 120.361 51.7321 120.361 60.0001C120.361 68.2681 118.792 76.0381 115.654 83.3099C112.516 90.5818 108.257 96.9074 102.878 102.287C97.4989 107.666 91.1734 111.924 83.9015 115.062C76.6296 118.2 68.8597 119.769 60.5916 119.769Z" fill="#542AAD"/>
-        </svg>  
+    <div class="notfoundmsg">
+        <h1>Whoops!<br>404 Not Found!</h1>
+        <div class="sub">
+            <h3>Looks like the page you are trying to access is not available!</h3>
+            <p>This might occur because you typed in the wrong address, or the page you are trying to access no longer exists.</p>
+        </div>
+        <a class="btn btn-purple" href="./home.html">Home</a>
     </div>
 
 
-    <div class="project-form-container active">
-        <div class="project-form">
-            <div class="header">
-                <h1>Start your project Today</h1>
-            </div>
-    
-            <form action="" method="">
-                <div class="form-header">
-                    <div class="left">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="input" placeholder="Enter your Name">
-                        </div> 
-    
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="input" placeholder="Enter your email address">
-                        </div>
-    
-    
-                        <div class="form-group">
-                            <label for="number">Phone Number</label>
-                            <input type="number" id="number" class="input" placeholder="Enter your number">
-                        </div>
-                    </div>
-    
-                    <div class="right">
-                        <div class="form-group">
-                            <label for="project">Project Name</label>
-                            <input type="text" id="project" class="input" placeholder="Enter a name">
-                        </div> 
-    
-                        <div class="form-group">
-                            <label for="about">Project Description</label>
-                            <textarea type="text" id="about" class="input textarea project" placeholder="Write a description..."></textarea>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="form-header dotted">
-                    <div class="left">
-                        <div class="form-group">
-                            <label for="budget">Budget($):</label>
-                            <input type="number" id="budget" class="input" placeholder="Enter number or range">
-                        </div> 
-                    </div>
-    
-                    <div class="right">
-                        <div class="form-group">
-                            <label for="date">Deadline:</label>
-                            <div class="inputs">
-                                <input maxlength="2" type="number" id="date" class="input date" placeholder="DD">
-                                <input maxlength="2" type="number" class="input month" placeholder="MM">
-                                <input maxlength="4" type="number" class="input years" placeholder="YYYY">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <button type="button" class="btn btn-purple">Submit Project</button>
-            </form>
-       </div>
-    </div>
 
+
+
+
+  
     <script src="./script/header.js"></script>
-    <script src="./script/project.js"></script>
     <script src="./script/main.js"></script>
-    <script src="./script/api_getquote.js"></script>
 </body>
 </html>

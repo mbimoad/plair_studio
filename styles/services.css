@@ -1032,6 +1032,7 @@ footer .links a {
   color: white;
   border: unset;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .stayuptodate button svg {
@@ -3604,6 +3605,7 @@ footer .links a {
   color: white;
   border: unset;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .stayuptodate button svg {

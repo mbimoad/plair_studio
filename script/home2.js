@@ -44,6 +44,15 @@ switch(url) {
         ourmissionimg.setAttribute("src", "./assets/ui2.webp");
         statistic.style.backgroundImage = 'url("./assets/ui3.webp")';
         break;
+    default: 
+        herotitle.innerText = "Mobile Development";
+        heroimage.setAttribute("src", "./assets/mobile1.webp");
+        heroimage.classList.add('mobile');
+        ourmissionh1.innerText = "Whatever you need, we can create!"
+        ourmissionp.innerText = "We create customized mobile applications for iOS and Android platforms that meet the unique needs of your business.";
+        ourmissionimg.setAttribute("src", "./assets/mobile2.webp");
+        statistic.style.backgroundImage = 'url("./assets/mobile3.webp")';
+        break;
 }
 
 

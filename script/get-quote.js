@@ -15,9 +15,5 @@ setTimeout(() => {
 const submitProject = document.querySelector('.project-form button');
 console.log(submitProject)
 submitProject.addEventListener('click', function() {
-    projectForm.classList.add('finished');
-
-    setTimeout(() => {
-        window.location = '/index.html'
-    }, 3000);
+  
 })

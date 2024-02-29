@@ -2582,6 +2582,179 @@ footer .links a {
   }
 }
 
+.notif-form {
+  position: fixed;
+  top: 50%;
+  /* position the top  edge of the element at the middle of the parent */
+  left: 50%;
+  /* position the left edge of the element at the middle of the parent */
+  border-radius: 7px;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+  background: white;
+  -webkit-box-shadow: 0 0 5px #ccc;
+          box-shadow: 0 0 5px #ccc;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+
+.notif-form svg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.notif-form .formbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 80px;
+}
+
+.notif-form .formbox h1 {
+  font-size: 39px;
+  font-family: redhat3;
+  width: 450px;
+  text-align: center;
+}
+
+.notif-form .formbox p {
+  font-size: 25px;
+  font-family: redhat1;
+}
+
+.notif-form .formbox svg {
+  width: 90px;
+  height: 90px;
+  position: unset;
+  cursor: unset;
+}
+
+.notif-form.active {
+  opacity: 1;
+  z-index: 99999;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  /* This is a shorthand of */
+}
+
+.notif-overlay {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.215);
+  content: '';
+  z-index: -1;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.notif-overlay.active {
+  pointer-events: unset;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 1350px) {
+  .notif-form svg {
+    width: 2.96296vw;
+    height: 2.96296vw;
+    top: 1.11111vw;
+    right: 1.11111vw;
+  }
+  .notif-form .formbox {
+    gap: 1.48148vw;
+    padding: 5.92593vw 5.92593vw;
+  }
+  .notif-form .formbox h1 {
+    font-size: 2.88889vw;
+    width: pxTOVw(450, 1350);
+  }
+  .notif-form .formbox p {
+    font-size: 1.85185vw;
+  }
+  .notif-form .formbox svg {
+    width: 6.66667vw;
+    height: 6.66667vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .notif-form {
+    width: 85%;
+  }
+  .notif-form svg {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
+  }
+  .notif-form .formbox {
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+    padding: 80px 80px;
+  }
+  .notif-form .formbox h1 {
+    font-size: 39px;
+    width: unset;
+  }
+  .notif-form .formbox p {
+    font-size: 25px;
+  }
+  .notif-form .formbox svg {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notif-form svg {
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 15px;
+  }
+  .notif-form .formbox {
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+    padding: 50px 30px;
+  }
+  .notif-form .formbox h1 {
+    font-size: 30px;
+  }
+  .notif-form .formbox p {
+    font-size: 18px;
+  }
+  .notif-form .formbox svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .questions {
   padding: unset;
   width: 982px;

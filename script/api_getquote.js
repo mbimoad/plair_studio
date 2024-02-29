@@ -9,6 +9,19 @@ let date = document.querySelector(".inputs input.date")
 let month = document.querySelector(".inputs input.month")
 let years = document.querySelector(".inputs input.years")
 const successformh1 = document.querySelector('.success-form h1');
+let notifform = document.querySelector('.notif-form')
+let notifclose = document.querySelector('.notif-form svg')
+let notifoverlay = document.querySelector('.notif-overlay')
+notifoverlay.addEventListener('click', function() {
+  this.classList.remove('active'); 
+  notifform.classList.remove('active');
+
+})
+notifclose.addEventListener('click', function() {
+  this.classList.remove('active'); 
+  notifform.classList.remove('active');
+
+})
 
 
 date.addEventListener('input', function(e) {
@@ -28,10 +41,10 @@ years.addEventListener('input', function(e) {
 
 
 // Production
-// let base_url  = "https://api.plairstudio.com";
+let base_url  = "https://api.plairstudio.com";
 
 // Development
-let base_url  = "http://localhost:5000";
+// let base_url  = "http://localhost:5000";
 
 let end_point = "/get_quote";
 let url_fetch = base_url + end_point; 
@@ -56,9 +69,27 @@ submitbtn.addEventListener('click', function() {
             body: JSON.stringify(data), // Ubah objek datax  menjadi string JSON sebelum mengirimkannya
             mode: 'cors'
         })
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
+        // .then(response => response.json())
+        .then(response => {
+          console.log(response)
+          if(!response.ok) {
+            notifform.classList.add('active')
+            notifoverlay.classList.add('active')
+          } else {
+            projectForm.classList.add('finished');
+
+            setTimeout(() => {
+                window.location = '/index.html'
+            }, 3000);
+          }
+          return response
+        })
+        .then(response =>  console.log(response.json()))
+        .catch(error => {
+          notifform.classList.add('active')
+          notifoverlay.classList.add('active')
+          console.log(error)
+        })
     } else {
       alert("Please check / fill all the fields!")
     }     

@@ -100,7 +100,19 @@ if(sosmedmenu.length != 0) {
 }
 
 
+let notifform2 = document.querySelector('.notif-form')
+let notifclose2 = document.querySelector('.notif-form svg')
+let notifoverlay2 = document.querySelector('.notif-overlay')
+notifoverlay2.addEventListener('click', function() {
+  this.classList.remove('active'); 
+  notifform2.classList.remove('active');
 
+})
+notifclose2.addEventListener('click', function() {
+  this.classList.remove('active'); 
+  notifform2.classList.remove('active');
+
+})
 
 // Api Newslatter 
 const emailInput   = document.querySelector('.stayuptodate input');
@@ -109,10 +121,10 @@ if(emailInput) {
 emailInput.setAttribute('type', 'email')
 const btnSubscribe = document.querySelector('.stayuptodate button');
 // Production
-// let base_url  = "https://api.plairstudio.com";
+let base_url  = "https://api.plairstudio.com";
 
 // Development
-let base_url  = "http://localhost:5000";
+// let base_url  = "http://localhost:5000";
 let end_point = "/newsletter";
 let url_fetch = base_url + end_point; 
 
@@ -125,8 +137,18 @@ btnSubscribe.addEventListener('click', function() {
         body: JSON.stringify(data), 
         mode: 'cors'
     })
-    .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => {
+      if(response.ok) {
+        notifform2.classList.add('active')
+        notifoverlay2.classList.add('active')
+        return response.json(); 
+      }
+     
+    })
+    .then(response => {
+      console.log(response)
+      notifform2.querySelector('h1').innerText = response.message;
+    })
     .catch(error => console.log(error))
   } else {
     alert("Please fill / fix the email!")

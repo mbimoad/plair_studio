@@ -17,7 +17,7 @@ linavigator.addEventListener('click', function() {
 
 const header = document.querySelector('header .logo');
 header.addEventListener('click', function() {
-  window.location = './home.html';
+  window.location = './index.html';
 })
 
 
@@ -35,7 +35,7 @@ const cookie = document.querySelector('footer .links a:nth-child(2)');
 const term = document.querySelector('footer .links a:last-child');
 const mobilequote = document.querySelector('.mobile-menu button.quotebtn')
 mobilequote.addEventListener('click', function() {
-  window.location = "./project.html"
+  window.location = "./get-quote.html"
 })
 
 about.setAttribute("href", "./about.html");
@@ -45,10 +45,10 @@ term.setAttribute("href", "./about.html");
 services.setAttribute("href", "./services.html");
 careers.setAttribute("href", "./careers.html");
 blog.setAttribute("href", "./blog.html");
-contactus.setAttribute("href", "./contactus.html");
-meeting.setAttribute("href", "./meeting.html");
-llogin.setAttribute("href", "./index.html");
-quote.setAttribute("href", "./project.html");
+contactus.setAttribute("href", "./contact.html");
+meeting.setAttribute("href", "./schedule-meeting.html");
+llogin.setAttribute("href", "./login.html");
+quote.setAttribute("href", "./get-quote.html");
 
 
 // faq
@@ -65,16 +65,16 @@ if(indexmenu.length != 0) {
   indexmenu[0].setAttribute("href", "./about.html");
   indexmenu[1].setAttribute("href", "./services.html");
   indexmenu[2].setAttribute("href", "./careers.html");
-  indexmenu[3].setAttribute("href", "./contactus.html");
-  indexmenu[4].setAttribute("href", "./meeting.html");
+  indexmenu[3].setAttribute("href", "./contact.html");
+  indexmenu[4].setAttribute("href", "./schedule-meeting.html");
 }
 
 
 // tools 
 const toolsmenu = document.querySelectorAll('.footer-menu .menu-data:nth-child(3) .buttons a');
 if(toolsmenu.length != 0) {
-  toolsmenu[0].setAttribute("href", "./project.html");
-  if(toolsmenu[1]) toolsmenu[1].setAttribute("href", "./index.html");
+  toolsmenu[0].setAttribute("href", "./get-quote.html");
+  if(toolsmenu[1]) toolsmenu[1].setAttribute("href", "./login.html");
 }
 
 

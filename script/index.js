@@ -1,245 +1,147 @@
+function getStyle(el, styleProp) {
+    var value, defaultView = (el.ownerDocument || document).defaultView;
+    // W3C standard way:
+    if (defaultView && defaultView.getComputedStyle) {
+      // sanitize property name to css notation
+      // (hypen separated words eg. font-Size)
+      styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+      return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+    } else if (el.currentStyle) { // IE
+      // sanitize property name to camelCase
+      styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
+        return letter.toUpperCase();
+      });
+      value = el.currentStyle[styleProp];
+      // convert other units to pixels on IE
+      if (/^\d+(em|pt|%|ex)?$/i.test(value)) { 
+        return (function(value) {
+          var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+          el.runtimeStyle.left = el.currentStyle.left;
+          el.style.left = value || 0;
+          value = el.style.pixelLeft + "px";
+          el.style.left = oldLeft;
+          el.runtimeStyle.left = oldRsLeft;
+          return value;
+        })(value);
+      }
+      return value;
+    }
+}
 
-const eye = document.querySelectorAll('.eye');
-const backtofirststep = document.querySelector('.backtofirststep');
-const processstep = document.querySelector('.process-step');
-const confirmemailbox = document.querySelector('.confirmemailbox');
-const customizebox = document.querySelector('.customizebox');
-const registerbox = document.querySelector('.registerbox');
-const forgotpassword = document.querySelector('.forgotpassword'); 
-const backtologin = document.querySelectorAll('.backtologin'); 
-const layer1   = document.querySelector('.main .layer:first-child');
-const layer2   = document.querySelector('.main .layer:last-child');
-const register = layer2.querySelector('.register'); 
-const forgotpassbox = layer1.querySelector('.forgotpassbox'); 
-const login    = layer1.querySelector('.login'); 
-const circles  = document.querySelectorAll('.circle');
-console.log(register);
-forgotpassword.addEventListener('click', function() {
-    console.log("Helo");
-    layer1.classList.add('forgotpass');
-    layer2.classList.add('forgotpass');
-    register.classList.add('forgotpass');
-    login.classList.add('forgotpass');
-    forgotpassbox.classList.remove('sended');
-    forgotpassbox.classList.remove('active');
-    forgotpassbox.classList.add('active');
-})
-
-
-
-
-
-
-const resetbtn = document.querySelectorAll(".resetbtn");
-const forgotpassnotif = document.querySelector('.forgotpass-notif');
-resetbtn.forEach(item => item.addEventListener('click', function() {
-    forgotpassbox.classList.remove('active');
-    forgotpassnotif.classList.add('sended');
-    forgotpassbox.classList.add('sended');
-}))
+const chatbox = document.querySelector('.chatbox'); 
+const chatbot = document.querySelector('.chatbot'); 
 
 
-backtologin.forEach(item => item.addEventListener('click', function() {
-    layer1.classList.remove('forgotpass');
-    layer2.classList.remove('forgotpass');
-    register.classList.remove('forgotpass');
-    login.classList.remove('forgotpass');
-    forgotpassbox.classList.remove('active');
-    forgotpassbox.classList.remove('sended');
-    forgotpassnotif.classList.remove('sended');
-    registerbox.classList.remove('active');
-    processstep.classList.remove('active');
-}))
 
 
-const registerbtn  = document.querySelector('.registerbtn');
-const registernext = document.querySelector('.registernext');
-const process      = document.querySelector('progress');
 
-registerbtn.addEventListener('click', function() {
+
+
+
+
+
+
+
+window.onload = function(e) {
+    document.querySelector('body').classList.add('show');
+    document.querySelector('.hero').classList.add('show');
+    document.querySelector('.our-mission').classList.add('show');
+    document.querySelector('.our-services').classList.add('show');
+    document.querySelector('.statistic').classList.add('show');
+    document.querySelector('.theprocess').classList.add('show');
+    document.querySelector('.consultation').classList.add('show');
+    document.querySelector('.stayuptodate').classList.add('show');
+    document.querySelector('.footer-menu').classList.add('show');
+
 
     if(window.innerWidth <= 767) {
-        layer1.classList.add('swap');
-        layer2.classList.add('swap');
-        layer1.classList.add('forgotpass');
-        layer2.classList.add('forgotpass');
-        login.classList.add('forgotpass');
-        register.classList.add('forgotpass');
-        setTimeout(() => {
-            registerbox.classList.add('active');
-            processstep.classList.add('active');
-        },300);
-        return; 
+        const process = document.querySelectorAll('.theprocess .dotted-process span');
+        process.forEach(item => item.addEventListener('click', function() {
+            process.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+            clearInterval(processint)
+            let turn = this.dataset.turn; 
+            const box = document.querySelectorAll('.theprocess .box');    
+            if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
+            if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
+            if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
+        }))
+
+
+        const process2 = document.querySelectorAll('.our-services .dotted-process span');
+        process2.forEach(item => item.addEventListener('click', function() {
+            process2.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+            clearInterval(servicesint)
+            let turn = this.dataset.turn; 
+            const box = document.querySelectorAll('.our-services .cards .card');    
+            if(turn == '1') box.forEach(item => item.style.transform = 'translate(0,0)');
+            if(turn == '2') box.forEach(item => item.style.transform = 'translate(-100%,0)');
+            if(turn == '3') box.forEach(item => item.style.transform = 'translate(-200%,0)');
+            if(turn == '4') box.forEach(item => item.style.transform = 'translate(-300%,0)');
+        }))
+
+        
+let index = 0; 
+const processdot = document.querySelectorAll('.theprocess .dotted-process span'); 
+const processbox = document.querySelectorAll('.theprocess .box'); 
+const processint = setInterval(() => {
+
+  if(index == processbox.length - 1) {
+    index = -1; 
+  }
+
+  index++;
+  processdot.forEach(item => item.classList.remove('active'));
+  processdot[index].classList.add('active');
+  processbox.forEach(item => item.style.transform = `translate(-${100*index}%,0)`);
+ 
+}, 2000)
+
+
+let index2 = 0; 
+const servicesdot = document.querySelectorAll('.our-services .dotted-process span'); 
+const servicesbox = document.querySelectorAll('.our-services .cards .card'); 
+const servicesint = setInterval(() => {
+
+  if(index2 == servicesbox.length - 1) {
+    index2 = -1; 
+  }
+
+  index2++;
+  servicesdot.forEach(item => item.classList.remove('active'));
+  servicesdot[index2].classList.add('active');
+  servicesbox.forEach(item => item.style.transform = `translate(-${100*index2}%,0)`);
+ 
+}, 2000)
+
+    }
+    
+}
+
+
+
+let min = `<svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.79492 2C1.51159 2 1.27409 1.90417 1.08242 1.7125C0.890755 1.52083 0.794922 1.28333 0.794922 1C0.794922 0.716667 0.890755 0.479167 1.08242 0.2875C1.27409 0.0958333 1.51159 0 1.79492 0H13.7949C14.0783 0 14.3158 0.0958333 14.5074 0.2875C14.6991 0.479167 14.7949 0.716667 14.7949 1C14.7949 1.28333 14.6991 1.52083 14.5074 1.7125C14.3158 1.90417 14.0783 2 13.7949 2H1.79492Z" fill="#542AAD"/>
+</svg>`;
+
+let plus = `<svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 8H1.5C1.21667 8 0.979167 7.90417 0.7875 7.7125C0.595833 7.52083 0.5 7.28333 0.5 7C0.5 6.71667 0.595833 6.47917 0.7875 6.2875C0.979167 6.09583 1.21667 6 1.5 6H6.5V1C6.5 0.716667 6.59583 0.479167 6.7875 0.2875C6.97917 0.0958333 7.21667 0 7.5 0C7.78333 0 8.02083 0.0958333 8.2125 0.2875C8.40417 0.479167 8.5 0.716667 8.5 1V6H13.5C13.7833 6 14.0208 6.09583 14.2125 6.2875C14.4042 6.47917 14.5 6.71667 14.5 7C14.5 7.28333 14.4042 7.52083 14.2125 7.7125C14.0208 7.90417 13.7833 8 13.5 8H8.5V13C8.5 13.2833 8.40417 13.5208 8.2125 13.7125C8.02083 13.9042 7.78333 14 7.5 14C7.21667 14 6.97917 13.9042 6.7875 13.7125C6.59583 13.5208 6.5 13.2833 6.5 13V8Z" fill="#542AAD"/>
+</svg>`;
+
+const questionsitems = document.querySelectorAll('.questions-item'); 
+questionsitems.forEach(item => item.addEventListener('click', function() {
+    this.classList.toggle('active');
+    if(this.classList.contains('active')) {
+        this.querySelector('.open-question').innerHTML = min;
+    } else {
+        this.querySelector('.open-question').innerHTML = plus;
     }
 
-    layer1.classList.add('forgotpass');
-    layer2.classList.add('forgotpass');
-    login.classList.add('forgotpass');
-    register.classList.add('forgotpass');
-    registerbox.classList.add('active');
-    processstep.classList.add('active');
-})
-const confirmbtnspan = document.querySelector('.confirmbtn span');
-
-
-// SEtup for interval and timeout
-let runprocess1 = null;
-let runprocess2 = null;
-let runprocess3 = null;
-let timeout1    = null;
-
-
-registernext.addEventListener('click' , function() {
-  let nilai = 0; 
-  runprocess1 = setInterval(() => {
-      nilai++; 
-      process.value = nilai; 
-      if(nilai == 50) {
-        circles[0].classList.add('finish');
-        circles[1].classList.add('active');
-        clearInterval(runprocess1);
-      }
-  }, 0)  
-
-  timeout1 = setTimeout(() => {
-      let value = 0; 
-      let message = "";
-      runprocess2 = setInterval(() => {
-
-          if(value == 3) {
-            clearInterval(runprocess2);
-            // if the runprocess2 success
-            let nilai = process.value; 
-            runprocess3 = setInterval(() => {
-                nilai++; 
-                process.value = nilai; 
-                if(nilai == 100) {
-                  circles[0].classList.add('finish');
-                  circles[1].classList.add('finish');
-                  circles[2].classList.add('active');
-                  clearInterval(runprocess3);
-                  customizebox.classList.add('active');
-                  confirmemailbox.classList.add('move');
-                }
-            }, 0)  
-
-          }
-          if(message == "....") message = "";
-          value++; 
-          confirmbtnspan.innerHTML = message; 
-          message += ".";
-      }, 500);
-  }, 500);
-
-  registerbox.classList.add('move');
-  confirmemailbox.classList.add('active');
-})
-
-
-
-
-const passwd      = document.querySelectorAll('.passwd'); 
-const confirmpass = document.querySelectorAll('.confirmpass'); 
-const line        = document.querySelectorAll('.line'); 
-
-
-passwd.forEach(item => item.addEventListener('input', function(e) {    
-    // if value not null
-    if(this.value != "") {
-        line[0].classList.add('active');
-        // if panjangnya lebih dari 5
-        if(this.value.length > 5) {
-            line[1].classList.add('active');
-            // if berisi nomor
-            if(this.value.includes('1') || this.value.includes('2') || this.value.includes('3') || this.value.includes('4') || this.value.includes('5') || this.value.includes('6') || this.value.includes('7') || this.value.includes('8') || this.value.includes('9')) {
-                line[2].classList.add('active');
-                // if berisi huruf besar
-                if(e.data == e.data.toUpperCase()) {
-                    line[3].classList.add('active');
-                    // if berisi specialchars
-                    if(this.value.includes('|') || this.value.includes('!') || this.value.includes('"') || this.value.includes("'")) {
-                        line[4].classList.add('active');
-                    } else {
-                        line[4].classList.remove('active');
-                    }
-                } else {
-                    line[3].classList.remove('active');
-                    line[4].classList.remove('active');
-                }
-            } else {
-                line[2].classList.remove('active');
-                line[3].classList.remove('active');
-                line[4].classList.remove('active');
-            }
-        } else {
-            line[1].classList.remove('active');
-            line[2].classList.remove('active');
-            line[3].classList.remove('active');
-            line[4].classList.remove('active');
-        }
-    } else {
-        line[0].classList.remove('active');
-        line[1].classList.remove('active');
-        line[2].classList.remove('active');
-        line[3].classList.remove('active');
-        line[4].classList.remove('active');
-
-    }       
 }))
 
 
-const continuebtn = document.querySelector('.continuebtn');
-console.log(continuebtn);
-const welcomebox  = document.querySelector('.welcomebox');
-continuebtn.addEventListener('click', function() {
-    welcomebox.classList.add('active');
-    customizebox.classList.add('move'); 
-    processstep.classList.add('move');
-})
 
 
-// preview image 
-const fileupload = document.getElementById("file-upload"); 
-const previewImage = document.querySelector('.previewImage');
-
-fileupload.addEventListener('change', function(event) {
-    console.log(event.target.files.length);
-    if (event.target.files.length > 0) {
-        previewImage.src = URL.createObjectURL(event.target.files[0])
-        // previewImage.style.display = 'block';
-      }
-      // 👇️ reset file input once you're done
-      fileupload.value = null;
-})
 
 
-backtofirststep.addEventListener('click', function() {
-    clearInterval(runprocess1);
-    clearInterval(runprocess2);
-    clearInterval(runprocess3);
-    clearTimeout(timeout1);
-    let nilai = process.value; 
-    runprocess1 = setInterval(() => {
-        nilai--;
-        process.value = nilai--; 
-        if(nilai == 0) {
-          circles[0].classList.remove('finish');
-          circles[1].classList.remove('active');
-          clearInterval(runprocess1);
-        }
-    }, 0)  
-
-    registerbox.classList.remove('move');
-    confirmemailbox.classList.remove('active');
-})
-
-eye.forEach(item => item.addEventListener('click', function() {
-    var input = this.previousElementSibling;
-    if(this.getAttribute('src') == "./assets/visibility.svg") {
-        input.setAttribute('type', 'text');
-        this.src = './assets/visibility_off.svg';
-    } else {
-        input.setAttribute('type', 'password');
-        this.src = "./assets/visibility.svg"
-    }
-}))

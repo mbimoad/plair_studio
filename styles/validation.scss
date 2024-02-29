@@ -1,0 +1,89 @@
+.main {
+    .layer:first-child {
+        width: 100%;
+        // background:unset;
+        background-color:unset; 
+        .login.sended {
+            transform: translate(0, -240%);
+            opacity: 0;
+        }
+        .login {
+            height: unset; 
+            gap:16px; 
+            .btn-dark {
+                font-size: 15px;
+            } 
+        } .forgotpass-notif.notif.sended {
+           transform: translate(-50%, 0); 
+        } .forgotpass-notif.notif {
+            h1 {
+                font-family: redhat2;
+            }
+        }
+        
+        
+        div.matchpass {
+            input.wrong {
+                border: 1px solid red; 
+            } p {
+                font-size: 9.7px; 
+                font-family: redhat1;
+                color:red; 
+                display: none;
+            } p.wrong {
+                display: unset;
+            }
+        } 
+    } .layer:nth-child(2) {
+        width: unset; 
+        background:unset;
+    }
+}
+
+@media screen and (max-width: 1350px) { 
+    .main {
+        .layer:first-child {
+            .login {
+                .btn-dark {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 767px) { 
+    .main {
+        .layer:first-child {
+           
+            .login {
+                gap: 26px; 
+                transform: translate(0,0); 
+                margin-top:unset;
+                position: absolute;
+                top: 50%;  /* position the top  edge of the element at the middle of the parent */
+                left: 50%; /* position the left edge of the element at the middle of the parent */
+                transform: translate(-50%, -50%); /* This is a shorthand of
+                                                translateX(-50%) and translateY(-50%) */
+            }
+        } .layer:last-child {
+            height: 100%; 
+        }
+    }
+ 
+}
+
+
+@media screen and (max-width: 550px) { 
+    .main {
+        .layer:last-child {
+            .login {
+                width: 85%; 
+            
+            }
+        }
+    }
+ 
+}

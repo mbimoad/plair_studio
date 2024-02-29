@@ -2637,4 +2637,138 @@ footer .links a {
   -webkit-box-shadow: 0 0 5px #4d289c;
           box-shadow: 0 0 5px #4d289c;
 }
+
+@media screen and (max-width: 1820px) {
+  .loginas {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 1570px) {
+  .loginas h1 {
+    font-size: 39px;
+    font-family: redhat2;
+  }
+  .loginas p {
+    margin-top: 36px;
+    margin-bottom: 37px;
+    font-size: 20px;
+    font-family: redhat1;
+  }
+  .loginas .structure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .loginas .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
+  .loginas .row .btn {
+    width: 298px;
+    padding: 13px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #4d289c;
+            box-shadow: 0 0 5px #4d289c;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .loginas {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .loginas h1 {
+    font-size: 3.9vw;
+  }
+  .loginas p {
+    margin-top: 3.6vw;
+    margin-bottom: 3.7vw;
+    font-size: 2vw;
+  }
+  .loginas .structure {
+    gap: 1.5vw;
+  }
+  .loginas .row {
+    gap: 1.5vw;
+  }
+  .loginas .row .btn {
+    width: 29.8vw;
+    padding: 1.3vw;
+    border-radius: 0.5vw;
+    -webkit-box-shadow: 0 0 0.5vw #4d289c;
+            box-shadow: 0 0 0.5vw #4d289c;
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loginas {
+    padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100dvh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .loginas h1 {
+    font-size: 30px;
+    font-family: redhat2;
+  }
+  .loginas p {
+    margin-top: 15px;
+    margin-bottom: 37px;
+    font-size: 18px;
+    font-family: redhat1;
+  }
+  .loginas .structure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .loginas .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .loginas .row .btn {
+    width: 100%;
+    padding: 13px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #4d289c;
+            box-shadow: 0 0 5px #4d289c;
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=loginas.css.map */

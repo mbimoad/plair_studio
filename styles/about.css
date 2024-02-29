@@ -2901,6 +2901,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  footer {
+    z-index: 99;
+    position: relative;
+  }
   .our-team {
     padding: 62px 30px;
   }
